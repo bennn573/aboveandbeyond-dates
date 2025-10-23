@@ -1,0 +1,14 @@
+    # This is your wrangler.toml file.
+    # It defines configuration for your Cloudflare Worker.
+
+    name = "trstyres" # You can choose a different name for your worker
+    main = "dist/worker.js"           # Path to your Worker script (will be generated)
+    compatibility_date = "2025-06-28" # Use the date Cloudflare suggests or a recent date
+
+    # Enable observability logs as suggested by Wrangler
+    [observability.logs]
+    enabled = true
+
+    # Configuration for a Worker Site (to serve your React app's static assets)
+    [site]
+    bucket = "./dist" # This tells Wrangler to upload the contents of your 'dist' folder

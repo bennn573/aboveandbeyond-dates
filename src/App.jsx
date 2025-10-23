@@ -1,0 +1,1214 @@
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+
+// --- 1. DATA & CONSTANTS (UPDATED CITIES WITH MERGED HOLLYWOOD EVENT) ---
+const CITIES = [
+    // 1. LONDON 
+    { 
+        id: 1, 
+        name: 'London', 
+        position: [51.509865, -0.118092], 
+        fact: 'Above & Beyond\'s spiritual home, hosting numerous club shows, milestone events like ABGT050, ABGT400 and ABGT450, as well as multiple tour dates over the years.', 
+        country: 'United Kingdom', 
+        events: [
+            // MILESTONES
+            { date: '2013-10-26', venue: 'Alexandra Palace (ABGT050)', type: 'Milestone' }, 
+            { date: '2020-09-26', venue: 'Virtual (ABGT400)', type: 'Milestone' }, 
+            { date: '2021-09-04', venue: 'The Drumsheds (ABGT450)', type: 'Milestone' },
+
+            // OTHER EVENTS
+            { date: '2005-03-24', venue: 'Gatecrasher @ Heaven', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-01-13', venue: 'The Gallery @ Turnmills', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-03-04', venue: 'Canvas', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-04-14', venue: 'The Gallery Eastern Weekender', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-07-07', venue: 'The Gallery', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-11-03', venue: 'The Gallery', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-12-31', venue: 'HeatNye @ O2 Academy Brixton', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-02-23', venue: 'The Gallery', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-05-25', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-12-07', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2015-04-03', venue: 'Brixton Academy', type: 'Tour' },
+            { date: '2015-04-04', venue: 'Brixton Academy', type: 'Tour' },
+            { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
+        ]
+    },
+    // 2. LOS ANGELES (UPDATED WITH TATW350)
+    { 
+        id: 2, 
+        name: 'Los Angeles', 
+        position: [34.0522, -118.2437], 
+        fact: 'Home to the most iconic A&B events in the US.', 
+        country: 'United States', 
+        events: [
+            // MILESTONES (TATW350 and TATW400)
+            { date: '2010-12-10', venue: 'Hollywood Palladium (TATW350)', type: 'Milestone' },
+            { date: '2011-12-10', venue: 'Shrine Exposition Hall (TATW400)', type: 'Milestone' }, 
+            { date: '2022-10-15', venue: 'Banc of California Stadium (ABGT500)', type: 'Milestone' },
+            
+            // OTHER DATES
+            { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
+        ], 
+    },
+    // 3. GLASGOW 
+    { 
+        id: 3, 
+        name: 'Glasgow',
+        position: [55.8642, -4.2518],
+        fact: 'A frequently visited city, known for passionate crowds and multiple tour stops over the years.',
+        country: 'United Kingdom',
+        events: [
+            { date: '2015-04-02', venue: 'ABC', type: 'Tour' },
+            { date: '2016-03-05', venue: 'The Arches', type: 'Other' },
+            { date: '2023-12-10', venue: 'SWG3', type: 'Other' },
+            { date: '2012-04-19', venue: 'O2 Academy Glasgow', type: 'Tour' },
+            { date: '2012-04-20', venue: 'The Barrowland Ballroom', type: 'Tour' },
+            { date: '2016-11-24', venue: 'O2 Academy Glasgow', type: 'Tour' },
+            { date: '2018-11-03', venue: 'SWG3', type: 'Tour' },
+            { date: '2018-11-04', venue: 'SWG3', type: 'Tour' },
+            { date: '2025-12-06', venue: 'O2 Academy Glasgow', type: 'Tour' },
+        ]
+    },
+    // 4. COALVILLE
+    { 
+        id: 4, 
+        name: 'Coalville', 
+        position: [52.6105, -1.3653], 
+        fact: 'A destination for early Passion parties in the UK, including a New Year\'s Eve special.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2004-02-28', venue: "Passion's 9th Birthday", type: 'Other', isResidentAdvisor: true },
+            { date: '2004-12-31', venue: 'Passion v Storm NYE', type: 'Other', isResidentAdvisor: true },
+            { date: '2005-04-16', venue: 'Passion Pure', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    // 5. IBIZA
+    { 
+        id: 5, 
+        name: 'Ibiza', 
+        position: [38.9088, 1.4323], 
+        // FACT UPDATED: Added mention of Essential Mixes
+        fact: 'A regular summer destination for the trio, including iconic BBC Radio 1 Essential Mix broadcasts.', 
+        country: 'Spain', 
+        events: [
+            { date: '2010-08-03', venue: 'Essential Mix Live from Privilege', type: 'Other' },
+            { date: '2015-08-14', venue: 'Essential Mix Live from Cream, Amnesia', type: 'Other' },
+            { date: '2017-08-27', venue: 'Essential Mix Live from Cream, Amnesia', type: 'Other' },
+            
+            // Existing events
+            { date: '2005-07-03', venue: 'Judgement Sundays @ Eden', type: 'Other', isResidentAdvisor: true },
+            { date: '2005-09-11', venue: 'Judgement Sundays @ Eden', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-06-28', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-07-05', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-07-19', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-08-16', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-09-13', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
+        ]
+    },
+    { 
+        id: 6, 
+        name: 'Stratford-upon-Avon', 
+        position: [52.1917, -1.7073], 
+        fact: 'The setting for massive Global Gathering festival appearances.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2005-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 7, 
+        name: 'Amsterdam', 
+        position: [52.3676, 4.9041], 
+        fact: 'Host to the ABGT200 milestone at the Ziggo Dome.', 
+        country: 'Netherlands', 
+        events: [
+            { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
+            { date: '2005-08-05', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-07-14', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
+            { date: '2025-10-31', venue: 'AFAS Live', type: 'Tour' },
+        ]
+    },
+    { 
+        id: 8, 
+        name: 'Istanbul', 
+        position: [41.0082, 28.9784], 
+        fact: '', 
+        country: 'Turkey', 
+        events: [
+            { date: '2005-09-10', venue: 'Pepsi Electronica Festival', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 9, 
+        name: 'Liverpool', 
+        position: [53.4084, -2.9916], 
+        fact: 'Host of Creamfields festival.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2005-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-08-25', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-14', venue: 'O2 Academy Liverpool', type: 'Tour' },
+        ]
+    },
+    { 
+        id: 10, 
+        name: 'Auckland', 
+        position: [-36.8485, 174.7633], 
+        fact: 'One of their early stops on the 2005 Godskitchen world tour, beginning in New Zealand.', 
+        country: 'New Zealand', 
+        events: [
+            { date: '2005-10-01', venue: 'Godskitchen', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 11, 
+        name: 'Sydney', 
+        position: [-33.8688, 151.2093], 
+        fact: 'Host of the epic **ABGT150** milestone at Allphones Arena, as well as part of the Godskitchen Australian tour in 2005.', 
+        country: 'Australia', 
+        events: [
+            { date: '2015-09-26', venue: 'Allphones Arena (ABGT150)', type: 'Milestone' }, 
+            { date: '2005-10-02', venue: 'Godskitchen @ Space', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 12, 
+        name: 'Melbourne', 
+        position: [-37.8136, 144.9631], 
+        fact: 'Hosted a major event at the iconic Rod Laver Arena in 2005 and headlined Creamfields 2012.', 
+        country: 'Australia', 
+        events: [
+            { date: '2005-10-08', venue: 'Rod Laver Arena', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 13, 
+        name: 'Cardiff', 
+        position: [51.4816, -3.1791], 
+        fact: 'The capital city of Wales, hosting the Evolution event.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2005-10-15', venue: 'Evolution', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 14, 
+        name: 'Middlesbrough', 
+        position: [54.5779, -1.2366], 
+        fact: 'A stop on the UK leg of the Godskitchen tour in November 2005.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2005-11-05', venue: 'Godskitchen', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 15, 
+        name: 'Utrecht', 
+        position: [52.0907, 5.1214], 
+        fact: 'The home of the massive Trance Energy event in February 2006.', 
+        country: 'Netherlands', 
+        events: [
+            { date: '2006-02-11', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-02-23', venue: 'A State of Trance 900', type: 'Other' },
+        ]
+    },
+    { 
+        id: 16, 
+        name: 'Miami', 
+        position: [25.7617, -80.1918], 
+        fact: 'A crucial location for Winter Music Conference (WMC) events, including two on the same day in March 2006!', 
+        country: 'United States', 
+        events: [
+            { date: '2006-03-24', venue: 'Nocturnal Club', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-03-24', venue: 'Wet Grooves Beach Party', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-03-21', venue: 'Winter Music Conference', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-03-22', venue: 'Made Event pres. Above & Beyond', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-03-23', venue: 'Wet Grooves Beach Party After Dark', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 17, 
+        name: 'Leeds', 
+        position: [53.8008, -1.5491], 
+        fact: 'A major stop on the 2012 UK club tour at the O2 Academy.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2012-04-13', venue: 'O2 Academy Leeds', type: 'Tour' },
+        ]
+    },
+    { 
+        id: 18, 
+        name: 'Adelaide', 
+        position: [-34.9285, 138.6007], 
+        fact: 'Host city for Creamfields Australia 2012.', 
+        country: 'Australia', 
+        events: [
+            { date: '2012-04-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 19, 
+        name: 'Manchester', 
+        position: [53.4808, -2.2426], 
+        fact: 'The city was a stop on the 2016 European Tour at The Warehouse Project, the 2015 "We Are All We Need" Tour at Albert Hall, and the 2018 Common Ground Tour.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2007-05-12', venue: 'The Music Box', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-04-05', venue: 'Albert Hall', type: 'Tour' },
+            { date: '2016-11-25', venue: 'The Warehouse Project', type: 'Tour' },
+            { date: '2018-11-16', venue: 'The Warehouse Project', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 20, 
+        name: 'Belfast', 
+        position: [54.5973, -5.9301], 
+        fact: 'Host of the 2016 European Tour at Ulster Hall and part of the 2018 Common Ground Tour.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2016-11-26', venue: 'Ulster Hall', type: 'Tour' },
+            { date: '2018-11-09', venue: 'The Telegraph Building', type: 'Tour' },
+            { date: '2025-11-01', venue: 'The Telegraph Building', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 21, 
+        name: 'Dublin', 
+        position: [53.3498, -6.2603], 
+        fact: 'The Irish capital was part of the 2016 European Tour, playing at the Olympia Theatre.', 
+        country: 'Ireland', 
+        events: [
+            { date: '2016-11-27', venue: 'Olympia Theatre', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 22, 
+        name: 'Warsaw', 
+        position: [52.2297, 21.0122], 
+        fact: 'A stop in Eastern Europe for both the 2016 European Tour and the 2018 Common Ground Tour.', 
+        country: 'Poland', 
+        events: [
+            { date: '2016-11-30', venue: 'Progresja Music Zone', type: 'Tour' },
+            { date: '2018-10-28', venue: 'Progresja Music Zone', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 23, 
+        name: 'Hamburg', 
+        position: [53.5511, 9.9937], 
+        fact: 'A German stop on the 2016 European Tour at Docks and the 2018 Common Ground Tour.', 
+        country: 'Germany', 
+        events: [
+            { date: '2016-12-01', venue: 'Docks', type: 'Tour' },
+            { date: '2018-10-26', venue: 'Uebel & Gefährlich', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 24, 
+        name: 'Munich', 
+        position: [48.1351, 11.5820], 
+        fact: 'The southern German city was part of the 2016 European Tour, playing at Backstage Werk.', 
+        country: 'Germany', 
+        events: [
+            { date: '2016-12-02', venue: 'Backstage Werk', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 25, 
+        name: 'Cologne', 
+        position: [50.9375, 6.9603], 
+        fact: 'A German stop on the 2015 "We Are All We Need" Tour, the 2016 European Tour, and the 2018 Common Ground Tour.', 
+        country: 'Germany', 
+        events: [
+            { date: '2015-01-15', venue: 'Live Music Hall', type: 'Tour' },
+            { date: '2016-12-03', venue: 'Live Music Hall', type: 'Tour' },
+            { date: '2018-10-20', venue: 'Boothaus', type: 'Tour' },
+            { date: '2025-12-05', venue: 'Bootshaus', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 26, 
+        name: 'Brussels', 
+        position: [50.8503, 4.3517], 
+        fact: 'The Belgian capital hosted a show at Ancienne Belgique during the 2016 European Tour.', 
+        country: 'Belgium', 
+        events: [
+            { date: '2016-12-10', venue: 'Ancienne Belgique', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 27, 
+        name: 'Paris', 
+        position: [48.8566, 2.3522], 
+        fact: 'Played at Le Trianon during the 2015 "We Are All We Need" Tour and at Elysée Montmartre as part of the 2016 European Tour.', 
+        country: 'France', 
+        events: [
+            { date: '2015-01-31', venue: 'Le Trianon', type: 'Tour' },
+            { date: '2016-12-11', venue: 'Elysée Montmartre', type: 'Tour' },
+            { date: '2018-11-07', venue: 'Le Trianon', type: 'Tour' },
+            { date: '2025-11-28', venue: 'Phantom', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 28, 
+        name: 'Stockholm', 
+        position: [59.3293, 18.0686], 
+        fact: 'The Swedish capital was a stop on the 2015 "We Are All We Need" Tour, the 2016 European Tour, and the 2018 Common Ground Tour.', 
+        country: 'Sweden', 
+        events: [
+            { date: '2015-01-24', venue: 'Münchenbryggeriet', type: 'Tour' },
+            { date: '2016-12-15', venue: 'Nobelberget', type: 'Tour' },
+            { date: '2018-10-22', venue: 'Berns', type: 'Tour' },
+            { date: '2025-11-22', venue: 'TBA', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 29, 
+        name: 'Helsinki', 
+        position: [60.1699, 24.9384], 
+        fact: 'A Nordic stop for the 2015 "We Are All We Need" Tour at The Circus, which was also the final city of the 2016 Nordic leg.', 
+        country: 'Finland', 
+        events: [
+            { date: '2015-01-17', venue: 'Circus', type: 'Tour' },
+            { date: '2016-12-16', venue: 'The Circus', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 30, 
+        name: 'Copenhagen', 
+        position: [55.6761, 12.5683], 
+        fact: 'A Danish stop on the 2015 "We Are All We Need" Tour, the 2016 European Tour, and the 2018 Common Ground Tour.', 
+        country: 'Denmark', 
+        events: [
+            { date: '2015-01-22', venue: 'Vega', type: 'Tour' },
+            { date: '2016-12-17', venue: 'Vega', type: 'Tour' },
+            { date: '2018-10-25', venue: 'Den Grå Hal', type: 'Tour' },
+            { date: '2025-11-20', venue: 'Progon', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 31, 
+        name: 'Oslo', 
+        position: [59.9139, 10.7522], 
+        fact: 'Host to the 2015 "We Are All We Need" Tour, the 2016 European Tour finale, and a stop on the 2018 Common Ground Tour at Sentrum Scene.', 
+        country: 'Norway', 
+        events: [
+            { date: '2015-01-23', venue: 'Rockefeller', type: 'Tour' },
+            { date: '2016-12-18', venue: 'Sentrum Scene', type: 'Tour' },
+            { date: '2018-10-24', venue: 'Sentrum Scene', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 32, 
+        name: 'Antwerp', 
+        position: [51.2194, 4.4025], 
+        fact: 'A stop on the 2015 "We Are All We Need" European Tour, playing at Trix, which was revisited during the 2018 Common Ground Tour.', 
+        country: 'Belgium', 
+        events: [
+            { date: '2015-01-29', venue: 'Trix', type: 'Tour' },
+            { date: '2018-11-06', venue: 'Trix', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 33, 
+        name: 'Prague', 
+        position: [50.0755, 14.4378], 
+        fact: 'The capital of the Czech Republic, host of the ABGT350 milestone at O2 Arena, and home to Transmission Festival.', 
+        country: 'Czech Republic', 
+        events: [
+            { date: '2007-11-02', venue: 'Transmission (O2 Arena', type: 'Other' },
+            { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone' },
+            { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 34, 
+        name: 'Bristol', 
+        position: [51.4545, -2.5879], 
+        fact: 'A stop on the UK leg of the 2018 Common Ground Tour at O2 Academy.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2018-11-02', venue: 'O2 Academy', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 35, 
+        name: 'Newcastle', 
+        position: [54.9783, -1.6178], 
+        fact: 'Visited in November 2018 for the Common Ground Tour at Digital.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2018-11-17', venue: 'Digital', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 36, 
+        name: 'Lausanne', 
+        position: [46.5197, 6.6323], 
+        fact: 'A stop in Switzerland for the 2025 Tour at DI Club.', 
+        country: 'Switzerland', 
+        events: [
+            { date: '2025-11-08', venue: 'DI Club', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 37, 
+        name: 'Berlin', 
+        position: [52.5200, 13.4050], 
+        fact: 'The German capital hosts the 2025 Tour at Ritter Butzke.', 
+        country: 'Germany', 
+        events: [
+            { date: '2025-11-21', venue: 'Ritter Butzke', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 38, 
+        name: 'Budapest', 
+        position: [47.4979, 19.0402], 
+        fact: 'A stop in Hungary for the 2025 Tour at Onaida Bay.', 
+        country: 'Hungary', 
+        events: [
+            { date: '2025-11-29', venue: 'Onaida Bay', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 39, 
+        name: 'Edinburgh', 
+        position: [55.9533, -3.1883], 
+        fact: 'The Scottish capital hosts the 2025 Tour at the Corn Exchange.', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2025-12-07', venue: 'Edinburgh Corn Exchange', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 40, 
+        name: 'Gdansk', 
+        position: [54.3520, 18.6464], 
+        fact: 'A Polish stop for the 2025 Tour at B90.', 
+        country: 'Poland', 
+        events: [
+            { date: '2025-12-13', venue: 'B90', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 41, 
+        name: 'Buenos Aires', 
+        position: [-34.6037, -58.3816], 
+        fact: 'South America gets a two-night visit in 2026 at Parque de la Ciudad.', 
+        country: 'Argentina', 
+        events: [
+            { date: '2007-09-22', venue: 'Paradise Garage', type: 'Other', isResidentAdvisor: true  },
+            { date: '2026-02-14', venue: 'Parque de la Ciudad', type: 'Tour' },
+            { date: '2026-02-15', venue: 'Parque de la Ciudad', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 42, 
+        name: 'Johannesburg', 
+        position: [-26.2041, 28.0473], 
+        fact: 'The River Cabin is the setting for the first African stop in 2026.', 
+        country: 'South Africa', 
+        events: [
+            { date: '2026-04-03', venue: 'The River Cabin', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 43, 
+        name: 'Cape Town', 
+        position: [-33.9249, 18.4241], 
+        fact: 'A second South African stop for the 2026 Tour at The Ostrich.', 
+        country: 'South Africa', 
+        events: [
+            { date: '2026-04-04', venue: 'The Ostrich', type: 'Tour' },
+        ] 
+    },
+    { 
+        id: 44, 
+        name: 'Beirut', 
+        position: [33.8938, 35.5018], 
+        fact: 'Host of the major **TATW400** milestone event at the Forum de Beyrouth in 2011.', 
+        country: 'Lebanon', 
+        events: [
+            { date: '2011-11-26', venue: 'Forum de Beyrouth (TATW400)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 45, 
+        name: 'Moscow', 
+        position: [55.7558, 37.6173], 
+        fact: 'Co-host of the **TATW300** milestone, following the Beirut event, held at Forum Hall.', 
+        country: 'Russia', 
+        events: [
+            { date: '2009-12-12', venue: 'Forum Hall (TATW300)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 46, 
+        name: 'Bangalore', 
+        position: [12.9716, 77.5946], 
+        fact: 'The Indian city that hosted the final Trance Around The World milestone, **TATW450**, at the Jayamahal Palace.', 
+        country: 'India', 
+        events: [
+            { date: '2012-11-10', venue: 'Jayamahal Palace (TATW450)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 47, 
+        name: 'New York', 
+        position: [40.7128, -74.0060], 
+        fact: 'The city that hosted the monumental ABGT100 milestone at Madison Square Garden (MSG) in 2014.', 
+        country: 'United States', 
+        events: [
+            { date: '2007-06-01', venue: 'Pacha NYC', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 48, 
+        name: 'The Gorge', 
+        position: [47.0957, -119.9912], 
+        fact: 'The breathtaking setting for the two-day **ABGT250** celebration at The Gorge Amphitheatre in 2017.', 
+        country: 'United States', 
+        events: [
+            { date: '2017-09-16', venue: 'The Gorge Amphitheatre (ABGT250)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 49, 
+        name: 'Hong Kong', 
+        position: [22.3193, 114.1694], 
+        fact: 'The city that hosted **ABGT300** at AsiaWorld-Expo in 2018, marking a significant Asia milestone.', 
+        country: 'China', 
+        events: [
+            { date: '2018-09-29', venue: 'AsiaWorld-Expo (ABGT300)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 50, 
+        name: 'Mexico City', 
+        position: [19.4326, -99.1332], 
+        fact: 'The host city for the two-day **ABGT600** milestone at Foro Sol in 2024.', 
+        country: 'Mexico', 
+        events: [
+            { date: '2024-10-19', venue: 'Hipódromo de las Américas (ABGT600)', type: 'Milestone' },
+        ] 
+    },
+    { 
+        id: 51, 
+        name: 'Cartagena', 
+        position: [10.3910, -75.4794], 
+        fact: 'Colombia\'s Cartagena hosted Above & Beyond first in 2007.',
+        country: 'Colombia', 
+        events: [
+            { date: '2007-01-02', venue: 'Summer Dance Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 52, 
+        name: 'Bucharest', 
+        position: [44.4268, 26.1025],
+        fact: 'Romania\'s capital city hosted Above & Beyond first in 2007.',
+        country: 'Romania', 
+        events: [
+            { date: '2007-03-31', venue: 'World Trade Plaza', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 53, 
+        name: 'Constanta', 
+        position: [44.1598, 28.6348],
+        fact: 'Romania\'s Constanta hosted Above & Beyond first in 2007.',
+        country: 'Romania', 
+        events: [
+            { date: '2007-04-29', venue: 'Anjunabeats Labelnight @ Club Two', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 54, 
+        name: 'Bratislava', 
+        position: [48.1486, 17.1077],
+        fact: 'Slovakia\'s capital city hosted Above & Beyond first in 2007.',
+        country: 'Slovakia', 
+        events: [
+            { date: '2007-06-22', venue: 'Dopler', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 55, 
+        name: 'Frankfurt', 
+        position: [50.1109, 8.6821],
+        fact: 'Germany\'s Frankfurt hosted Above & Beyond first in 2007.',
+        country: 'Germany',
+        events: [
+            { date: '2007-08-03', venue: 'Nature One', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 56, 
+        name: 'Harjumaa', 
+        position: [59.4370, 24.7536],
+        fact: 'Estonia\'s Harjumaa hosted Above & Beyond first in 2007.',
+        country: 'Estonia',
+        events: [
+            { date: '2007-08-10', venue: 'Take Off Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 57, 
+        name: 'Antrim', 
+        position: [54.6596, -6.2146],
+        fact: 'Northern Ireland\'s Antrim hosted Above & Beyond first in 2007.',
+        country: 'United Kingdom',
+        events: [
+            { date: '2007-09-08', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 58, 
+        name: 'Osijek', 
+        position: [45.5511, 18.6939],
+        fact: 'Croatia\'s Osijek hosted Above & Beyond first in 2007.',
+        country: 'Croatia',
+        events: [
+            { date: '2007-09-28', venue: 'Runway Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 59, 
+        name: 'Birmingham', 
+        position: [52.4862, -1.8904],
+        fact: 'Godskitchen\'s spiritual second home.',
+        country: 'United Kingdom',
+        events: [
+            { date: '2007-10-27', venue: 'Godskitchen Halloween Special', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 60, 
+        name: 'Goa', 
+        position: [15.2993, 74.1240],
+        fact: 'Where Anjuna was born - on the beaches of Goa.',
+        country: 'India',
+        events: [
+            { date: '2007-12-28', venue: 'Smirnoff Sunburn Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+];
+
+// --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
+
+const Sidebar = ({ 
+    yearFilter, setYearFilter, 
+    typeFilter, setTypeFilter, 
+    countryFilter, setCountryFilter, 
+    filteredEventsCount 
+}) => {
+    // Collect all unique years for the dropdown filter, ensuring they are sorted historically
+    const allYears = useMemo(() => {
+        const years = new Set();
+        CITIES.forEach(city => {
+            city.events.forEach(event => {
+                const year = event.date.substring(0, 4); 
+                years.add(year);
+            });
+        });
+        // Sort years numerically (smallest/oldest first)
+        return ['All Years', ...Array.from(years).sort((a, b) => parseInt(a) - parseInt(b))];
+    }, []);
+
+    // Collect all unique countries for the dropdown filter
+    const allCountries = useMemo(() => {
+        const countries = new Set();
+        CITIES.forEach(city => {
+            countries.add(city.country);
+        });
+        // Sort countries alphabetically
+        return ['All Countries', ...Array.from(countries).sort()];
+    }, []);
+    
+    // Define all possible event types for the filter (Re-adding 'Tour')
+    const EVENT_TYPES = ['All Types', 'Milestone', 'Tour', 'Other'];
+
+    return (
+        <div className="lg:w-1/4 w-full p-4 lg:p-6 bg-white rounded-xl shadow-lg border-2 border-indigo-100 lg:ml-6 mt-6 lg:mt-0">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                Map Filters
+            </h2>
+            <hr className="mb-4" />
+            
+            <div className="p-3 bg-indigo-50 rounded-lg shadow-inner mb-4">
+                <p className="text-sm font-medium text-indigo-700">Total Events recorded</p>
+                <p className="text-3xl font-extrabold text-indigo-600 mt-1">{filteredEventsCount}</p>
+            </div>
+
+            {/* Year Filter */}
+            <div className="mt-6">
+                <label htmlFor="year-filter" className="block text-sm font-medium text-gray-700 mb-2">Filter by Year:</label>
+                <select
+                    id="year-filter"
+                    value={yearFilter}
+                    onChange={(e) => setYearFilter(e.target.value)}
+                    className="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition cursor-pointer bg-white"
+                >
+                    {allYears.map(year => (
+                        <option key={year} value={year}>{year}</option>
+                    ))}
+                </select>
+            </div>
+
+            {/* Country Filter */}
+            <div className="mt-4">
+                <label htmlFor="country-filter" className="block text-sm font-medium text-gray-700 mb-2">Filter by Country:</label>
+                <select
+                    id="country-filter"
+                    value={countryFilter}
+                    onChange={(e) => setCountryFilter(e.target.value)}
+                    className="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition cursor-pointer bg-white"
+                >
+                    {allCountries.map(country => (
+                        <option key={country} value={country}>{country}</option>
+                    ))}
+                </select>
+            </div>
+
+            {/* Event Type Filter */}
+            <div className="mt-4">
+                <label htmlFor="type-filter" className="block text-sm font-medium text-gray-700 mb-2">Filter by Type:</label>
+                <select
+                    id="type-filter"
+                    value={typeFilter}
+                    onChange={(e) => setTypeFilter(e.target.value)}
+                    className="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition cursor-pointer bg-white"
+                >
+                    {EVENT_TYPES.map(type => (
+                        <option key={type} value={type}>{type}</option>
+                    ))}
+                </select>
+            </div>
+        </div>
+    );
+};
+
+
+// --- 3. LEAFLET MAP COMPONENT (MODIFIED FOR FIXED SORTING) ---
+
+const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => { 
+    const mapRef = useRef(null);
+    const mapInstance = useRef(null); 
+    const markerLayerRef = useRef(null); 
+    
+    const [isLeafletLoaded, setIsLeafletLoaded] = useState(false);
+    
+    // Constant for the Resident Advisor logo URL
+    const RA_LOGO_URL = 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/ResidentAdvisor_logo.png/1200px-ResidentAdvisor_logo.png';
+    const FALLBACK_RA_URL = 'https://placehold.co/20x20/cccccc/000000?text=RA';
+    
+    // Constant for Songkick logo URL
+    const SK_LOGO_URL = 'https://uptime.com/media/website_profiles/songkick.com.png';
+    const FALLBACK_SK_URL = 'https://placehold.co/20x20/ef4444/ffffff?text=SK'; 
+
+    // Constants for dynamic icon sizing
+    const MIN_ZOOM = 3; 
+    const MAX_ZOOM = 7; 
+    const BASE_SIZE = 32;
+
+    // --- MODIFIED HELPER FUNCTION: Sorts events chronologically (Lowest Year First) ---
+    /**
+     * Sorts events chronologically (earliest date first).
+     * This automatically sorts by year first, and then by month/day.
+     */
+    const sortEvents = (events) => {
+        // Function to parse date strings (YYYY-MM-DD) into Date objects
+        const parseDate = (dateStr) => {
+            const date = new Date(dateStr);
+            return isNaN(date.getTime()) ? new Date(0) : date;
+        };
+
+        const sorted = [...events].sort((a, b) => {
+            const dateA = parseDate(a.date);
+            const dateB = parseDate(b.date);
+            
+            // Fixed ascending sort: dateA - dateB for oldest first
+            const comparison = dateA.getTime() - dateB.getTime();
+
+            return comparison;
+        });
+        return sorted;
+    };
+
+
+    // Function to generate the custom SVG Icon with zoom scaling (NO CHANGES)
+    const getCustomIcon = (cityName, currentZoom) => {
+        if (typeof L === 'undefined') return;
+
+        // Calculate size based on a smaller zoom range for world map
+        const zoomRatio = Math.max(0, Math.min(1, (currentZoom - MIN_ZOOM) / (MAX_ZOOM - MIN_ZOOM)));
+        const scaleFactor = 0.8 + zoomRatio * 0.4; 
+        const size = Math.round(BASE_SIZE * scaleFactor);
+
+        // Use the first letter of the cleaned city name for the marker text
+        const markerText = cityName.charAt(0);
+
+        const svgContent = `
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${BASE_SIZE} ${BASE_SIZE}" width="${size}" height="${size}" class="marker-icon">
+                <path fill="#5B48B2" d="M16 0C7.163 0 0 7.163 0 16c0 6.627 4.032 12.28 9.712 14.54l6.288 1.46L22.288 30.54C27.968 28.28 32 22.627 32 16c0-8.837-7.163-16-16-16z"/>
+                <circle cx="16" cy="16" r="12" fill="#FFFFFF"/>
+                <text x="16" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5B48B2" text-anchor="middle">
+                    ${markerText}
+                </text>
+            </svg>
+        `;
+        
+        return new L.DivIcon({
+            html: svgContent,
+            className: 'transition-all duration-100 ease-out',
+            iconSize: [size, size],
+            iconAnchor: [size / 2, size], 
+            popupAnchor: [0, -size]
+        });
+    };
+
+    // --- Effect 1: Load Leaflet and Initialize Map (Runs Once) ---
+    useEffect(() => {
+        // Helper functions to load external resources
+        const loadScript = (url) => new Promise((resolve) => {
+            if (document.querySelector(`script[src="${url}"]`)) { resolve(); return; }
+            const script = document.createElement('script');
+            script.src = url;
+            script.onload = resolve;
+            document.head.appendChild(script);
+        });
+
+        const loadCSS = (url) => {
+            if (document.querySelector(`link[href="${url}"]`)) { return; }
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = url;
+            document.head.appendChild(link);
+        };
+        
+        loadCSS('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+        loadScript('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js').then(() => {
+            setIsLeafletLoaded(true);
+        });
+    }, []);
+
+    // --- Effect 2: Initialize Map Instance and Listeners (Runs on isLeafletLoaded=true) ---
+    useEffect(() => {
+        if (isLeafletLoaded && typeof L !== 'undefined' && mapRef.current && !mapInstance.current) {
+            const mapCenter = [20, 0]; 
+            const map = L.map(mapRef.current).setView(mapCenter, 3); 
+            mapInstance.current = map;
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            markerLayerRef.current = L.featureGroup().addTo(map);
+
+            const handleMapUpdate = () => {
+                const map = mapInstance.current;
+                if (!map) return;
+                
+                map.invalidateSize(true);
+                // Update marker icons on zoom
+                markerLayerRef.current.eachLayer(layer => {
+                    const cityName = layer.options.title; 
+                    if (cityName) { 
+                        layer.setIcon(getCustomIcon(cityName, map.getZoom()));
+                    }
+                });
+            };
+
+            const fixMap = () => {
+                map.invalidateSize(true);
+                setTimeout(() => map.invalidateSize(true), 50);
+            };
+            
+            fixMap(); 
+            window.addEventListener('resize', fixMap);
+            map.on('zoomend', handleMapUpdate); 
+
+            // Cleanup function for map instance
+            return () => {
+                if (mapInstance.current) {
+                    mapInstance.current.remove();
+                    mapInstance.current = null;
+                }
+                window.removeEventListener('resize', fixMap);
+            };
+        }
+    }, [isLeafletLoaded]); 
+
+    // --- Effect 3: Filter and Draw Markers (Runs on filter change or map init) ---
+    useEffect(() => {
+        if (!mapInstance.current || !markerLayerRef.current) return;
+
+        const map = mapInstance.current;
+        const markerLayer = markerLayerRef.current;
+        
+        // Store markers whose popups are currently open to update them later
+        const openPopups = {};
+        markerLayer.eachLayer(layer => {
+            if (layer.isPopupOpen()) {
+                openPopups[layer.options.title] = layer;
+            }
+        });
+        
+        // Clear all existing markers (we'll redraw them)
+        markerLayer.clearLayers();
+
+        const currentZoom = map.getZoom();
+
+        // 2. Add filtered and sorted markers
+        CITIES.forEach(city => {
+            // Filter city based on Country filter
+            const countryMatchCity = countryFilter === 'All Countries' || city.country === countryFilter;
+            
+            if (!countryMatchCity) {
+                return; // Skip the city entirely if it doesn't match the country filter
+            }
+            
+            // 1. Filter events based on year AND type
+            const filteredEventsRaw = city.events.filter(event => {
+                const year = event.date.substring(0, 4);
+                const yearMatch = yearFilter === 'All Years' || year === yearFilter;
+                const typeMatch = typeFilter === 'All Types' || event.type === typeFilter;
+                
+                return yearMatch && typeMatch; 
+            });
+
+            // 2. Sort the filtered events (always ascending chronological)
+            const filteredEvents = sortEvents(filteredEventsRaw);
+
+
+            // Only show the city marker if it has matching events
+            if (filteredEvents.length > 0) {
+                
+                // Create event table rows from filtered and sorted events
+                const tableRows = filteredEvents.map(event => {
+                    let sourceDisplay = '';
+                    let sourceTitle = '';
+                    
+                    // Show RA logo only if explicitly flagged as ResidentAdvisor source
+                    if (event.isResidentAdvisor) {
+                        sourceTitle = 'Source: Resident Advisor';
+                        sourceDisplay = `<div class="flex items-center justify-center p-0 m-0"> 
+                                            <img src="${RA_LOGO_URL}" 
+                                                 class="w-5 h-5 object-contain align-middle" 
+                                                 alt="Resident Advisor Logo" 
+                                                 title="${sourceTitle}"
+                                                 onerror="this.onerror=null;this.src='${FALLBACK_RA_URL}';"
+                                            />
+                                       </div>`;
+                    } else if (event.isSongkick) {
+                        sourceTitle = 'Source: Songkick';
+                        sourceDisplay = `<div class="flex items-center justify-center p-0 m-0"> 
+                                            <img src="${SK_LOGO_URL}" 
+                                                 class="w-5 h-5 object-contain align-middle" 
+                                                 alt="Songkick Logo" 
+                                                 title="${sourceTitle}"
+                                                 onerror="this.onerror=null;this.src='${FALLBACK_SK_URL}';"
+                                            />
+                                       </div>`;
+                    }
+                    
+                    return `
+                        <tr class="border-b border-gray-100 last:border-b-0 transition">
+                            <td class="px-3 py-1 text-xs text-gray-700 font-mono sm:w-[23%]">${event.date}</td>
+                            <td class="px-3 py-1 text-xs text-gray-700 sm:w-[67%]">${event.venue}</td>
+                            <td class="px-3 py-1 text-xs text-gray-700 hidden sm:table-cell sm:w-[10%] text-center align-middle h-full">${sourceDisplay}</td>
+                        </tr>
+                    `;
+                }).join('');
+
+                // Popup content construction (using filtered events)
+                const popupContent = `
+                    <div class="p-4 font-inter w-full">
+                        <h3 class="text-xl font-bold text-indigo-700 mb-3">${city.name}, ${city.country}</h3>
+                        
+                        <blockquote class="text-xs italic text-gray-500 border-l-4 border-indigo-400 pl-3 py-1 mb-4 bg-indigo-50 rounded-r-lg min-w-xl">
+                            ${city.fact}
+                        </blockquote>
+
+                        <div class="max-h-60 overflow-y-auto border border-gray-200 rounded-lg shadow-inner">
+                            <table class="w-full text-left table-fixed">
+                                <thead class="bg-gray-100 sticky top-0">
+                                    <tr>
+                                        <!-- DATE HEADER: Now static, no click handler or sort icon -->
+                                        <th scope="col" 
+                                            class="px-3 py-1 text-xs font-bold text-gray-600 sm:w-[23%] select-none"
+                                            title="Sorted by Year (Lowest First)">
+                                            Date
+                                        </th>
+                                        <th class="px-3 py-1 text-xs font-bold text-gray-600 sm:w-[67%]">Venue</th>
+                                        <th class="px-3 py-1 text-xs font-bold text-gray-600 hidden sm:table-cell sm:w-[10%] text-center"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${tableRows}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-[10px] text-gray-400 mt-2">Last column indicates the source from which the event was grabbed.</p>
+                    </div>
+                `;
+
+                // Create and add marker to the feature group
+                const icon = getCustomIcon(city.name, currentZoom);
+                const marker = L.marker(city.position, { icon: icon, title: city.name });
+                marker.bindPopup(popupContent, { minWidth: 600, maxWidth: 600 });
+                
+                markerLayer.addLayer(marker);
+
+                // CRITICAL: If the popup for this city was open before the re-render, update its content
+                if (openPopups[city.name]) {
+                    // Find the existing marker instance (which is now in markerLayer)
+                    markerLayer.eachLayer(newMarker => {
+                        if (newMarker.options.title === city.name) {
+                            // Update the content of the already open popup
+                            newMarker.setPopupContent(popupContent);
+                        }
+                    });
+                }
+            }
+        });
+        
+    }, [isLeafletLoaded, yearFilter, typeFilter, countryFilter]); 
+
+    return (
+        <div 
+            ref={mapRef} 
+            id="map" 
+            className="h-[600px] w-full rounded-xl"
+        >
+            {!isLeafletLoaded && (
+                <div className="flex items-center justify-center h-full bg-gray-100 rounded-xl">
+                    <p className="text-gray-500 font-semibold text-lg">Loading map data...</p>
+                </div>
+            )}
+        </div>
+    );
+};
+
+// --- 4. MAIN APP COMPONENT (NO CHANGES) ---
+
+export default function App() {
+    const [yearFilter, setYearFilter] = useState('All Years'); 
+    const [typeFilter, setTypeFilter] = useState('All Types'); 
+    const [countryFilter, setCountryFilter] = useState('All Countries'); 
+
+    // Calculate the total count of events based on current filters
+    const filteredEventsCount = useMemo(() => {
+        return CITIES.reduce((total, city) => {
+            // 1. Check country match
+            const countryMatch = countryFilter === 'All Countries' || city.country === countryFilter;
+            
+            if (!countryMatch) {
+                return total;
+            }
+
+            // 2. Filter events by year and type
+            const matchingEvents = city.events.filter(event => {
+                const year = event.date.substring(0, 4);
+                const yearMatch = yearFilter === 'All Years' || year === yearFilter;
+                const typeMatch = typeFilter === 'All Types' || event.type === typeFilter;
+                
+                return yearMatch && typeMatch;
+            });
+            return total + matchingEvents.length;
+        }, 0);
+    }, [yearFilter, typeFilter, countryFilter]);
+    
+    return (
+        <>
+            <style>
+                {`
+                    /* Global Styles */
+                    body { 
+                        font-family: 'Inter', sans-serif; 
+                        background-color: #f3f4f6;
+                        padding: 1.5rem; 
+                        min-height: 100vh; 
+                    }
+                    
+                    /* Leaflet Popup Styling - Ensures proper appearance */
+                    .leaflet-popup-content-wrapper {
+                        border-radius: 0.75rem;
+                        padding: 0;
+                        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                    }
+                    .leaflet-popup-content {
+                        margin: 0;
+                    }
+                    /* Custom icon styling to ensure SVG is rendered correctly */
+                    .leaflet-marker-icon svg {
+                        display: block;
+                        transition: all 0.1s ease-out; 
+                    }
+                    /* Ensure table header sticks within the popup */
+                    .max-h-60 table thead {
+                        background-color: #f3f4f6;
+                    }
+                    
+                    /* CRITICAL FIX: Enforce absolute height of 30px for all table cells in the popup. */
+                    .leaflet-popup table th, 
+                    .leaflet-popup table td {
+                        height: 30px !important;
+                        min-height: 30px !important;
+                        vertical-align: middle !important;
+                        line-height: 1.25rem; 
+                        box-sizing: border-box; 
+                    }
+                `}
+            </style>
+            
+            <div className="flex flex-col items-center">
+                <header className="w-full max-w-5xl text-center mb-8">
+                    <h1 className="text-4xl font-extrabold text-gray-800 mb-2">
+                        Above & Beyond Worldwide Event History Map
+                    </h1>
+                    <p className="text-lg text-indigo-600">
+                        Explore their global tour history, featuring major events from **2004** to **2026**.
+                    </p>
+                </header>
+
+                {/* Main Content: Map and Sidebar */}
+                <div className="w-full max-w-5xl flex flex-col lg:flex-row shadow-2xl overflow-hidden rounded-xl bg-white p-4">
+                    
+                    {/* Map Container (takes 3/4 width on desktop) */}
+                    <div className="lg:w-3/4 w-full border-4 border-indigo-200 rounded-xl overflow-hidden">
+                        <MapComponent 
+                            yearFilter={yearFilter} 
+                            typeFilter={typeFilter}
+                            countryFilter={countryFilter}
+                        />
+                    </div>
+
+                    {/* Sidebar (takes 1/4 width on desktop) */}
+                    <Sidebar 
+                        yearFilter={yearFilter}
+                        setYearFilter={setYearFilter}
+                        typeFilter={typeFilter}
+                        setTypeFilter={setTypeFilter}
+                        countryFilter={countryFilter}
+                        setCountryFilter={setCountryFilter}
+                        filteredEventsCount={filteredEventsCount}
+                    />
+                </div>
+
+                <footer className="mt-8 text-sm text-gray-500">
+                    <p>Map implementation uses Leaflet, OpenStreetMap, and custom SVG markers. Data is simulated based on known tour history.</p>
+                </footer>
+            </div>
+        </>
+    );
+}
