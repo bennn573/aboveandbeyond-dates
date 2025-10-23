@@ -534,7 +534,7 @@ const CITIES = [
         id: 44, 
         name: 'Beirut', 
         position: [33.8938, 35.5018], 
-        fact: 'Host of the major **TATW400** milestone event at the Forum de Beyrouth in 2011.', 
+        fact: 'Host of the major TATW400 milestone event at the Forum de Beyrouth in 2011.', 
         country: 'Lebanon', 
         events: [
             { date: '2011-11-26', venue: 'Forum de Beyrouth (TATW400)', type: 'Milestone' },
