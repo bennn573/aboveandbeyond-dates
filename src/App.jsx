@@ -28,6 +28,7 @@ const CITIES = [
             { date: '2007-12-07', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2008-10-10', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-31', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-04-02', venue: 'Anjunabeats @ Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2015-04-03', venue: 'Brixton Academy', type: 'Tour' },
@@ -44,14 +45,14 @@ const CITIES = [
         fact: 'Home to the most iconic A&B events in the US.', 
         country: 'United States', 
         events: [
-            // MILESTONES (TATW350 and TATW400)
+            // MILESTONES (TATW350 and ABGT500)
             { date: '2010-12-10', venue: 'Hollywood Palladium (TATW350)', type: 'Milestone' },
-            { date: '2011-12-10', venue: 'Shrine Exposition Hall (TATW400)', type: 'Milestone' }, 
             { date: '2022-10-15', venue: 'Banc of California Stadium (ABGT500)', type: 'Milestone' },
             
             // OTHER DATES
             { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-13', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-06-26', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
         ], 
     },
     // 3. GLASGOW 
@@ -112,6 +113,7 @@ const CITIES = [
             { date: '2008-08-14', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-18', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-07-01', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
         ]
     },
@@ -186,6 +188,7 @@ const CITIES = [
             { date: '2015-09-26', venue: 'Allphones Arena (ABGT150)', type: 'Milestone' }, 
             { date: '2005-10-02', venue: 'Godskitchen @ Space', type: 'Other', isResidentAdvisor: true },
             { date: '2008-11-30', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-06', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -198,6 +201,7 @@ const CITIES = [
         events: [
             { date: '2005-10-08', venue: 'Rod Laver Arena', type: 'Other', isResidentAdvisor: true },
             { date: '2008-11-22', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-07', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -230,6 +234,7 @@ const CITIES = [
         country: 'Netherlands', 
         events: [
             { date: '2006-02-11', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-04-03', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
             { date: '2019-02-23', venue: 'A State of Trance 900', type: 'Other' },
         ]
     },
@@ -246,6 +251,7 @@ const CITIES = [
             { date: '2007-03-22', venue: 'Made Event pres. Above & Beyond', type: 'Other', isResidentAdvisor: true },
             { date: '2007-03-23', venue: 'Wet Grooves Beach Party After Dark', type: 'Other', isResidentAdvisor: true },
             { date: '2008-03-27', venue: 'Anjunabeats 100 with Above & Beyond', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-27', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -266,6 +272,7 @@ const CITIES = [
         fact: 'Host city for Creamfields Australia 2012.', 
         country: 'Australia', 
         events: [
+            { date: '2010-03-08', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -367,6 +374,7 @@ const CITIES = [
         country: 'France', 
         events: [
             { date: '2008-04-18', venue: 'Queen', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-01-28', venue: 'Queen', type: 'Other', isResidentAdvisor: true },
             { date: '2015-01-31', venue: 'Le Trianon', type: 'Tour' },
             { date: '2016-12-11', venue: 'Elysée Montmartre', type: 'Tour' },
             { date: '2018-11-07', venue: 'Le Trianon', type: 'Tour' },
@@ -711,6 +719,7 @@ const CITIES = [
             { date: '2007-10-27', venue: 'Godskitchen Halloween Special', type: 'Other', isResidentAdvisor: true },
             { date: '2008-03-22', venue: 'Godskitchen Easter Special', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-27', venue: 'Godskitchen\'s Birthday', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-01-30', venue: 'Godskitchen', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -763,6 +772,7 @@ const CITIES = [
         country: 'United States',
         events: [
             { date: '2008-04-25', venue: 'Bleu', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-21', venue: 'Necto', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -857,7 +867,7 @@ const CITIES = [
         ] 
     },
     { 
-        id: 73, 
+        id: 74, 
         name: 'San Francisco',
         position: [37.77493, -122.41942],
         fact: '',
@@ -867,29 +877,64 @@ const CITIES = [
         ] 
     },
     { 
-        id: 74, 
+        id: 75, 
         name: 'Perth',
         position: [-31.951329528, 115.855329912],
         fact: '',
         country: 'Australia',
         events: [
             { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-02-28', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
         ] 
     },
-        { 
-        id: 75, 
+    { 
+        id: 76, 
         name: 'Brisbane',
         position: [-27.467331464, 153.02333324],
         fact: '',
         country: 'Australia',
         events: [
             { date: '2008-11-29', venue: 'Global Gathering Brisbane', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-02-27', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
         ] 
+    },
+    { 
+        id: 77, 
+        name: 'Chicago, IL', 
+        position: [41.85003, -87.65005], 
+        fact: '', 
+        country: 'United States', 
+        events: [
+            { date: '2010-03-20', venue: 'Spring Awakening', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 78, 
+        name: 'Ljubljana', 
+        position: [46.05139, 14.50611], 
+        fact: '', 
+        country: 'Slovenia', 
+        events: [
+            { date: '2010-04-26', venue: 'Dance Republic Revolution', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 79, 
+        name: 'Glastonbury', 
+        position: [51.155015, -2.585598], 
+        fact: '', 
+        country: 'United Kingdom', 
+        events: [
+            { date: '2010-06-27', venue: 'Glastonbury Festival', type: 'Other', isResidentAdvisor: true },
+        ]
     },
 ];
 
+// RESIDENT ADVISOR
 /*
 Add 2008 Anjunabeats 100 North America tour
+2010: Up to Fri, 16 Jul 2010
+Sennheiser presents: Open Air Festival Palanga 2010 07 16/17
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
