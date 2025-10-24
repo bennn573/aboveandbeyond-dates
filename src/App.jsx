@@ -1243,7 +1243,7 @@ const CITIES = [
             { date: '2002', venue: 'Unnamed Venue', type: 'Other' },
             { date: '2000', venue: 'Unnamed Venue', type: 'Other' },
         ] 
-    }
+    },
 ];
 
 // RESIDENT ADVISOR
