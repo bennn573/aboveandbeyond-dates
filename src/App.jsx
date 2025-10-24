@@ -325,7 +325,7 @@ const CITIES = [
         name: 'Belfast', 
         position: [54.5973, -5.9301], 
         fact: 'Host of the 2016 European Tour at Ulster Hall and part of the 2018 Common Ground Tour.', 
-        country: 'United Kingdom', 
+        country: 'United Kingdom (Northern Ireland)', 
         events: [
             { date: '2016-11-26', venue: 'Ulster Hall', type: 'Tour' },
             { date: '2018-11-09', venue: 'The Telegraph Building', type: 'Tour' },
@@ -749,7 +749,7 @@ const CITIES = [
         name: 'Antrim', 
         position: [54.6596, -6.2146],
         fact: 'Northern Ireland\'s Antrim hosted Above & Beyond first in 2007.',
-        country: 'United Kingdom',
+        country: 'United Kingdom (Northern Ireland)',
         events: [
             { date: '2007-09-08', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2010-09-10', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
