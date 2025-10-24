@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 
-// --- 1. DATA & CONSTANTS (UPDATED CITIES WITH MERGED HOLLYWOOD EVENT) ---
 const CITIES = [
     // 1. LONDON 
     { 
@@ -516,7 +515,7 @@ const CITIES = [
         id: 38, 
         name: 'Budapest', 
         position: [47.4979, 19.0402], 
-        fact: '', 
+        fact: 'The capital of Hungary is home to the infamous Sziget Festival.', 
         country: 'Hungary', 
         events: [
             { date: '2010-10-16', venue: 'T-Mobile Bónusz Electronic Music Festival', type: 'Other', isResidentAdvisor: true },
@@ -794,7 +793,6 @@ const CITIES = [
         id: 63, 
         name: 'Columbus, OH', 
         position: [39.983334, -82.983330],
-        fact: '',
         country: 'United States',
         events: [
             { date: '2008-04-24', venue: 'Anjunabeats 100 @ Sugar', type: 'Other', isResidentAdvisor: true },
@@ -804,7 +802,6 @@ const CITIES = [
         id: 64, 
         name: 'Detroit', 
         position: [42.3314, -83.0458],
-        fact: '',
         country: 'United States',
         events: [
             { date: '2008-04-25', venue: 'Bleu', type: 'Other', isResidentAdvisor: true },
