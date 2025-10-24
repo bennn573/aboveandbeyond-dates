@@ -1240,8 +1240,6 @@ const CITIES = [
         country: 'Japan', 
         events: [
             { date: '2011-10-22', venue: 'AgeHa', type: 'Other', isResidentAdvisor: true },
-            { date: '2002', venue: 'Unnamed Venue', type: 'Other' },
-            { date: '2000', venue: 'Unnamed Venue', type: 'Other' },
         ] 
     },
 ];
