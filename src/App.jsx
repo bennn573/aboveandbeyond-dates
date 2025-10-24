@@ -29,6 +29,7 @@ const CITIES = [
             { date: '2008-10-10', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-31', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2010-04-02', venue: 'Anjunabeats @ Ministry of Sound', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-10-30', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2015-04-03', venue: 'Brixton Academy', type: 'Tour' },
@@ -128,6 +129,7 @@ const CITIES = [
             { date: '2006-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2007-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2008-07-26', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -262,6 +264,7 @@ const CITIES = [
         country: 'United Kingdom', 
         events: [
             { date: '2008-04-11', venue: 'Godskitchen Leeds', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-05-02', venue: 'Digital Society', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-13', venue: 'O2 Academy Leeds', type: 'Tour' },
         ]
     },
@@ -280,10 +283,11 @@ const CITIES = [
         id: 19, 
         name: 'Manchester', 
         position: [53.4808, -2.2426], 
-        fact: 'The city was a stop on the 2016 European Tour at The Warehouse Project, the 2015 "We Are All We Need" Tour at Albert Hall, and the 2018 Common Ground Tour.', 
+        fact: 'The city is a frequent stop historically at Sankeys, more recently at The Warehouse Project and on tours.', 
         country: 'United Kingdom', 
         events: [
             { date: '2007-05-12', venue: 'The Music Box', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-12-26', venue: 'The Warehouse Project', type: 'Other', isResidentAdvisor: true },
             { date: '2015-04-05', venue: 'Albert Hall', type: 'Tour' },
             { date: '2016-11-25', venue: 'The Warehouse Project', type: 'Tour' },
             { date: '2018-11-16', venue: 'The Warehouse Project', type: 'Tour' },
@@ -305,9 +309,10 @@ const CITIES = [
         id: 21, 
         name: 'Dublin', 
         position: [53.3498, -6.2603], 
-        fact: 'The Irish capital was part of the 2016 European Tour, playing at the Olympia Theatre.', 
+        fact: 'The Irish capital.', 
         country: 'Ireland', 
         events: [
+            { date: '2010-10-29', venue: 'Tripod', type: 'Other', isResidentAdvisor: true },
             { date: '2016-11-27', venue: 'Olympia Theatre', type: 'Tour' },
         ] 
     },
@@ -347,7 +352,7 @@ const CITIES = [
         id: 25, 
         name: 'Cologne', 
         position: [50.9375, 6.9603], 
-        fact: 'A German stop on the 2015 "We Are All We Need" Tour, the 2016 European Tour, and the 2018 Common Ground Tour.', 
+        fact: 'A German stop on the 2015, the 2016, the 2018 and the 2025 tour.', 
         country: 'Germany', 
         events: [
             { date: '2015-01-15', venue: 'Live Music Hall', type: 'Tour' },
@@ -385,24 +390,25 @@ const CITIES = [
         id: 28, 
         name: 'Stockholm', 
         position: [59.3293, 18.0686], 
-        fact: 'The Swedish capital was a stop on the 2015 "We Are All We Need" Tour, the 2016 European Tour, and the 2018 Common Ground Tour.', 
+        fact: 'The Swedish capital was a stop on the 2015, 2016 European Tour, and the 2018 Common Ground Tour.', 
         country: 'Sweden', 
         events: [
             { date: '2015-01-24', venue: 'Münchenbryggeriet', type: 'Tour' },
             { date: '2016-12-15', venue: 'Nobelberget', type: 'Tour' },
             { date: '2018-10-22', venue: 'Berns', type: 'Tour' },
-            { date: '2025-11-22', venue: 'TBA', type: 'Tour' },
+            { date: '2025-11-22', venue: 'Fållan', type: 'Tour' },
         ] 
     },
     { 
         id: 29, 
         name: 'Helsinki', 
         position: [60.1699, 24.9384], 
-        fact: 'A Nordic stop for the 2015 "We Are All We Need" Tour at The Circus, which was also the final city of the 2016 Nordic leg.', 
+        fact: 'A Nordic stop for the tours.', 
         country: 'Finland', 
         events: [
+            { date: '2010-11-12', venue: 'Fredan Tivoli', type: 'Tour' },
             { date: '2015-01-17', venue: 'Circus', type: 'Tour' },
-            { date: '2016-12-16', venue: 'The Circus', type: 'Tour' },
+            { date: '2016-12-16', venue: 'Circus', type: 'Tour' },
         ] 
     },
     { 
@@ -477,10 +483,10 @@ const CITIES = [
         id: 36, 
         name: 'Lausanne', 
         position: [46.5197, 6.6323], 
-        fact: 'A stop in Switzerland for the 2025 Tour at DI Club.', 
+        fact: 'A stop in Switzerland for the 2025 Tour at D! Club.', 
         country: 'Switzerland', 
         events: [
-            { date: '2025-11-08', venue: 'DI Club', type: 'Tour' },
+            { date: '2025-11-08', venue: 'D! Club', type: 'Tour' },
         ] 
     },
     { 
@@ -497,10 +503,11 @@ const CITIES = [
         id: 38, 
         name: 'Budapest', 
         position: [47.4979, 19.0402], 
-        fact: 'A stop in Hungary for the 2025 Tour at Onaida Bay.', 
+        fact: '', 
         country: 'Hungary', 
         events: [
-            { date: '2025-11-29', venue: 'Onaida Bay', type: 'Tour' },
+            { date: '2010-10-16', venue: 'T-Mobile Bónusz Electronic Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2025-11-29', venue: 'Obuda Bay', type: 'Tour' },
         ] 
     },
     { 
@@ -517,9 +524,10 @@ const CITIES = [
         id: 40, 
         name: 'Gdansk', 
         position: [54.3520, 18.6464], 
-        fact: 'A Polish stop for the 2025 Tour at B90.', 
+        fact: 'A Polish stop for the boys.', 
         country: 'Poland', 
         events: [
+            { date: '2010-10-15', venue: 'Stocznia Gdanska', type: 'Other', isResidentAdvisor: true },
             { date: '2025-12-13', venue: 'B90', type: 'Tour' },
         ] 
     },
@@ -564,6 +572,7 @@ const CITIES = [
         country: 'Lebanon', 
         events: [
             { date: '2008-04-04', venue: 'Forum de Beyrouth', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-09-11', venue: 'Forum de Beyrouth', type: 'Other', isResidentAdvisor: true },
             { date: '2011-11-26', venue: 'Forum de Beyrouth (TATW400)', type: 'Milestone' },
         ] 
     },
@@ -581,9 +590,10 @@ const CITIES = [
         id: 46, 
         name: 'Bangalore', 
         position: [12.9716, 77.5946], 
-        fact: 'The Indian city that hosted the final Trance Around The World milestone, **TATW450**, at the Jayamahal Palace.', 
+        fact: 'The Indian city that hosted the final Trance Around The World milestone TATW450 at the Jayamahal Palace.', 
         country: 'India', 
         events: [
+            { date: '2010-09-19', venue: 'Fuga', type: 'Other', isResidentAdvisor: true },
             { date: '2012-11-10', venue: 'Jayamahal Palace (TATW450)', type: 'Milestone' },
         ] 
     },
@@ -596,6 +606,7 @@ const CITIES = [
         events: [
             { date: '2007-06-01', venue: 'Pacha NYC', type: 'Other', isResidentAdvisor: true },
             { date: '2008-05-02', venue: 'Anjunabeats 100 @ Pacha NYC', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-09-05', venue: 'Electric Zoo', type: 'Other', isResidentAdvisor: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
         ] 
     },
@@ -613,9 +624,10 @@ const CITIES = [
         id: 49, 
         name: 'Hong Kong', 
         position: [22.3193, 114.1694], 
-        fact: 'The city that hosted **ABGT300** at AsiaWorld-Expo in 2018, marking a significant Asia milestone.', 
+        fact: 'The city that hosted ABGT300 at AsiaWorld-Expo in 2018, marking a significant Asia milestone.', 
         country: 'China', 
         events: [
+            { date: '2010-09-30', venue: 'AsiaWorld-Expo', type: 'Other', isResidentAdvisor: true },
             { date: '2018-09-29', venue: 'AsiaWorld-Expo (ABGT300)', type: 'Milestone' },
         ] 
     },
@@ -626,6 +638,7 @@ const CITIES = [
         fact: 'The host city for the two-day **ABGT600** milestone at Foro Sol in 2024.', 
         country: 'Mexico', 
         events: [
+            { date: '2010-12-11', venue: 'Hipódromo de las Américas', type: 'Other', isResidentAdvisor: true },
             { date: '2024-10-19', venue: 'Hipódromo de las Américas (ABGT600)', type: 'Milestone' },
         ] 
     },
@@ -647,6 +660,7 @@ const CITIES = [
         country: 'Romania', 
         events: [
             { date: '2007-03-31', venue: 'World Trade Plaza', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-31', venue: 'World Trade Plaza', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -697,6 +711,7 @@ const CITIES = [
         country: 'United Kingdom',
         events: [
             { date: '2007-09-08', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-09-10', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -720,6 +735,7 @@ const CITIES = [
             { date: '2008-03-22', venue: 'Godskitchen Easter Special', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-27', venue: 'Godskitchen\'s Birthday', type: 'Other', isResidentAdvisor: true },
             { date: '2010-01-30', venue: 'Godskitchen', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-11-27', venue: 'Godskitchen pres. Anjunabeats', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -741,6 +757,7 @@ const CITIES = [
         events: [
             { date: '2008-02-09', venue: 'Zouk', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-13', venue: 'ZoukOut 2008', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-09-23', venue: 'Avalon at Large!', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -788,12 +805,13 @@ const CITIES = [
     },
     { 
         id: 66, 
-        name: 'Washington DC', 
+        name: 'Washington, DC', 
         position: [38.8951, -77.0364],
         fact: '',
         country: 'United States',
         events: [
             { date: '2008-05-03', venue: 'Glow', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-05-15', venue: 'Fur Nightclub', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -824,6 +842,7 @@ const CITIES = [
         country: 'Spain',
         events: [
             { date: '2008-07-11', venue: 'Tiësto In Search Of Sunrise Tour 08', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-08-07', venue: 'Barcelona Music Conference @ Montjuic', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -854,6 +873,7 @@ const CITIES = [
         country: 'Russia',
         events: [
             { date: '2008-08-02', venue: 'Global Gathering Russia 2008', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-07-17', venue: 'Global Gathering Russia 2010', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -928,13 +948,121 @@ const CITIES = [
             { date: '2010-06-27', venue: 'Glastonbury Festival', type: 'Other', isResidentAdvisor: true },
         ]
     },
+    { 
+        id: 80, 
+        name: 'Palanga', 
+        position: [55.970662784, 21.089666308], 
+        fact: '', 
+        country: 'Lithuania', 
+        events: [
+            { date: '2010-07-16', venue: 'Sennheiser pres. Open Air Festival', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 81, 
+        name: 'Póvoa de Varzim', 
+        position: [41.38344, -8.76364], 
+        fact: '', 
+        country: 'Portugal', 
+        events: [
+            { date: '2010-07-31', venue: 'MMC 2010 - Midsummer Music Conference', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 82, 
+        name: 'Seattle, WA', 
+        position: [47.60621, -122.33207], 
+        fact: '', 
+        country: 'United States', 
+        events: [
+            { date: '2010-09-03', venue: 'The Showbox Market', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 83, 
+        name: 'Toronto', 
+        position: [43.70011, -79.4163], 
+        fact: '', 
+        country: 'Canada', 
+        events: [
+            { date: '2010-09-05', venue: 'Labour Of Love @ The Guvernment', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 84, 
+        name: 'Mumbai', 
+        position: [19.07283, 72.88261], 
+        fact: '', 
+        country: 'India', 
+        events: [
+            { date: '2010-09-17', venue: 'Blue Frog', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 85, 
+        name: 'New Delhi', 
+        position: [28.63576, 77.22445], 
+        fact: '', 
+        country: 'India', 
+        events: [
+            { date: '2010-09-18', venue: 'Quantum', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 86, 
+        name: 'Manila', 
+        position: [14.58, 121.0], 
+        fact: '', 
+        country: 'Philippines', 
+        events: [
+            { date: '2010-10-01', venue: 'WTC Hall', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 86, 
+        name: 'Sofia', 
+        position: [42.69751, 23.32415], 
+        fact: '', 
+        country: 'Bulgaria', 
+        events: [
+            { date: '2010-10-09', venue: 'Yalta Club', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    { 
+        id: 87, 
+        name: 'Milan', 
+        position: [45.46427, 9.18951], 
+        fact: '', 
+        country: 'Italy', 
+        events: [
+            { date: '2010-10-22', venue: 'Amnesia', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 88, 
+        name: 'Sao Paulo', 
+        position: [-23.5475, -46.63611], 
+        fact: '', 
+        country: 'Brazil', 
+        events: [
+            { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 89, 
+        name: 'Nicosia', 
+        position: [35.17531, 33.3642], 
+        fact: '', 
+        country: 'Cyprus', 
+        events: [
+            { date: '2010-12-17', venue: 'The Pavillion Hall', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
 ];
 
 // RESIDENT ADVISOR
 /*
 Add 2008 Anjunabeats 100 North America tour
-2010: Up to Fri, 16 Jul 2010
-Sennheiser presents: Open Air Festival Palanga 2010 07 16/17
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
