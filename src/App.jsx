@@ -1612,7 +1612,7 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                 // Create and add marker to the feature group
                 const icon = getCustomIcon(city.name, currentZoom);
                 const marker = L.marker(city.position, { icon: icon, title: city.name });
-                marker.bindPopup(popupContent, { minWidth: 600, maxWidth: 600 });
+                marker.bindPopup(popupContent, { minWidth: 540, maxWidth: 600 });
                 
                 markerLayer.addLayer(marker);
 
