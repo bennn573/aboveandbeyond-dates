@@ -34,6 +34,8 @@ const CITIES = [
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2015-04-03', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2015-04-04', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2019-04-12', venue: 'Printworks', type: 'Tour' },
+            { date: '2019-04-13', venue: 'Printworks', type: 'Tour' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
         ]
@@ -118,6 +120,7 @@ const CITIES = [
             { date: '2010-07-01', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2011-06-30', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
+            { date: '2019-07-12', venue: 'Ushuaia', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -175,6 +178,7 @@ const CITIES = [
             { date: '2011-08-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2011-10-08', venue: 'Cream 19th Birthday @ Nation', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-14', venue: 'O2 Academy Liverpool', type: 'Tour' },
+            { date: '2019-08-24', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -303,6 +307,7 @@ const CITIES = [
             { date: '2015-04-05', venue: 'Albert Hall', type: 'Tour' },
             { date: '2016-11-25', venue: 'The Warehouse Project', type: 'Tour' },
             { date: '2018-11-16', venue: 'The Warehouse Project', type: 'Tour' },
+            { date: '2019-11-29', venue: 'The Warehouse Project', type: 'Other' },
         ] 
     },
     { 
@@ -530,6 +535,7 @@ const CITIES = [
         fact: 'The Scottish capital hosts the 2025 Tour at the Corn Exchange.', 
         country: 'United Kingdom', 
         events: [
+            { date: '2019-09-14', venue: 'EH1 Festival', type: 'Tour' },
             { date: '2025-12-07', venue: 'Edinburgh Corn Exchange', type: 'Tour' },
         ] 
     },
@@ -554,6 +560,7 @@ const CITIES = [
             { date: '2007-09-22', venue: 'Paradise Garage', type: 'Other', isResidentAdvisor: true  },
             { date: '2008-06-07', venue: 'Versus Sessions Festival', type: 'Other', isResidentAdvisor: true  },
             { date: '2011-11-12', venue: 'Creamfields Buenos Aires', type: 'Other', isResidentAdvisor: true  },
+            { date: '2019-02-09', venue: 'Mandarine Park', type: 'Other' },
             { date: '2026-02-14', venue: 'Parque de la Ciudad', type: 'Other' },
             { date: '2026-02-15', venue: 'Parque de la Ciudad', type: 'Other' },
         ] 
@@ -624,6 +631,7 @@ const CITIES = [
             { date: '2011-04-23', venue: 'Best Buy Theater', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-03', venue: 'Electric Zoo Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
+            { date: '2019-08-31', venue: 'Electric Zoo: Evolved', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -880,6 +888,8 @@ const CITIES = [
         events: [
             { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
             { date: '2011-07-23', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-07-19', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-07-26', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -923,6 +933,7 @@ const CITIES = [
             { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Other', isResidentAdvisor: true },
             { date: '2010-02-28', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-09', venue: 'Metro City', type: 'Tour', isResidentAdvisor: true },
+            { date: '2019-11-16', venue: 'Amon Vision Courtyard Party', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1170,6 +1181,7 @@ const CITIES = [
         country: 'Canada', 
         events: [
             { date: '2011-04-24', venue: 'Palais Des Congrès de Montréal', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-01-25', venue: 'Igloofest', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1242,12 +1254,37 @@ const CITIES = [
             { date: '2011-10-22', venue: 'AgeHa', type: 'Other', isResidentAdvisor: true },
         ] 
     },
+    { 
+        id: 106, 
+        name: 'Morrison, CO', 
+        position: [39.6548, -105.2057], 
+        fact: "Home to the legendary Red Rocks Amphitheatre, a venue so iconic to the group that they named an instrumental track on their 'Common Ground' album after it.", 
+        country: 'United States', 
+        events: [
+            { date: '2019-09-20', venue: 'Red Rocks Amphitheatre', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 107, 
+        name: 'Atlanta, CO', 
+        position: [33.7490, -84.3880], 
+        fact: 'A frequent stop on their US tours.', 
+        country: 'United States',
+        events: [
+            { date: '2019-12-29', venue: 'Believe Music Hall', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
 ];
 
 // RESIDENT ADVISOR
 /*
+2007-2008: Added
 Add 2008 Anjunabeats 100 North America tour
+
+2010-2011: Added
 Add 2011 Group Therapy North America tour
+
+2019: Added
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
