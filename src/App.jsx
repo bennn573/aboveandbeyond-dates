@@ -17,15 +17,17 @@ const CITIES = [
 
             // OTHER EVENTS
             { date: '2005-03-24', venue: 'Gatecrasher @ Heaven', type: 'Other', isResidentAdvisor: true },
-            { date: '2006-01-13', venue: 'The Gallery @ Turnmills', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-01-13', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2006-03-04', venue: 'Canvas', type: 'Other', isResidentAdvisor: true },
-            { date: '2006-04-14', venue: 'The Gallery Eastern Weekender', type: 'Other', isResidentAdvisor: true },
-            { date: '2006-07-07', venue: 'The Gallery', type: 'Other', isResidentAdvisor: true },
-            { date: '2006-11-03', venue: 'The Gallery', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-04-14', venue: 'The Gallery Easter Weekender', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-07-07', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
+            { date: '2006-11-03', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2006-12-31', venue: 'HeatNye @ O2 Academy Brixton', type: 'Other', isResidentAdvisor: true },
-            { date: '2007-02-23', venue: 'The Gallery', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-02-23', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2007-05-25', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2007-12-07', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-10-10', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-12-31', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2015-04-03', venue: 'Brixton Academy', type: 'Tour' },
@@ -49,6 +51,7 @@ const CITIES = [
             
             // OTHER DATES
             { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-09-13', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
         ], 
     },
     // 3. GLASGOW 
@@ -104,6 +107,11 @@ const CITIES = [
             { date: '2007-07-19', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2007-08-16', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2007-09-13', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-07-10', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-07-24', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-08-14', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-09-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-09-18', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
         ]
     },
@@ -117,6 +125,7 @@ const CITIES = [
             { date: '2005-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2006-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2007-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-07-26', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -129,6 +138,7 @@ const CITIES = [
             { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
             { date: '2005-08-05', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2006-07-14', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-09-20', venue: 'The Sand', type: 'Other', isResidentAdvisor: true },
             { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
             { date: '2025-10-31', venue: 'AFAS Live', type: 'Tour' },
         ]
@@ -141,6 +151,7 @@ const CITIES = [
         country: 'Turkey', 
         events: [
             { date: '2005-09-10', venue: 'Pepsi Electronica Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-08-08', venue: 'Global Gathering Turkey 2008', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -174,6 +185,7 @@ const CITIES = [
         events: [
             { date: '2015-09-26', venue: 'Allphones Arena (ABGT150)', type: 'Milestone' }, 
             { date: '2005-10-02', venue: 'Godskitchen @ Space', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-30', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -185,6 +197,7 @@ const CITIES = [
         country: 'Australia', 
         events: [
             { date: '2005-10-08', venue: 'Rod Laver Arena', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-22', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -192,10 +205,11 @@ const CITIES = [
         id: 13, 
         name: 'Cardiff', 
         position: [51.4816, -3.1791], 
-        fact: 'The capital city of Wales, hosting the Evolution event.', 
+        fact: 'The capital city of Wales.', 
         country: 'United Kingdom', 
         events: [
             { date: '2005-10-15', venue: 'Evolution', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-12-31', venue: 'Liquid (Godskitchen Return To Cardiff Nye)', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -231,6 +245,7 @@ const CITIES = [
             { date: '2007-03-21', venue: 'Winter Music Conference', type: 'Other', isResidentAdvisor: true },
             { date: '2007-03-22', venue: 'Made Event pres. Above & Beyond', type: 'Other', isResidentAdvisor: true },
             { date: '2007-03-23', venue: 'Wet Grooves Beach Party After Dark', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-03-27', venue: 'Anjunabeats 100 with Above & Beyond', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -240,6 +255,7 @@ const CITIES = [
         fact: 'A major stop on the 2012 UK club tour at the O2 Academy.', 
         country: 'United Kingdom', 
         events: [
+            { date: '2008-04-11', venue: 'Godskitchen Leeds', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-13', venue: 'O2 Academy Leeds', type: 'Tour' },
         ]
     },
@@ -350,6 +366,7 @@ const CITIES = [
         fact: 'Played at Le Trianon during the 2015 "We Are All We Need" Tour and at Elysée Montmartre as part of the 2016 European Tour.', 
         country: 'France', 
         events: [
+            { date: '2008-04-18', venue: 'Queen', type: 'Other', isResidentAdvisor: true },
             { date: '2015-01-31', venue: 'Le Trianon', type: 'Tour' },
             { date: '2016-12-11', venue: 'Elysée Montmartre', type: 'Tour' },
             { date: '2018-11-07', venue: 'Le Trianon', type: 'Tour' },
@@ -506,6 +523,7 @@ const CITIES = [
         country: 'Argentina', 
         events: [
             { date: '2007-09-22', venue: 'Paradise Garage', type: 'Other', isResidentAdvisor: true  },
+            { date: '2008-06-07', venue: 'Versus Sessions Festival', type: 'Other', isResidentAdvisor: true  },
             { date: '2026-02-14', venue: 'Parque de la Ciudad', type: 'Tour' },
             { date: '2026-02-15', venue: 'Parque de la Ciudad', type: 'Tour' },
         ] 
@@ -537,6 +555,7 @@ const CITIES = [
         fact: 'Host of the major TATW400 milestone event at the Forum de Beyrouth in 2011.', 
         country: 'Lebanon', 
         events: [
+            { date: '2008-04-04', venue: 'Forum de Beyrouth', type: 'Other', isResidentAdvisor: true },
             { date: '2011-11-26', venue: 'Forum de Beyrouth (TATW400)', type: 'Milestone' },
         ] 
     },
@@ -568,6 +587,7 @@ const CITIES = [
         country: 'United States', 
         events: [
             { date: '2007-06-01', venue: 'Pacha NYC', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-05-02', venue: 'Anjunabeats 100 @ Pacha NYC', type: 'Other', isResidentAdvisor: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
         ] 
     },
@@ -689,6 +709,8 @@ const CITIES = [
         country: 'United Kingdom',
         events: [
             { date: '2007-10-27', venue: 'Godskitchen Halloween Special', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-03-22', venue: 'Godskitchen Easter Special', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-09-27', venue: 'Godskitchen\'s Birthday', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -701,7 +723,174 @@ const CITIES = [
             { date: '2007-12-28', venue: 'Smirnoff Sunburn Festival', type: 'Other', isResidentAdvisor: true },
         ] 
     },
+    { 
+        id: 61, 
+        name: 'Singapore', 
+        position: [1.364917, 103.822872],
+        fact: 'Home to the renowned Zouk club.',
+        country: 'Singapore',
+        events: [
+            { date: '2008-02-09', venue: 'Zouk', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-12-13', venue: 'ZoukOut 2008', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 62, 
+        name: 'Vilnius', 
+        position: [54.689383, 25.270894],
+        fact: 'Lithuania\'s capital hosted Above & Beyond first in 2008.',
+        country: 'Lithuania',
+        events: [
+            { date: '2008-03-14', venue: 'Pacha Vilnius', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-03-15', venue: 'Club Exit', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 63, 
+        name: 'Columbus, OH', 
+        position: [39.983334, -82.983330],
+        fact: '',
+        country: 'United States',
+        events: [
+            { date: '2008-04-24', venue: 'Anjunabeats 100 @ Sugar', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 64, 
+        name: 'Detroit', 
+        position: [42.3314, -83.0458],
+        fact: '',
+        country: 'United States',
+        events: [
+            { date: '2008-04-25', venue: 'Bleu', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 65, 
+        name: 'Indio, CA', 
+        position: [42.3314, -83.0458],
+        fact: '',
+        country: 'United States',
+        events: [
+            { date: '2008-04-26', venue: 'Coachella', type: 'Other', isResidentAdvisor: true },
+            { date: '2025-04-12', venue: 'Coachella', type: 'Other'},
+        ] 
+    },
+    { 
+        id: 66, 
+        name: 'Washington DC', 
+        position: [38.8951, -77.0364],
+        fact: '',
+        country: 'United States',
+        events: [
+            { date: '2008-05-03', venue: 'Glow', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 67, 
+        name: 'Asuncion', 
+        position: [-25.30066, -57.63591],
+        fact: '',
+        country: 'Paraguay',
+        events: [
+            { date: '2008-06-06', venue: 'Yacht Golf Club', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 68, 
+        name: 'Riga', 
+        position: [56.97778, 24.12167],
+        fact: '',
+        country: 'Latvia',
+        events: [
+            { date: '2008-07-05', venue: 'Essential Knockout 2008', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 69, 
+        name: 'Barcelona', 
+        position: [56.97778, 24.12167],
+        fact: '',
+        country: 'Spain',
+        events: [
+            { date: '2008-07-11', venue: 'Tiësto In Search Of Sunrise Tour 08', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 70, 
+        name: 'Chelyabinsk',
+        position: [55.164440, 61.436844],
+        fact: '',
+        country: 'Russia',
+        events: [
+            { date: '2008-07-18', venue: 'Anjunabeats 100', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 71, 
+        name: 'Boom',
+        position: [51.092222, 4.385556],
+        fact: '',
+        country: 'Belgium',
+        events: [
+            { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 72, 
+        name: 'Saint Petersburg',
+        position: [59.93863, 30.31413],
+        fact: '',
+        country: 'Russia',
+        events: [
+            { date: '2008-08-02', venue: 'Global Gathering Russia 2008', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 73, 
+        name: 'Malta',
+        position: [35.891996432, 14.50749797],
+        fact: '',
+        country: 'Malta',
+        events: [
+            { date: '2008-08-16', venue: 'Gianpula Main Room', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 73, 
+        name: 'San Francisco',
+        position: [37.77493, -122.41942],
+        fact: '',
+        country: 'United States',
+        events: [
+            { date: '2008-10-04', venue: 'Lovefest', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 74, 
+        name: 'Perth',
+        position: [-31.951329528, 115.855329912],
+        fact: '',
+        country: 'Australia',
+        events: [
+            { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+        { 
+        id: 75, 
+        name: 'Brisbane',
+        position: [-27.467331464, 153.02333324],
+        fact: '',
+        country: 'Australia',
+        events: [
+            { date: '2008-11-29', venue: 'Global Gathering Brisbane', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
 ];
+
+/*
+Add 2008 Anjunabeats 100 North America tour
+*/
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
 
