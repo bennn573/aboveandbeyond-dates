@@ -811,8 +811,8 @@ const CITIES = [
     { 
         id: 65, 
         name: 'Indio, CA', 
-        position: [42.3314, -83.0458],
-        fact: '',
+        position: [33.6803 -116.17389],
+        fact: 'Home to world famous Coachella festival.',
         country: 'United States',
         events: [
             { date: '2008-04-26', venue: 'Coachella', type: 'Other', isResidentAdvisor: true },
