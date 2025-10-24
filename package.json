@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run build-worker",
     "preview": "vite preview",
     "build-worker": "esbuild worker-src/index.js --bundle --outfile=dist/worker.js --minify",
     "start": "npm run dev"
-  },
+  }
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
     "@react-spring/web": "^10.0.3",
