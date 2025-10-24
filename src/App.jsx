@@ -27,6 +27,9 @@ const CITIES = [
             { date: '2007-12-07', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2008-10-10', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-31', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
+            { date: '2009-08-29', venue: 'SW4 @ Clapham Common', type: 'Other', isSongkick: true },
+            { date: '2009-10-02', venue: 'Ministry of Sound', type: 'Other', isSongkick: true },
+            { date: '2009-10-28', venue: 'Ministry of Sound', type: 'Other', isSongkick: true },
             { date: '2010-04-02', venue: 'Anjunabeats @ Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2010-10-30', venue: 'O2 Academy Brixton', type: 'Other', isResidentAdvisor: true },
             { date: '2011-08-27', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
@@ -56,6 +59,8 @@ const CITIES = [
             { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-13', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2010-06-26', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-05-13', venue: 'Hollywood Palladium', type: 'Other', isSongkick: true },
+            { date: '2011-05-14', venue: 'Hollywood Palladium', type: 'Other', isSongkick: true },
             { date: '2011-09-05', venue: 'Sutra', type: 'Other', isResidentAdvisor: true },
         ], 
     },
@@ -67,6 +72,7 @@ const CITIES = [
         fact: 'A frequently visited city, known for passionate crowds and multiple tour stops over the years.',
         country: 'United Kingdom',
         events: [
+            { date: '2011-04-02', venue: 'The Arches', type: 'Other', isSongkick: true },
             { date: '2015-04-02', venue: 'ABC', type: 'Tour' },
             { date: '2016-03-05', venue: 'The Arches', type: 'Other' },
             { date: '2023-12-10', venue: 'SWG3', type: 'Other' },
@@ -148,6 +154,7 @@ const CITIES = [
             { date: '2005-08-05', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2006-07-14', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-20', venue: 'The Sand', type: 'Other', isResidentAdvisor: true },
+            { date: '2009-08-30', venue: 'Mysteryland', type: 'Other', isSongkick: true },
             { date: '2011-08-06', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
             { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
@@ -229,6 +236,7 @@ const CITIES = [
         events: [
             { date: '2005-10-15', venue: 'Evolution', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-31', venue: 'Liquid (Godskitchen Return To Cardiff Nye)', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-04-08', venue: 'Millenium Music Hall', type: 'Other', isSongkick: true },
         ]
     },
     { 
@@ -268,13 +276,14 @@ const CITIES = [
             { date: '2008-03-27', venue: 'Anjunabeats 100 with Above & Beyond', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-27', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-03-24', venue: 'Ice Palace', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-03-22', venue: 'Group Therapy @ Bayfront Park', type: 'Other', isSongkick: true },
         ]
     },
     { 
         id: 17, 
         name: 'Leeds', 
         position: [53.8008, -1.5491], 
-        fact: 'A major stop on the 2012 UK club tour at the O2 Academy.', 
+        fact: 'A major stop in A&Bs early career.', 
         country: 'United Kingdom', 
         events: [
             { date: '2008-04-11', venue: 'Godskitchen Leeds', type: 'Other', isResidentAdvisor: true },
@@ -303,6 +312,7 @@ const CITIES = [
         country: 'United Kingdom', 
         events: [
             { date: '2007-05-12', venue: 'The Music Box', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-06-11', venue: 'Sankeys', type: 'Other', isSongkick: true },
             { date: '2010-12-26', venue: 'The Warehouse Project', type: 'Other', isResidentAdvisor: true },
             { date: '2015-04-05', venue: 'Albert Hall', type: 'Tour' },
             { date: '2016-11-25', venue: 'The Warehouse Project', type: 'Tour' },
@@ -493,6 +503,8 @@ const CITIES = [
         fact: 'Visited in November 2018 for the Common Ground Tour at Digital.', 
         country: 'United Kingdom', 
         events: [
+            { date: '2010-04-09', venue: 'Digital', type: 'Other', isSongkick: true },
+            { date: '2011-03-04', venue: 'Digital', type: 'Other', isSongkick: true },
             { date: '2018-11-17', venue: 'Digital', type: 'Tour' },
         ] 
     },
@@ -535,7 +547,8 @@ const CITIES = [
         fact: 'The Scottish capital hosts the 2025 Tour at the Corn Exchange.', 
         country: 'United Kingdom', 
         events: [
-            { date: '2019-09-14', venue: 'EH1 Festival', type: 'Tour' },
+            { date: '2009-08-15', venue: 'EH1 Festival', type: 'Other', isSongkick: true },
+            { date: '2019-09-14', venue: 'EH1 Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2025-12-07', venue: 'Edinburgh Corn Exchange', type: 'Tour' },
         ] 
     },
@@ -582,6 +595,7 @@ const CITIES = [
         fact: 'A second South African stop for the 2026 Tour at The Ostrich.', 
         country: 'South Africa', 
         events: [
+            { date: '2010-11-19', venue: 'Bellville Velodrome', type: 'Other', isSongkick: true },
             { date: '2026-04-04', venue: 'The Ostrich', type: 'Tour' },
         ] 
     },
@@ -605,6 +619,7 @@ const CITIES = [
         country: 'Russia', 
         events: [
             { date: '2009-12-12', venue: 'Forum Hall (TATW300)', type: 'Milestone' },
+            { date: '2011-12-17', venue: 'Expocentre', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -660,10 +675,11 @@ const CITIES = [
         id: 50, 
         name: 'Mexico City', 
         position: [19.4326, -99.1332], 
-        fact: 'The host city for the two-day **ABGT600** milestone at Foro Sol in 2024.', 
+        fact: 'The host city for the two-day ABGT600 milestone in 2024.', 
         country: 'Mexico', 
         events: [
             { date: '2010-12-11', venue: 'Hipódromo de las Américas', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-03-16', venue: 'Centro De Espectáculos Premier', type: 'Other', isSongkick: true },
             { date: '2024-10-19', venue: 'Hipódromo de las Américas (ABGT600)', type: 'Milestone' },
         ] 
     },
@@ -867,6 +883,7 @@ const CITIES = [
         events: [
             { date: '2008-07-11', venue: 'Tiësto In Search Of Sunrise Tour 08', type: 'Other', isResidentAdvisor: true },
             { date: '2010-08-07', venue: 'Barcelona Music Conference @ Montjuic', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-10-06', venue: 'OPIUM', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -917,10 +934,11 @@ const CITIES = [
         id: 74, 
         name: 'San Francisco',
         position: [37.77493, -122.41942],
-        fact: '',
         country: 'United States',
         events: [
             { date: '2008-10-04', venue: 'Lovefest', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-02-13', venue: 'Ruby Skye', type: 'Other', isSongkick: true },
+            { date: '2011-10-13', venue: 'Ruby Skye', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1071,11 +1089,12 @@ const CITIES = [
     },
     { 
         id: 88, 
-        name: 'Sao Paulo', 
+        name: 'São Paulo', 
         position: [-23.5475, -46.63611], 
         fact: '', 
         country: 'Brazil', 
         events: [
+            { date: '2010-04-17', venue: 'Skol Sensation 2010', type: 'Other', isSongkick: true },
             { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
         ] 
     },
@@ -1101,12 +1120,14 @@ const CITIES = [
     },
     { 
         id: 91, 
-        name: 'San Diego', 
+        name: 'San Diego, CA', 
         position: [32.7157, -117.1611], 
         fact: 'A frequent stop for West Coast tours.', 
         country: 'United States', 
         events: [
             { date: '2011-02-17', venue: 'Fluxx', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-01-18', venue: 'Fluxx', type: 'Other', isSongkick: true },
+            { date: '2012-01-19', venue: 'Fluxx', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1161,6 +1182,7 @@ const CITIES = [
         country: 'United States', 
         events: [
             { date: '2011-04-21', venue: 'Royale', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-01-24', venue: 'Royale', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1170,6 +1192,7 @@ const CITIES = [
         fact: 'The "Live Music Capital of the World," home to major festivals like SXSW.', 
         country: 'United States', 
         events: [
+            { date: '2011-02-11', venue: 'Republic Live', type: 'Other', isSongkick: true },
             { date: '2011-04-29', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
         ] 
     },
@@ -1236,12 +1259,12 @@ const CITIES = [
     },
     { 
         id: 104, 
-        name: 'Houston', 
+        name: 'Houston, TX', 
         position: [29.7604, -95.3698], 
         fact: 'The most populous city in Texas, known for its vibrant energy sector and significant role in the US space program ("Houston, we have a problem").', 
         country: 'United States', 
         events: [
-            { date: '2025-10-14', venue: 'Stereo Live', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-10-14', venue: 'Stereo Live', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1266,12 +1289,140 @@ const CITIES = [
     },
     { 
         id: 107, 
-        name: 'Atlanta, CO', 
+        name: 'Atlanta, GA', 
         position: [33.7490, -84.3880], 
         fact: 'A frequent stop on their US tours.', 
         country: 'United States',
         events: [
+            { date: '2011-06-03', venue: 'Tabernacle', type: 'Other', isSongkick: true },
             { date: '2019-12-29', venue: 'Believe Music Hall', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 108, 
+        name: 'Abu Dhabi', 
+        position: [24.4539, 54.3773], 
+        fact: 'Host of Creamfields UAE 2010, marking the group\'s first performance in the Middle East.', 
+        country: 'United Arab Emirates',
+        events: [
+            { date: '2010-12-09', venue: 'Creamfields UAE 2010', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 109, 
+        name: 'Albuquerque, CO', 
+        position: [34.0522, -118.2437], 
+        country: 'United States',
+        events: [
+            { date: '2011-02-18', venue: 'Sunshine Theater', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 110, 
+        name: 'Edmonton', 
+        position: [53.5461, -113.4938],
+        country: 'Canada',
+        events: [
+            { date: '2011-02-20', venue: 'Edmonton Convention Centre', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 111, 
+        name: 'San Antonio, TX', 
+        position: [29.4241, -98.4936],
+        country: 'United States',
+        events: [
+            { date: '2011-02-25', venue: 'Club Rio', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 112, 
+        name: 'St Louis, MO', 
+        position: [38.6270, -90.1994],
+        country: 'United States',
+        events: [
+            { date: '2011-04-22', venue: 'Europe Nightclub', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 113, 
+        name: 'Orlando, FL', 
+        position: [28.5383, -81.3792],
+        country: 'United States',
+        events: [
+            { date: '2011-04-28', venue: 'Roxy', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 114, 
+        name: 'Tampa, FL', 
+        position: [27.9506, -82.4572],
+        country: 'United States',
+        events: [
+            { date: '2011-04-30', venue: 'The Amphitheatre', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 114, 
+        name: 'New Orleans, LA', 
+        position: [29.9511, -90.0715],
+        country: 'United States',
+        events: [
+            { date: '2011-05-01', venue: 'Ampersand', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 115, 
+        name: 'Tucson, AZ', 
+        position: [32.2226, -110.9747],
+        country: 'United States',
+        events: [
+            { date: '2011-05-18', venue: 'Rialto Theatre', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 116, 
+        name: 'Denver, CO', 
+        position: [39.7392, -104.9903],
+        country: 'United States',
+        events: [
+            { date: '2011-05-19', venue: 'Beta', type: 'Tour', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 117, 
+        name: 'Dallas, TX', 
+        position: [32.7767, -96.7970],
+        country: 'United States',
+        events: [
+            { date: '2011-09-04', venue: 'Zouk', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 118, 
+        name: 'Kuala Lumpur', 
+        position: [3.1390, 101.6869],
+        country: 'Malaysia',
+        events: [
+            { date: '2011-10-26', venue: 'KL Live', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 119, 
+        name: 'Seoul', 
+        position: [37.5665, 126.9780],
+        country: 'South Korea',
+        events: [
+            { date: '2012-01-14', venue: 'Seoul Electronic Music Festival', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 120, 
+        name: 'Baltimore, MD', 
+        position: [39.2904, -76.6122],
+        country: 'United States',
+        events: [
+            { date: '2012-02-11', venue: 'Baltimore Soundstage', type: 'Other', isSongkick: true },
         ] 
     },
 ];
@@ -1285,6 +1436,8 @@ Add 2008 Anjunabeats 100 North America tour
 Add 2011 Group Therapy North America tour
 
 2019: Added
+
+Songkick: Page 17-19 done
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
