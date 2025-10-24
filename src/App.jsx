@@ -1233,15 +1233,15 @@ const CITIES = [
         ] 
     },
     { 
-        id: 75, 
+        id: 105, 
         name: 'Tokyo', 
         position: [35.6895, 139.6917], 
         fact: 'The group’s relationship with the city is significant, as Paavo Siljamäki met his wife while remixing Japanese pop star Ayumi Hamasaki.', 
         country: 'Japan', 
         events: [
             { date: '2011-10-22', venue: 'AgeHa', type: 'Other', isResidentAdvisor: true },
-            { date: '2002', venue: 'Unnamed Venue', type: 'Concert' },
-            { date: '2000', venue: 'Unnamed Venue }
+            { date: '2002', venue: 'Unnamed Venue', type: 'Other' },
+            { date: '2000', venue: 'Unnamed Venue', type: 'Other' },
         ] 
     }
 ];
