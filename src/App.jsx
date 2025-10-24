@@ -115,6 +115,7 @@ const CITIES = [
             { date: '2008-09-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-18', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2010-07-01', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-06-30', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
         ]
     },
@@ -167,6 +168,7 @@ const CITIES = [
         events: [
             { date: '2005-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2007-08-25', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-03-05', venue: 'Cream @ Nation', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-14', venue: 'O2 Academy Liverpool', type: 'Tour' },
         ]
     },
@@ -254,6 +256,7 @@ const CITIES = [
             { date: '2007-03-23', venue: 'Wet Grooves Beach Party After Dark', type: 'Other', isResidentAdvisor: true },
             { date: '2008-03-27', venue: 'Anjunabeats 100 with Above & Beyond', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-27', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-03-24', venue: 'Ice Palace', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -265,6 +268,7 @@ const CITIES = [
         events: [
             { date: '2008-04-11', venue: 'Godskitchen Leeds', type: 'Other', isResidentAdvisor: true },
             { date: '2010-05-02', venue: 'Digital Society', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-04-15', venue: 'Digital Society', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-13', venue: 'O2 Academy Leeds', type: 'Tour' },
         ]
     },
@@ -599,7 +603,7 @@ const CITIES = [
     },
     { 
         id: 47, 
-        name: 'New York', 
+        name: 'New York, NY', 
         position: [40.7128, -74.0060], 
         fact: 'The city that hosted the monumental ABGT100 milestone at Madison Square Garden (MSG) in 2014.', 
         country: 'United States', 
@@ -607,6 +611,7 @@ const CITIES = [
             { date: '2007-06-01', venue: 'Pacha NYC', type: 'Other', isResidentAdvisor: true },
             { date: '2008-05-02', venue: 'Anjunabeats 100 @ Pacha NYC', type: 'Other', isResidentAdvisor: true },
             { date: '2010-09-05', venue: 'Electric Zoo', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-04-23', venue: 'Best Buy Theater', type: 'Other', isResidentAdvisor: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
         ] 
     },
@@ -863,6 +868,7 @@ const CITIES = [
         country: 'Belgium',
         events: [
             { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-07-23', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1058,11 +1064,126 @@ const CITIES = [
             { date: '2010-12-17', venue: 'The Pavillion Hall', type: 'Other', isResidentAdvisor: true },
         ] 
     },
+    { 
+        id: 90, 
+        name: 'Florianopolis', 
+        position: [-27.5969, -48.5495], 
+        fact: 'Host of the Creamfields Brasil festival in 2011.', 
+        country: 'Brazil', 
+        events: [
+            { date: '2011-01-22', venue: 'Creamfields Brasil', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 91, 
+        name: 'San Diego', 
+        position: [32.7157, -117.1611], 
+        fact: 'A frequent stop for West Coast tours.', 
+        country: 'United States', 
+        events: [
+            { date: '2011-02-17', venue: 'Fluxx', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 92, 
+        name: 'Eilat', 
+        position: [29.5577, 34.9519], 
+        fact: 'Israel\'s southernmost city and a popular Red Sea resort.', 
+        country: 'Israel', 
+        events: [
+            { date: '2011-03-12', venue: 'Blu4dance Day Party', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 93, 
+        name: 'Den Bosch', 
+        position: [51.6978, 5.3037], 
+        fact: 'The site of the massive A State of Trance 500 event in 2011.', 
+        country: 'Netherlands', 
+        events: [
+            { date: '2011-04-09', venue: 'A State of Trance 500 @ Brabanthallen', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 94, 
+        name: 'Madrid', 
+        position: [40.4168, -3.7038], 
+        fact: 'The Spanish capital, hosting major electronic music events like Klubbers Day.', 
+        country: 'Spain', 
+        events: [
+            { date: '2011-04-14', venue: 'Klubbers Day @ Madrid Arena', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 95, 
+        name: 'Las Vegas', 
+        position: [36.1699, -115.1398], 
+        fact: 'A major US nightlife destination, with multiple appearances at venues like Marquee.', 
+        country: 'United States', 
+        events: [
+            { date: '2011-02-19', venue: 'Marquee', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-03-26', venue: 'Marquee', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-05-15', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-06-26', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 96, 
+        name: 'Boston', 
+        position: [42.3601, -71.0589], 
+        fact: 'The capital of Massachusetts, known for its historic role and vibrant music culture.', 
+        country: 'United States', 
+        events: [
+            { date: '2011-04-21', venue: 'Royale', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 97, 
+        name: 'Austin', 
+        position: [30.2672, -97.7431], 
+        fact: 'The "Live Music Capital of the World," home to major festivals like SXSW.', 
+        country: 'United States', 
+        events: [
+            { date: '2011-04-29', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 98, 
+        name: 'Montreal', 
+        position: [45.5017, -73.5673], 
+        fact: 'A major cultural hub in Quebec, often hosting large electronic music shows and festivals like ÎLESONIQ.', 
+        country: 'Canada', 
+        events: [
+            { date: '2011-04-24', venue: 'Palais Des Congrès de Montréal', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 99, 
+        name: 'Mykonos', 
+        position: [37.4445, 25.3254], 
+        fact: 'A popular Greek island in the Cyclades, famous for its intense nightlife and traditional Cycladic architecture.', 
+        country: 'Greece', 
+        events: [
+            { date: '2011-07-16', venue: 'Cavo Paradiso', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 100, 
+        name: 'Kołobrzeg', 
+        position: [54.1756, 15.5834], 
+        fact: 'A port and spa city on the Baltic Sea coast of Poland, and home to the major electronic music event, Sunrise Festival.', 
+        country: 'Poland', 
+        events: [
+            { date: '2011-07-22', venue: 'Sunrise Festival', type: 'Other', isResidentAdvisor: true },
+        ] 
+    }
 ];
 
 // RESIDENT ADVISOR
 /*
 Add 2008 Anjunabeats 100 North America tour
+Add 2011 Group Therapy North America tour
+2011: Up to Tomorrowland, no Global Gathering
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
