@@ -811,7 +811,7 @@ const CITIES = [
     { 
         id: 65, 
         name: 'Indio, CA', 
-        position: [33.6803 -116.17389],
+        position: [33.6803, -116.17389],
         fact: 'Home to world famous Coachella festival.',
         country: 'United States',
         events: [
