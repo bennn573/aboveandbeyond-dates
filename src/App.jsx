@@ -29,11 +29,12 @@ const CITIES = [
             { date: '2008-10-10', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-31', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2010-04-02', venue: 'Anjunabeats @ Ministry of Sound', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-10-30', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2010-10-30', venue: 'O2 Academy Brixton', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-08-27', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
-            { date: '2015-04-03', venue: 'Brixton Academy', type: 'Tour' },
-            { date: '2015-04-04', venue: 'Brixton Academy', type: 'Tour' },
+            { date: '2015-04-03', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2015-04-04', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
         ]
@@ -54,6 +55,7 @@ const CITIES = [
             { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-13', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2010-06-26', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-05', venue: 'Sutra', type: 'Other', isResidentAdvisor: true },
         ], 
     },
     // 3. GLASGOW 
@@ -131,6 +133,7 @@ const CITIES = [
             { date: '2007-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2008-07-26', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2010-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-07-29', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -140,11 +143,12 @@ const CITIES = [
         fact: 'Host to the ABGT200 milestone at the Ziggo Dome.', 
         country: 'Netherlands', 
         events: [
-            { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
             { date: '2005-08-05', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2006-07-14', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2008-09-20', venue: 'The Sand', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-08-06', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
+            { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
             { date: '2025-10-31', venue: 'AFAS Live', type: 'Tour' },
         ]
     },
@@ -169,6 +173,8 @@ const CITIES = [
             { date: '2005-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2007-08-25', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2011-03-05', venue: 'Cream @ Nation', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-08-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-10-08', venue: 'Cream 19th Birthday @ Nation', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-14', venue: 'O2 Academy Liverpool', type: 'Tour' },
         ]
     },
@@ -193,6 +199,7 @@ const CITIES = [
             { date: '2005-10-02', venue: 'Godskitchen @ Space', type: 'Other', isResidentAdvisor: true },
             { date: '2008-11-30', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-06', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-10', venue: 'Hordern Pavillion', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -206,6 +213,7 @@ const CITIES = [
             { date: '2005-10-08', venue: 'Rod Laver Arena', type: 'Other', isResidentAdvisor: true },
             { date: '2008-11-22', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-07', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-17', venue: 'Festival Hall', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -280,6 +288,7 @@ const CITIES = [
         country: 'Australia', 
         events: [
             { date: '2010-03-08', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-15', venue: 'HQ Complex', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -511,6 +520,7 @@ const CITIES = [
         country: 'Hungary', 
         events: [
             { date: '2010-10-16', venue: 'T-Mobile Bónusz Electronic Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-08-10', venue: 'Sziget Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2025-11-29', venue: 'Obuda Bay', type: 'Tour' },
         ] 
     },
@@ -544,8 +554,9 @@ const CITIES = [
         events: [
             { date: '2007-09-22', venue: 'Paradise Garage', type: 'Other', isResidentAdvisor: true  },
             { date: '2008-06-07', venue: 'Versus Sessions Festival', type: 'Other', isResidentAdvisor: true  },
-            { date: '2026-02-14', venue: 'Parque de la Ciudad', type: 'Tour' },
-            { date: '2026-02-15', venue: 'Parque de la Ciudad', type: 'Tour' },
+            { date: '2011-11-12', venue: 'Creamfields Buenos Aires', type: 'Other', isResidentAdvisor: true  },
+            { date: '2026-02-14', venue: 'Parque de la Ciudad', type: 'Other' },
+            { date: '2026-02-15', venue: 'Parque de la Ciudad', type: 'Other' },
         ] 
     },
     { 
@@ -612,6 +623,7 @@ const CITIES = [
             { date: '2008-05-02', venue: 'Anjunabeats 100 @ Pacha NYC', type: 'Other', isResidentAdvisor: true },
             { date: '2010-09-05', venue: 'Electric Zoo', type: 'Other', isResidentAdvisor: true },
             { date: '2011-04-23', venue: 'Best Buy Theater', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-03', venue: 'Electric Zoo Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
         ] 
     },
@@ -633,6 +645,7 @@ const CITIES = [
         country: 'China', 
         events: [
             { date: '2010-09-30', venue: 'AsiaWorld-Expo', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-10-19', venue: 'Hyde', type: 'Other', isResidentAdvisor: true },
             { date: '2018-09-29', venue: 'AsiaWorld-Expo (ABGT300)', type: 'Milestone' },
         ] 
     },
@@ -751,6 +764,7 @@ const CITIES = [
         country: 'India',
         events: [
             { date: '2007-12-28', venue: 'Smirnoff Sunburn Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-12-27', venue: 'Sunburn Festival', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -911,6 +925,7 @@ const CITIES = [
         events: [
             { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Other', isResidentAdvisor: true },
             { date: '2010-02-28', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-09', venue: 'Metro City', type: 'Tour', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -922,6 +937,7 @@ const CITIES = [
         events: [
             { date: '2008-11-29', venue: 'Global Gathering Brisbane', type: 'Other', isResidentAdvisor: true },
             { date: '2010-02-27', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-16', venue: 'The Family', type: 'Tour', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -991,7 +1007,8 @@ const CITIES = [
         fact: '', 
         country: 'Canada', 
         events: [
-            { date: '2010-09-05', venue: 'Labour Of Love @ The Guvernment', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-09-05', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-03', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -1125,6 +1142,7 @@ const CITIES = [
             { date: '2011-03-26', venue: 'Marquee', type: 'Other', isResidentAdvisor: true },
             { date: '2011-05-15', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
             { date: '2011-06-26', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-01', venue: 'Wet Republic', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1176,6 +1194,58 @@ const CITIES = [
         events: [
             { date: '2011-07-22', venue: 'Sunrise Festival', type: 'Other', isResidentAdvisor: true },
         ] 
+    },
+    { 
+        id: 101, 
+        name: 'Mamaia', 
+        position: [44.2464, 28.6228], 
+        fact: 'Romania\'s most popular seaside resort, located on a narrow strip of land between the Black Sea and Lake Siutghiol, near the city of Constanța.', 
+        country: 'Romania', 
+        events: [
+            { date: '2011-08-05', venue: 'Hanul Piratilor Beach', type: 'Other', isResidentAdvisor: false },
+        ] 
+    },
+    { 
+        id: 102, 
+        name: 'Mallorca', 
+        position: [39.5694, 2.7094], 
+        fact: 'The largest of the Balearic Islands, famous for its beaches and as the home of the world-famous superclub, BCM Planet Dance, in the Magaluf area.', 
+        country: 'Spain', 
+        events: [
+            { date: '2011-08-17', venue: 'BCM Planet Dance (Cream Mallorca)', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 103, 
+        name: 'Portrush', 
+        position: [55.2047, -6.6522], 
+        fact: 'A popular seaside resort in Northern Ireland, renowned in the dance music scene as the home of the iconic trance superclub Lush.', 
+        country: 'United Kingdom (Northern Ireland)', 
+        events: [
+            { date: '2011-10-01', venue: 'Lush! at Kellys Complex', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 104, 
+        name: 'Houston', 
+        position: [29.7604, -95.3698], 
+        fact: 'The most populous city in Texas, known for its vibrant energy sector and significant role in the US space program ("Houston, we have a problem").', 
+        country: 'United States', 
+        events: [
+            { date: '2025-10-14', venue: 'Stereo Live', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 75, 
+        name: 'Tokyo', 
+        position: [35.6895, 139.6917], 
+        fact: 'The group’s relationship with the city is significant, as Paavo Siljamäki met his wife while remixing Japanese pop star Ayumi Hamasaki.', 
+        country: 'Japan', 
+        events: [
+            { date: '2011-10-22', venue: 'AgeHa', type: 'Other', isResidentAdvisor: true },
+            { date: '2002', venue: 'Unnamed Venue', type: 'Concert' },
+            { date: '2000', venue: 'Unnamed Venue }
+        ] 
     }
 ];
 
@@ -1183,7 +1253,6 @@ const CITIES = [
 /*
 Add 2008 Anjunabeats 100 North America tour
 Add 2011 Group Therapy North America tour
-2011: Up to Tomorrowland, no Global Gathering
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
