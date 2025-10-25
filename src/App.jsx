@@ -2090,7 +2090,7 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
         <div 
             ref={mapRef} 
             id="map" 
-            className="h-[75vh] w-full rounded-xl"
+            className="h-[60vh] w-full rounded-xl"
         >
             {!isLeafletLoaded && (
                 <div className="flex items-center justify-center h-full bg-gray-100 rounded-xl">
