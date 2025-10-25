@@ -35,15 +35,19 @@ const CITIES = [
             { date: '2011-08-27', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2015-03-13', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-01-24', venue: 'Porchester Hall (Acoustic)', type: 'Acoustic' },
+            { date: '2014-11-13', venue: 'Little Something Special @ SSE Wembley Arena', type: 'Other', isSongkick: true },
             { date: '2015-04-03', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2015-04-04', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2016-06-04', venue: 'Royal Albert Hall (Acoustic)', type: 'Acoustic' },
+            { date: '2016-08-28', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
             { date: '2019-04-12', venue: 'Printworks', type: 'Tour' },
             { date: '2019-04-13', venue: 'Printworks', type: 'Tour' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
         ]
     },
-    // 2. LOS ANGELES (UPDATED WITH TATW350)
     { 
         id: 2, 
         name: 'Los Angeles', 
@@ -62,6 +66,10 @@ const CITIES = [
             { date: '2011-05-13', venue: 'Hollywood Palladium', type: 'Other', isSongkick: true },
             { date: '2011-05-14', venue: 'Hollywood Palladium', type: 'Other', isSongkick: true },
             { date: '2011-09-05', venue: 'Sutra', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-05-17', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
+            { date: '2012-05-18', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
+            { date: '2012-05-19', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
+            { date: '2016-05-28', venue: 'Hollywood Bowl (Acoustic)', type: 'Acoustic' },
         ], 
     },
     // 3. GLASGOW 
@@ -125,6 +133,24 @@ const CITIES = [
             { date: '2008-09-18', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2010-07-01', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2011-06-30', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-06-28', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true },
+            { date: '2012-07-12', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true },
+            { date: '2012-08-09', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true },
+            { date: '2012-08-16', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true },
+            { date: '2012-08-30', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true },
+            { date: '2012-09-13', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true },
+            { date: '2015-06-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-07-02', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-07-16', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-08-01', venue: 'Creamfields Ibiza @ Ushuaia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-08-06', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-08-20', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-08-27', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-09-10', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-07-21', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-08-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-08-18', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-08-25', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
             { date: '2019-07-12', venue: 'Ushuaia', type: 'Other', isResidentAdvisor: true },
         ]
@@ -142,6 +168,7 @@ const CITIES = [
             { date: '2008-07-26', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2010-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2011-07-29', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-07-28', venue: 'Global Gathering', type: 'Other', isSongkick: true },
         ]
     },
     { 
@@ -156,6 +183,7 @@ const CITIES = [
             { date: '2008-09-20', venue: 'The Sand', type: 'Other', isResidentAdvisor: true },
             { date: '2009-08-30', venue: 'Mysteryland', type: 'Other', isSongkick: true },
             { date: '2011-08-06', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-08-04', venue: 'Dance Valley Festival', type: 'Other', isSongkick: true },
             { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
             { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
             { date: '2025-10-31', venue: 'AFAS Live', type: 'Tour' },
@@ -185,6 +213,9 @@ const CITIES = [
             { date: '2011-08-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2011-10-08', venue: 'Cream 19th Birthday @ Nation', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-14', venue: 'O2 Academy Liverpool', type: 'Tour' },
+            { date: '2012-08-25', venue: 'Creamfields', type: 'Other', isSongkick: true },
+            { date: '2015-08-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2019-08-24', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
         ]
     },
@@ -202,15 +233,18 @@ const CITIES = [
         id: 11, 
         name: 'Sydney', 
         position: [-33.8688, 151.2093], 
-        fact: 'Host of the epic **ABGT150** milestone at Allphones Arena, as well as part of the Godskitchen Australian tour in 2005.', 
+        fact: 'Host of the epic ABGT150 milestone at Allphones Arena as well as part of the Godskitchen Australian tour in 2005.', 
         country: 'Australia', 
         events: [
             { date: '2015-09-26', venue: 'Allphones Arena (ABGT150)', type: 'Milestone' }, 
             { date: '2005-10-02', venue: 'Godskitchen @ Space', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-11-30', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-30', venue: 'Global Gathering Sydney', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-06', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-10', venue: 'Hordern Pavillion', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-01-27', venue: 'Hordern Pavillion', type: 'Other', isSongkick: true },
+            { date: '2014-12-31', venue: 'Hordern Pavillion', type: 'Other', isSongkick: true },
+            { date: '2016-06-06', venue: 'Sydney Opera House (Acoustic)', type: 'Acoustic' },
         ]
     },
     { 
@@ -225,6 +259,9 @@ const CITIES = [
             { date: '2010-03-07', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-17', venue: 'Festival Hall', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-02-02', venue: 'Melbourne Arena', type: 'Other', isSongkick: true },
+            { date: '2015-01-01', venue: 'Myer Music Bowl', type: 'Other', isSongkick: true },
+            { date: '2015-09-25', venue: 'Myer Music Bowl', type: 'Tour', isResidentAdvisor: true },
         ]
     },
     { 
@@ -258,6 +295,7 @@ const CITIES = [
         events: [
             { date: '2006-02-11', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
             { date: '2010-04-03', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-05-03', venue: 'TivoliVredenburg (Acoustic)', type: 'Acoustic' },
             { date: '2019-02-23', venue: 'A State of Trance 900', type: 'Other' },
         ]
     },
@@ -277,6 +315,9 @@ const CITIES = [
             { date: '2010-03-27', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-03-24', venue: 'Ice Palace', type: 'Other', isResidentAdvisor: true },
             { date: '2012-03-22', venue: 'Group Therapy @ Bayfront Park', type: 'Other', isSongkick: true },
+            { date: '2013-03-17', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
+            { date: '2013-03-23', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
+            { date: '2016-03-17', venue: 'RC Cola Plant', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -302,6 +343,7 @@ const CITIES = [
             { date: '2010-03-08', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-15', venue: 'HQ Complex', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-01-26', venue: 'Adelaide Entertainment Centre', type: 'Other', isSongkick: true },
         ]
     },
     { 
@@ -314,7 +356,9 @@ const CITIES = [
             { date: '2007-05-12', venue: 'The Music Box', type: 'Other', isResidentAdvisor: true },
             { date: '2010-06-11', venue: 'Sankeys', type: 'Other', isSongkick: true },
             { date: '2010-12-26', venue: 'The Warehouse Project', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-10-03', venue: 'The Warehouse Project (Anjuna)', type: 'Other', isResidentAdvisor: true },
             { date: '2015-04-05', venue: 'Albert Hall', type: 'Tour' },
+            { date: '2016-05-01', venue: 'Albert Hall (Acoustic)', type: 'Acoustic' },
             { date: '2016-11-25', venue: 'The Warehouse Project', type: 'Tour' },
             { date: '2018-11-16', venue: 'The Warehouse Project', type: 'Tour' },
             { date: '2019-11-29', venue: 'The Warehouse Project', type: 'Other' },
@@ -340,6 +384,7 @@ const CITIES = [
         country: 'Ireland', 
         events: [
             { date: '2010-10-29', venue: 'Tripod', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-04-05', venue: 'Trinity Ball', type: 'Other', isSongkick: true },
             { date: '2016-11-27', venue: 'Olympia Theatre', type: 'Tour' },
         ] 
     },
@@ -350,6 +395,7 @@ const CITIES = [
         fact: 'A stop in Eastern Europe for both the 2016 European Tour and the 2018 Common Ground Tour.', 
         country: 'Poland', 
         events: [
+            { date: '2012-07-14', venue: 'Ultra Music Festival Poland 2012', type: 'Other', isSongkick: true },
             { date: '2016-11-30', venue: 'Progresja Music Zone', type: 'Tour' },
             { date: '2018-10-28', venue: 'Progresja Music Zone', type: 'Tour' },
         ] 
@@ -407,6 +453,7 @@ const CITIES = [
         events: [
             { date: '2008-04-18', venue: 'Queen', type: 'Other', isResidentAdvisor: true },
             { date: '2010-01-28', venue: 'Queen', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-05', venue: 'Grand Palais', type: 'Other', isSongkick: true },
             { date: '2015-01-31', venue: 'Le Trianon', type: 'Tour' },
             { date: '2016-12-11', venue: 'Elysée Montmartre', type: 'Tour' },
             { date: '2018-11-07', venue: 'Le Trianon', type: 'Tour' },
@@ -420,6 +467,7 @@ const CITIES = [
         fact: 'The Swedish capital was a stop on the 2015, 2016 European Tour, and the 2018 Common Ground Tour.', 
         country: 'Sweden', 
         events: [
+            { date: '2013-03-01', venue: 'Münchenbryggeriet', type: 'Other', isSongkick: true },
             { date: '2015-01-24', venue: 'Münchenbryggeriet', type: 'Tour' },
             { date: '2016-12-15', venue: 'Nobelberget', type: 'Tour' },
             { date: '2018-10-22', venue: 'Berns', type: 'Tour' },
@@ -433,8 +481,9 @@ const CITIES = [
         fact: 'A Nordic stop for the tours.', 
         country: 'Finland', 
         events: [
-            { date: '2010-11-12', venue: 'Fredan Tivoli', type: 'Tour' },
-            { date: '2015-01-17', venue: 'Circus', type: 'Tour' },
+            { date: '2010-11-12', venue: 'Fredan Tivoli', type: 'Other' },
+            { date: '2012-03-02', venue: 'Circus', type: 'Other', isSongkick: true },
+            { date: '2015-01-17', venue: 'Circus', type: 'Other' },
             { date: '2016-12-16', venue: 'Circus', type: 'Tour' },
         ] 
     },
@@ -458,6 +507,7 @@ const CITIES = [
         fact: 'Host to the 2015 "We Are All We Need" Tour, the 2016 European Tour finale, and a stop on the 2018 Common Ground Tour at Sentrum Scene.', 
         country: 'Norway', 
         events: [
+            { date: '2013-02-28', venue: 'Sentrum Scene', type: 'Other', isSongkick: true },
             { date: '2015-01-23', venue: 'Rockefeller', type: 'Tour' },
             { date: '2016-12-18', venue: 'Sentrum Scene', type: 'Tour' },
             { date: '2018-10-24', venue: 'Sentrum Scene', type: 'Tour' },
@@ -481,9 +531,10 @@ const CITIES = [
         fact: 'The capital of the Czech Republic, host of the ABGT350 milestone at O2 Arena, and home to Transmission Festival.', 
         country: 'Czech Republic', 
         events: [
-            { date: '2007-11-02', venue: 'Transmission (O2 Arena', type: 'Other' },
-            { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone' },
+            { date: '2007-11-02', venue: 'Transmission (O2 Arena)', type: 'Other' },
+            { date: '2014-10-25', venue: 'Transmission (O2 Arena)', type: 'Other', isResidentAdvisor: true },
             { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Tour' },
+            { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone' },
         ] 
     },
     { 
@@ -493,18 +544,19 @@ const CITIES = [
         fact: 'A stop on the UK leg of the 2018 Common Ground Tour at O2 Academy.', 
         country: 'United Kingdom', 
         events: [
-            { date: '2018-11-02', venue: 'O2 Academy', type: 'Tour' },
+            { date: '2018-11-02', venue: 'O2 Academy Bristol', type: 'Tour' },
         ] 
     },
     { 
         id: 35, 
-        name: 'Newcastle', 
+        name: 'Newcastle',
         position: [54.9783, -1.6178], 
         fact: 'Visited in November 2018 for the Common Ground Tour at Digital.', 
         country: 'United Kingdom', 
         events: [
             { date: '2010-04-09', venue: 'Digital', type: 'Other', isSongkick: true },
             { date: '2011-03-04', venue: 'Digital', type: 'Other', isSongkick: true },
+            { date: '2014-12-19', venue: 'Sage Gateshead (Northern Lights Winteredition)', type: 'Other', isResidentAdvisor: true },
             { date: '2018-11-17', venue: 'Digital', type: 'Tour' },
         ] 
     },
@@ -615,11 +667,13 @@ const CITIES = [
         id: 45, 
         name: 'Moscow', 
         position: [55.7558, 37.6173], 
-        fact: 'Co-host of the **TATW300** milestone, following the Beirut event, held at Forum Hall.', 
+        fact: 'Host to the TATW300 milestone; following the Beirut event, held at Forum Hall.', 
         country: 'Russia', 
         events: [
             { date: '2009-12-12', venue: 'Forum Hall (TATW300)', type: 'Milestone' },
             { date: '2011-12-17', venue: 'Expocentre', type: 'Other', isSongkick: true },
+            { date: '2013-02-23', venue: 'Stadium Live Club', type: 'Other', isSongkick: true },
+            { date: '2014-04-12', venue: 'Space Moscow', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -641,21 +695,29 @@ const CITIES = [
         country: 'United States', 
         events: [
             { date: '2007-06-01', venue: 'Pacha NYC', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-05-02', venue: 'Anjunabeats 100 @ Pacha NYC', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-05-02', venue: 'Pacha NYC (Anjunabeats 100)', type: 'Other', isResidentAdvisor: true },
             { date: '2010-09-05', venue: 'Electric Zoo', type: 'Other', isResidentAdvisor: true },
             { date: '2011-04-23', venue: 'Best Buy Theater', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-03', venue: 'Electric Zoo Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-09-01', venue: 'Electric Zoo Festival', type: 'Other', isSongkick: true },
+            { date: '2013-02-16', venue: 'Roseland Ballroom', type: 'Other', isSongkick: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
+            { date: '2015-09-04', venue: 'Electric Zoo: Transformed', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-05-20', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
+            { date: '2016-05-21', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
+            { date: '2016-05-22', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2019-08-31', venue: 'Electric Zoo: Evolved', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-10-28', venue: 'Pier 94 (Above & Beyond Halloween)', type: 'Other', isResidentAdvisor },
         ] 
     },
     { 
         id: 48, 
-        name: 'The Gorge', 
+        name: 'George, WA', 
         position: [47.0957, -119.9912], 
-        fact: 'The breathtaking setting for the two-day **ABGT250** celebration at The Gorge Amphitheatre in 2017.', 
+        fact: 'The breathtaking setting for the two-day ABGT250 celebration at The Gorge Amphitheatre in 2017.', 
         country: 'United States', 
         events: [
+            { date: '2015-06-23', venue: 'The Gorge Amphitheatre (Paradiso Festival)', type: 'Other', isResidentAdvisor: true },
             { date: '2017-09-16', venue: 'The Gorge Amphitheatre (ABGT250)', type: 'Milestone' },
         ] 
     },
@@ -680,6 +742,8 @@ const CITIES = [
         events: [
             { date: '2010-12-11', venue: 'Hipódromo de las Américas', type: 'Other', isResidentAdvisor: true },
             { date: '2012-03-16', venue: 'Centro De Espectáculos Premier', type: 'Other', isSongkick: true },
+            { date: '2012-11-03', venue: 'Nevada Festival 2012', type: 'Other', isSongkick: true },
+            { date: '2014-05-03', venue: 'Electric Zoo Mexico City', type: 'Other', isResidentAdvisor: true },
             { date: '2024-10-19', venue: 'Hipódromo de las Américas (ABGT600)', type: 'Milestone' },
         ] 
     },
@@ -711,7 +775,7 @@ const CITIES = [
         fact: 'Romania\'s Constanta hosted Above & Beyond first in 2007.',
         country: 'Romania', 
         events: [
-            { date: '2007-04-29', venue: 'Anjunabeats Labelnight @ Club Two', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-04-29', venue: 'Club Two (Anjunabeats Labelnight)', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -722,6 +786,7 @@ const CITIES = [
         country: 'Slovakia', 
         events: [
             { date: '2007-06-22', venue: 'Dopler', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-06-24', venue: 'Zlate Piesky (Neon Festival)', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -777,6 +842,8 @@ const CITIES = [
             { date: '2008-09-27', venue: 'Godskitchen\'s Birthday', type: 'Other', isResidentAdvisor: true },
             { date: '2010-01-30', venue: 'Godskitchen', type: 'Other', isResidentAdvisor: true },
             { date: '2010-11-27', venue: 'Godskitchen pres. Anjunabeats', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-12', venue: 'O2 Institute Birmingham', type: 'Other', isSongkick: true },
+            { date: '2015-11-14', venue: 'The Rainbow Venues', type: 'Other' },
         ] 
     },
     { 
@@ -788,6 +855,7 @@ const CITIES = [
         events: [
             { date: '2007-12-28', venue: 'Smirnoff Sunburn Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-12-27', venue: 'Sunburn Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-12-26', venue: 'VH1 Supersonic', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -800,6 +868,7 @@ const CITIES = [
             { date: '2008-02-09', venue: 'Zouk', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-13', venue: 'ZoukOut 2008', type: 'Other', isResidentAdvisor: true },
             { date: '2010-09-23', venue: 'Avalon at Large!', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-12-12', venue: 'ZoukOut 2014', type: 'Other' , isResidentAdvisor: true },
         ] 
     },
     { 
@@ -862,6 +931,7 @@ const CITIES = [
         country: 'Paraguay',
         events: [
             { date: '2008-06-06', venue: 'Yacht Golf Club', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-07-04', venue: 'Casco Antiguo', type: 'Other' , isResidentAdvisor: true },
         ] 
     },
     { 
@@ -939,7 +1009,12 @@ const CITIES = [
             { date: '2008-10-04', venue: 'Lovefest', type: 'Other', isResidentAdvisor: true },
             { date: '2011-02-13', venue: 'Ruby Skye', type: 'Other', isSongkick: true },
             { date: '2011-10-13', venue: 'Ruby Skye', type: 'Other', isSongkick: true },
-        ] 
+            { date: '2012-06-22', venue: 'The Warfield', type: 'Other', isSongkick: true },
+            { date: '2012-06-23', venue: 'The Warfield', type: 'Other', isSongkick: true },
+            { date: '2014-09-20', venue: 'Beyond Wonderland Bay Area', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-05-26', venue: 'Greek Theatre (Acoustic)', type: 'Acoustic' },
+            { date: '2016-05-27', venue: 'Greek Theatre (Acoustic)', type: 'Acoustic' },
+        ]
     },
     { 
         id: 75, 
@@ -951,6 +1026,8 @@ const CITIES = [
             { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Other', isResidentAdvisor: true },
             { date: '2010-02-28', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-09', venue: 'Metro City', type: 'Tour', isResidentAdvisor: true },
+            { date: '2012-05-05', venue: 'Creamfields Perth 2012', type: 'Other', isSongkick: true },
+            { date: '2013-02-01', venue: 'Metro City', type: 'Other', isSongkick: true },
             { date: '2019-11-16', venue: 'Amon Vision Courtyard Party', type: 'Other', isResidentAdvisor: true },
         ] 
     },
@@ -974,6 +1051,10 @@ const CITIES = [
         country: 'United States', 
         events: [
             { date: '2010-03-20', venue: 'Spring Awakening', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-05-12', venue: 'Congrass Theatre', type: 'Other', isSongkick: true },
+            { date: '2016-05-11', venue: 'Chicago Theatre (Acoustic)', type: 'Acoustic' },
+            { date: '2016-05-12', venue: 'Chicago Theatre (Acoustic)', type: 'Acoustic' },
+            { date: '2016-06-10', venue: 'Spring Awakening Music Festival', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -994,6 +1075,7 @@ const CITIES = [
         country: 'United Kingdom', 
         events: [
             { date: '2010-06-27', venue: 'Glastonbury Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-06-27', venue: 'Glastonbury Festival', type: 'Other', isResidentAdvisor: true },
         ]
     },
     { 
@@ -1024,6 +1106,7 @@ const CITIES = [
         country: 'United States', 
         events: [
             { date: '2010-09-03', venue: 'The Showbox Market', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-02-09', venue: 'Foundation Nightclub', type: 'Other', isSongkick: true },
         ]
     },
     { 
@@ -1035,6 +1118,8 @@ const CITIES = [
         events: [
             { date: '2010-09-05', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-03', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-05-14', venue: 'Massey Hal (Acoustic)', type: 'Acoustic' },
+            { date: '2016-05-15', venue: 'Massey Hall (Acoustic)', type: 'Acoustic' },
         ]
     },
     { 
@@ -1085,6 +1170,7 @@ const CITIES = [
         country: 'Italy', 
         events: [
             { date: '2010-10-22', venue: 'Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-06-02', venue: 'Magazzini Generali', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1096,6 +1182,7 @@ const CITIES = [
         events: [
             { date: '2010-04-17', venue: 'Skol Sensation 2010', type: 'Other', isSongkick: true },
             { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-12-04', venue: 'EDC Brasil 2015', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1158,6 +1245,7 @@ const CITIES = [
         country: 'Spain', 
         events: [
             { date: '2011-04-14', venue: 'Klubbers Day @ Madrid Arena', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-07-10', venue: 'A Summer Story @ Ciudad Del Rock', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1172,17 +1260,29 @@ const CITIES = [
             { date: '2011-05-15', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
             { date: '2011-06-26', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-01', venue: 'Wet Republic', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-05-20', venue: 'Marquee', type: 'Other', isSongkick: true },
+            { date: '2012-06-08', venue: 'Electric Daisy Carnival', type: 'Other', isSongkick: true },
+            { date: '2012-09-03', venue: 'Marquee', type: 'Other', isSongkick: true },
+            { date: '2013-05-08', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
+            { date: '2013-05-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
+            { date: '2013-06-23', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
+            { date: '2013-06-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
+            { date: '2014-06-20', venue: 'EDC Las Vegas', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
-        id: 96, 
-        name: 'Boston', 
-        position: [42.3601, -71.0589], 
+        id: 96,
+        name: 'Boston, MA',
+        position: [42.3601, -71.0589],
         fact: 'The capital of Massachusetts, known for its historic role and vibrant music culture.', 
-        country: 'United States', 
+        country: 'United States',
         events: [
             { date: '2011-04-21', venue: 'Royale', type: 'Other', isResidentAdvisor: true },
             { date: '2012-01-24', venue: 'Royale', type: 'Other', isSongkick: true },
+            { date: '2013-05-20', venue: 'Royale', type: 'Other', isSongkick: true },
+            { date: '2013-05-21', venue: 'Royale', type: 'Other', isSongkick: true },
+            { date: '2013-05-22', venue: 'Royale', type: 'Other', isSongkick: true },
+            { date: '2016-05-17', venue: 'The Wang', type: 'Acoustic' },
         ] 
     },
     { 
@@ -1254,7 +1354,8 @@ const CITIES = [
         fact: 'A popular seaside resort in Northern Ireland, renowned in the dance music scene as the home of the iconic trance superclub Lush.', 
         country: 'United Kingdom (Northern Ireland)', 
         events: [
-            { date: '2011-10-01', venue: 'Lush! at Kellys Complex', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-10-01', venue: 'Lush', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-04-06', venue: 'Lush', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1265,6 +1366,7 @@ const CITIES = [
         country: 'United States', 
         events: [
             { date: '2011-10-14', venue: 'Stereo Live', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-09-22', venue: 'Stereo Live', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1284,6 +1386,7 @@ const CITIES = [
         fact: "Home to the legendary Red Rocks Amphitheatre, a venue so iconic to the group that they named an instrumental track on their 'Common Ground' album after it.", 
         country: 'United States', 
         events: [
+            { date: '2012-07-21', venue: 'Red Rocks Amphitheatre', type: 'Other', isSongkick: true },
             { date: '2019-09-20', venue: 'Red Rocks Amphitheatre', type: 'Other', isResidentAdvisor: true },
         ] 
     },
@@ -1295,6 +1398,7 @@ const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-06-03', venue: 'Tabernacle', type: 'Other', isSongkick: true },
+            { date: '2012-06-01', venue: 'Opera', type: 'Other', isSongkick: true },
             { date: '2019-12-29', venue: 'Believe Music Hall', type: 'Other', isResidentAdvisor: true },
         ] 
     },
@@ -1324,6 +1428,7 @@ const CITIES = [
         country: 'Canada',
         events: [
             { date: '2011-02-20', venue: 'Edmonton Convention Centre', type: 'Other', isSongkick: true },
+            { date: '2012-05-25', venue: 'Edmonton Events Centre', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1341,7 +1446,8 @@ const CITIES = [
         position: [38.6270, -90.1994],
         country: 'United States',
         events: [
-            { date: '2011-04-22', venue: 'Europe Nightclub', type: 'Tour', isSongkick: true },
+            { date: '2011-04-22', venue: 'Europe Nightclub', type: 'Other', isSongkick: true },
+            { date: '2012-06-09', venue: 'Pulse Music Festival', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1351,6 +1457,7 @@ const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-04-28', venue: 'Roxy', type: 'Tour', isSongkick: true },
+            { date: '2016-11-04', venue: 'EDC Orlando', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1360,6 +1467,7 @@ const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-04-30', venue: 'The Amphitheatre', type: 'Tour', isSongkick: true },
+            { date: '2012-05-31', venue: 'The Amphitheatre', type: 'Tour', isSongkick: true },
         ] 
     },
     { 
@@ -1387,6 +1495,7 @@ const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-05-19', venue: 'Beta', type: 'Tour', isSongkick: true },
+            { date: '2013-03-21', venue: 'Beta', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1396,6 +1505,7 @@ const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-09-04', venue: 'Zouk', type: 'Other', isSongkick: true },
+            { date: '2012-09-20', venue: 'Lizard Lounge', type: 'Other', isSongkick: true },
         ] 
     },
     { 
@@ -1425,6 +1535,161 @@ const CITIES = [
             { date: '2012-02-11', venue: 'Baltimore Soundstage', type: 'Other', isSongkick: true },
         ] 
     },
+    { 
+        id: 121, 
+        name: 'Santiago', 
+        position: [-33.4489, -70.6693],
+        country: 'Chile',
+        events: [
+            { date: '2012-04-01', venue: 'Lollapalooza 2012', type: 'Other', isSongkick: true },
+            { date: '2015-07-03', venue: 'Ciudad Empresarial', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 122, 
+        name: 'Natal', 
+        position: [-5.7945, -35.2110],
+        country: 'Brazil',
+        events: [
+            { date: '2012-03-31', venue: 'Praia Devassa Beach Club', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 123, 
+        name: 'Buffalo, NY', 
+        position: [42.8864, -78.8784],
+        country: 'United States',
+        events: [
+            { date: '2012-05-11', venue: 'Town Ballroom', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 123, 
+        name: 'Charlotte, NC', 
+        position: [35.2271, -80.8431],
+        country: 'United States',
+        events: [
+            { date: '2012-06-02', venue: 'Phoenix', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 124, 
+        name: 'Odessa', 
+        position: [46.4825, 30.7233],
+        country: 'Ukraine',
+        events: [
+            { date: '2012-06-30', venue: 'Summer Sound', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 125, 
+        name: 'Kansas City, MO', 
+        position: [39.0997, -94.5786],
+        country: 'United States',
+        events: [
+            { date: '2012-07-20', venue: 'Global Dance Festival 2012', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 126, 
+        name: 'Rimini', 
+        position: [44.0678, 12.5695],
+        country: 'Italy',
+        events: [
+            { date: '2012-08-17', venue: 'Cocoricò', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 127, 
+        name: 'Dubai', 
+        position: [25.2048, 55.2708],  
+        country: 'United Arab Emirates',
+        events: [
+            { date: '2012-11-08', venue: 'Nasimi Beach, Atlantis', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 128, 
+        name: 'Anaheim, CA', 
+        position: [33.8366, -117.9143],
+        country: 'United States',
+        events: [
+            { date: '2012-12-31', venue: 'White Wonderland', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 128, 
+        name: 'Honolulu, HI', 
+        position: [21.3069, -157.8583],
+        country: 'United States',
+        events: [
+            { date: '2013-02-08', venue: 'Kaka\'ako Beach Park Amphitheater', type: 'Other', isSongkick: true },
+            { date: '2016-05-31', venue: 'Waikiki Shell (Acoustic)', type: 'Acoustic' },
+        ] 
+    },
+    { 
+        id: 129, 
+        name: 'Vancouver, BC', 
+        position: [49.2827, -123.1207],
+        country: 'Canada',
+        events: [
+            { date: '2013-02-10', venue: 'Pacific Coliseum', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 130, 
+        name: 'Philadephia, PA', 
+        position: [39.9526, -75.1652],
+        country: 'United States',
+        events: [
+            { date: '2013-02-15', venue: 'Soundgarden Hall', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 131, 
+        name: 'Mayrhofen', 
+        position: [47.1667, 11.8667],
+        country: 'Austria',
+        events: [
+            { date: '2013-03-31', venue: 'Snowbombing 2013', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 132, 
+        name: 'Inverness', 
+        position: [57.4778, -4.2247],
+        country: 'United Kingdom',
+        events: [
+            { date: '2013-06-08', venue: 'Rockness 2013', type: 'Other', isSongkick: true },
+        ] 
+    },
+    { 
+        id: 133, 
+        name: 'Perth', 
+        position: [56.395462405, -3.438900169],
+        country: 'United Kingdom',
+        events: [
+            { date: '2015-07-10', venue: 'T In The Park', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 134, 
+        name: 'Hasselt', 
+        position: [51.0056, 5.3387],
+        country: 'Belgium',
+        events: [
+            { date: '2015-08-21', venue: 'Pukkelpop', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
+    { 
+        id: 135, 
+        name: 'Split', 
+        position: [43.5081, 16.4402],
+        country: 'Croatia',
+        events: [
+            { date: '2016-07-17', venue: 'Ultra Europe 2016 Croatia', type: 'Other', isResidentAdvisor: true },
+        ] 
+    },
 ];
 
 // RESIDENT ADVISOR
@@ -1437,7 +1702,7 @@ Add 2011 Group Therapy North America tour
 
 2019: Added
 
-Songkick: Page 17-19 done
+Songkick: Page 15-19 done
 */
 
 // --- 2. SIDEBAR COMPONENT (NO CHANGES) ---
