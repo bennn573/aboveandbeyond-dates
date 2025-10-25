@@ -2157,6 +2157,11 @@ export default function App() {
             return total + matchingEvents.length;
         }, 0);
     }, [yearFilter, typeFilter, countryFilter]);
+
+    useEffect(() => {
+    console.log('Filters ->', { yearFilter, typeFilter, countryFilter });
+    console.log('TopCities ->', topCities);
+    }, [yearFilter, typeFilter, countryFilter, topCities]);
     
     return (
         <>
