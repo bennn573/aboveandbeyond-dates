@@ -1737,7 +1737,7 @@ const Sidebar = ({
     }, []);
     
     // Define all possible event types for the filter (Re-adding 'Tour')
-    const EVENT_TYPES = ['All Types', 'Milestone', 'Tour', 'Other'];
+    const EVENT_TYPES = ['All Types', 'Milestone', 'Tour', 'Acoustic', 'Other'];
 
     return (
         <div className="lg:w-1/4 w-full p-4 lg:p-6 bg-white rounded-xl shadow-lg border-2 border-indigo-100 lg:ml-6 mt-6 lg:mt-0">
