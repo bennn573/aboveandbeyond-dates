@@ -2108,36 +2108,33 @@ export default function App() {
     const [typeFilter, setTypeFilter] = useState('All Types'); 
     const [countryFilter, setCountryFilter] = useState('All Countries'); 
 
+    // inside App()
     const topCities = useMemo(() => {
+        // Build counts using the same filtering logic used elsewhere
         const counts = CITIES.map(city => {
-            // Check country match
+            // country must match
             const countryMatch = countryFilter === 'All Countries' || city.country === countryFilter;
 
             if (!countryMatch) {
-                return { name: city.name, country: city.country, count: 0 };
+                return { id: city.id, name: city.name, country: city.country, count: 0 };
             }
 
-            // Filter by year + type
             const matchingEvents = city.events.filter(event => {
-                const year = event.date.substring(0, 4);
+                const year = event.date ? event.date.substring(0, 4) : '';
                 const yearMatch = yearFilter === 'All Years' || year === yearFilter;
                 const typeMatch = typeFilter === 'All Types' || event.type === typeFilter;
-                
                 return yearMatch && typeMatch;
             });
 
-            return {
-                name: city.name,
-                country: city.country,
-                count: matchingEvents.length
-            };
+            return { id: city.id, name: city.name, country: city.country, count: matchingEvents.length };
         });
 
+        // Keep only cities with at least one matching event, sort desc, return top 10
         return counts
+            .filter(c => c.count > 0)          // hide zero-count cities (so table is meaningful)
             .sort((a, b) => b.count - a.count)
             .slice(0, 10);
-    }, [yearFilter, typeFilter, countryFilter]);
-
+    }, [yearFilter, typeFilter, countryFilter]); // <-- IMPORTANT: re-run when filters change
 
     // Calculate the total count of events based on current filters
     const filteredEventsCount = useMemo(() => {
@@ -2251,15 +2248,21 @@ export default function App() {
                             </tr>
                         </thead>
                         <tbody>
-                            {topCities.map(city => (
-                                <tr key={city.name} className="border-b last:border-b-0">
-                                    <td className="px-3 py-2">{city.name}</td>
-                                    <td className="px-3 py-2">{city.country}</td>
-                                    <td className="px-3 py-2 text-right font-semibold text-indigo-600">
-                                        {city.count}
-                                    </td>
-                                </tr>
-                            ))}
+                        {topCities.length === 0 ? (
+                            <tr>
+                            <td colSpan="3" className="p-6 text-center text-gray-400">
+                                No cities match the current filters.
+                            </td>
+                            </tr>
+                        ) : (
+                            topCities.map((city, idx) => (
+                            <tr key={city.id} className="border-b last:border-b-0 hover:bg-indigo-50">
+                                <td className="px-3 py-2">{city.name}</td>
+                                <td className="px-3 py-2">{city.country}</td>
+                                <td className="px-3 py-2 text-right font-semibold text-indigo-600">{city.count}</td>
+                            </tr>
+                            ))
+                        )}
                         </tbody>
                     </table>
                 </div>
