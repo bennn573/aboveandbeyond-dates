@@ -2110,31 +2110,31 @@ export default function App() {
 
     // inside App()
     const topCities = useMemo(() => {
-        // Build counts using the same filtering logic used elsewhere
-        const counts = CITIES.map(city => {
-            // country must match
-            const countryMatch = countryFilter === 'All Countries' || city.country === countryFilter;
+    const counts = CITIES.map(city => {
+        const matchingEvents = city.events.filter(event => {
+        const year = event.date ? event.date.substring(0, 4) : '';
+        const yearMatch = yearFilter === 'All Years' || year === yearFilter;
+        const typeMatch = typeFilter === 'All Types' || event.type === typeFilter;
 
-            if (!countryMatch) {
-                return { id: city.id, name: city.name, country: city.country, count: 0 };
-            }
+        // ✅ Moved into event filtering
+        const countryMatch = countryFilter === 'All Countries' || city.country === countryFilter;
 
-            const matchingEvents = city.events.filter(event => {
-                const year = event.date ? event.date.substring(0, 4) : '';
-                const yearMatch = yearFilter === 'All Years' || year === yearFilter;
-                const typeMatch = typeFilter === 'All Types' || event.type === typeFilter;
-                return yearMatch && typeMatch;
-            });
-
-            return { id: city.id, name: city.name, country: city.country, count: matchingEvents.length };
+        return yearMatch && typeMatch && countryMatch;
         });
 
-        // Keep only cities with at least one matching event, sort desc, return top 10
-        return counts
-            .filter(c => c.count > 0)          // hide zero-count cities (so table is meaningful)
-            .sort((a, b) => b.count - a.count)
-            .slice(0, 10);
-    }, [yearFilter, typeFilter, countryFilter]); // <-- IMPORTANT: re-run when filters change
+        return {
+        id: city.id,
+        name: city.name,
+        country: city.country,
+        count: matchingEvents.length
+        };
+    });
+
+    return counts
+        .filter(c => c.count > 0) // ✅ Now truly removes non-matching cities
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 10);
+    }, [yearFilter, typeFilter, countryFilter]);
 
     // Calculate the total count of events based on current filters
     const filteredEventsCount = useMemo(() => {
