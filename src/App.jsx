@@ -2090,7 +2090,7 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
         <div 
             ref={mapRef} 
             id="map" 
-            className="h-[600px] w-full rounded-xl"
+            className="h-[75vh] w-full rounded-xl"
         >
             {!isLeafletLoaded && (
                 <div className="flex items-center justify-center h-full bg-gray-100 rounded-xl">
@@ -2107,6 +2107,18 @@ export default function App() {
     const [yearFilter, setYearFilter] = useState('All Years'); 
     const [typeFilter, setTypeFilter] = useState('All Types'); 
     const [countryFilter, setCountryFilter] = useState('All Countries'); 
+
+    const topCities = useMemo(() => {
+    const counts = CITIES.map(city => ({
+        name: city.name,
+        country: city.country,
+        count: city.events.length
+    }));
+
+    return counts
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 10); // Top 10
+    }, []);
 
     // Calculate the total count of events based on current filters
     const filteredEventsCount = useMemo(() => {
@@ -2205,6 +2217,32 @@ export default function App() {
                         setCountryFilter={setCountryFilter}
                         filteredEventsCount={filteredEventsCount}
                     />
+                </div>
+
+                <div className="w-full max-w-5xl bg-white mt-8 p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Top Event Cities</h2>
+                    <p className="text-sm text-gray-500 mb-4">Cities with the most documented events</p>
+
+                    <table className="w-full table-fixed border-collapse rounded-lg overflow-hidden">
+                        <thead className="bg-indigo-100 text-indigo-800 text-sm">
+                            <tr>
+                                <th className="px-3 py-2 text-left w-1/2">City</th>
+                                <th className="px-3 py-2 text-left w-1/3">Country</th>
+                                <th className="px-3 py-2 text-right w-1/6">Events</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {topCities.map(city => (
+                                <tr key={city.name} className="border-b last:border-b-0">
+                                    <td className="px-3 py-2">{city.name}</td>
+                                    <td className="px-3 py-2">{city.country}</td>
+                                    <td className="px-3 py-2 text-right font-semibold text-indigo-600">
+                                        {city.count}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
 
                 <footer className="mt-8 text-sm text-gray-500">
