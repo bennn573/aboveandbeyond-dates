@@ -2109,16 +2109,35 @@ export default function App() {
     const [countryFilter, setCountryFilter] = useState('All Countries'); 
 
     const topCities = useMemo(() => {
-    const counts = CITIES.map(city => ({
-        name: city.name,
-        country: city.country,
-        count: city.events.length
-    }));
+        const counts = CITIES.map(city => {
+            // Check country match
+            const countryMatch = countryFilter === 'All Countries' || city.country === countryFilter;
 
-    return counts
+            if (!countryMatch) {
+                return { name: city.name, country: city.country, count: 0 };
+            }
+
+            // Filter by year + type
+            const matchingEvents = city.events.filter(event => {
+                const year = event.date.substring(0, 4);
+                const yearMatch = yearFilter === 'All Years' || year === yearFilter;
+                const typeMatch = typeFilter === 'All Types' || event.type === typeFilter;
+                
+                return yearMatch && typeMatch;
+            });
+
+            return {
+                name: city.name,
+                country: city.country,
+                count: matchingEvents.length
+            };
+        });
+
+        return counts
             .sort((a, b) => b.count - a.count)
-            .slice(0, 10); // Top 10
-    }, []);
+            .slice(0, 10);
+    }, [yearFilter, typeFilter, countryFilter]);
+
 
     // Calculate the total count of events based on current filters
     const filteredEventsCount = useMemo(() => {
