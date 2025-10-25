@@ -707,7 +707,7 @@ const CITIES = [
             { date: '2016-05-21', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2016-05-22', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2019-08-31', venue: 'Electric Zoo: Evolved', type: 'Other', isResidentAdvisor: true },
-            { date: '2016-10-28', venue: 'Pier 94 (Above & Beyond Halloween)', type: 'Other', isResidentAdvisor },
+            { date: '2016-10-28', venue: 'Pier 94 (Above & Beyond Halloween)', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
