@@ -42,6 +42,7 @@ const CITIES = [
             { date: '2015-04-04', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2016-06-04', venue: 'Royal Albert Hall (Acoustic)', type: 'Acoustic' },
             { date: '2016-08-28', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
+            { date: '2017-11-04', venue: 'O2 Arena', type: 'Other' },
             { date: '2019-04-12', venue: 'Printworks', type: 'Tour' },
             { date: '2019-04-13', venue: 'Printworks', type: 'Tour' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
