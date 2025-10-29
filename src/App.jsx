@@ -1132,6 +1132,7 @@ const CITIES = [
         country: 'India', 
         events: [
             { date: '2010-09-17', venue: 'Blue Frog', type: 'Other', isResidentAdvisor: true },
+            { date: '2025-12-21', venue: 'Infinity Bay', type: 'Other' },
         ]
     },
     { 
