@@ -45,6 +45,7 @@ const CITIES = [
             { date: '2017-11-04', venue: 'O2 Arena', type: 'Other' },
             { date: '2019-04-12', venue: 'Printworks', type: 'Tour' },
             { date: '2019-04-13', venue: 'Printworks', type: 'Tour' },
+            { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
         ]
@@ -91,6 +92,7 @@ const CITIES = [
             { date: '2016-11-24', venue: 'O2 Academy Glasgow', type: 'Tour' },
             { date: '2018-11-03', venue: 'SWG3', type: 'Tour' },
             { date: '2018-11-04', venue: 'SWG3', type: 'Tour' },
+            { date: '2024-07-27', venue: 'Galvanizers Yard, SWG3', type: 'Other' },
             { date: '2025-12-06', venue: 'O2 Academy Glasgow', type: 'Tour' },
         ]
     },
@@ -375,6 +377,7 @@ const CITIES = [
         events: [
             { date: '2016-11-26', venue: 'Ulster Hall', type: 'Tour' },
             { date: '2018-11-09', venue: 'The Telegraph Building', type: 'Tour' },
+            { date: '2024-07-26', venue: 'The Telegraph Building', type: 'Other' },
             { date: '2025-11-01', venue: 'The Telegraph Building', type: 'Tour' },
         ] 
     },
