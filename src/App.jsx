@@ -71,6 +71,7 @@ const CITIES = [
             { date: '2012-05-18', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
             { date: '2012-05-19', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
             { date: '2016-05-28', venue: 'Hollywood Bowl (Acoustic)', type: 'Acoustic' },
+            { date: '2025-12-31', venue: 'Los Angeles Convention Centre', type: 'Other' },
         ], 
     },
     // 3. GLASGOW 
