@@ -1124,7 +1124,7 @@ export const CITIES = [
             { date: '2011-09-03', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
             { date: '2016-05-14', venue: 'Massey Hal (Acoustic)', type: 'Acoustic' },
             { date: '2016-05-15', venue: 'Massey Hall (Acoustic)', type: 'Acoustic' },
-            { date: '2026-08-01', venue: 'Veld Music Festival', type: '},
+            { date: '2026-08-01', venue: 'Veld Music Festival', type: 'Other'},
         ]
     },
     { 
