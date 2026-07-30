@@ -220,6 +220,7 @@ export const CITIES = [
             { date: '2015-08-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2016-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2019-08-24', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2026-10-17', venue: 'Blackstone Street Warehouse', type: 'Other'},
         ]
     },
     { 
@@ -549,6 +550,7 @@ export const CITIES = [
         country: 'United Kingdom', 
         events: [
             { date: '2018-11-02', venue: 'O2 Academy Bristol', type: 'Tour' },
+            { date: '2026-10-30', venue: 'The Prospect Building', type: 'Other'},
         ] 
     },
     { 
@@ -849,6 +851,7 @@ export const CITIES = [
             { date: '2010-11-27', venue: 'Godskitchen pres. Anjunabeats', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-12', venue: 'O2 Institute Birmingham', type: 'Other', isSongkick: true },
             { date: '2015-11-14', venue: 'The Rainbow Venues', type: 'Other' },
+            { date: '2026-10-24', venue: 'GASWRX', type: 'Other'},
         ] 
     },
     { 
