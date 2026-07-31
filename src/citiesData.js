@@ -934,11 +934,12 @@ export const CITIES = [
         id: 66, 
         name: 'Washington, DC', 
         position: [38.8951, -77.0364],
-        fact: '',
+        fact: 'Home to Echostage',
         country: 'United States',
         events: [
             { date: '2008-05-03', venue: 'Glow', type: 'Other', isResidentAdvisor: true },
             { date: '2010-05-15', venue: 'Fur Nightclub', type: 'Other', isResidentAdvisor: true },
+            { date: '2025-08-31', venue: 'Echostage', type: 'Tour', isResidentAdvisor: true },
             { date: '2026-07-10', venue: 'Echostage', type: 'Other', isResidentAdvisor: true },
         ] 
     },
