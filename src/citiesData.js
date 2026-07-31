@@ -1366,7 +1366,7 @@ export const CITIES = [
         id: 102, 
         name: 'Mallorca', 
         position: [39.5694, 2.7094], 
-        fact: 'The largest of the Balearic Islands, famous for its beaches and as the home of the world-famous superclub, BCM Planet Dance, in the Magaluf area.', 
+        fact: 'The largest of the Balearic Islands, famous as the home of the world-famous superclub BCM, in the Magaluf area.', 
         country: 'Spain', 
         events: [
             { date: '2011-08-17', venue: 'BCM Planet Dance (Cream Mallorca)', type: 'Other', isResidentAdvisor: true },
@@ -1376,7 +1376,7 @@ export const CITIES = [
         id: 103, 
         name: 'Portrush', 
         position: [55.2047, -6.6522], 
-        fact: 'A popular seaside resort in Northern Ireland, renowned in the dance music scene as the home of the iconic trance superclub Lush.', 
+        fact: 'A popular seaside resort in Northern Ireland renowned as the home of the iconic trance superclub Lush.', 
         country: 'United Kingdom (Northern Ireland)', 
         events: [
             { date: '2011-10-01', venue: 'Lush', type: 'Other', isResidentAdvisor: true },
@@ -1387,7 +1387,7 @@ export const CITIES = [
         id: 104, 
         name: 'Houston, TX', 
         position: [29.7604, -95.3698], 
-        fact: 'The most populous city in Texas, known for its vibrant energy sector and significant role in the US space program ("Houston, we have a problem").', 
+        fact: 'Known for its vibrant energy sector and significant role in the US space program ("Houston, we have a problem").', 
         country: 'United States', 
         events: [
             { date: '2011-10-14', venue: 'Stereo Live', type: 'Other', isResidentAdvisor: true },
@@ -1398,7 +1398,7 @@ export const CITIES = [
         id: 105, 
         name: 'Tokyo', 
         position: [35.6895, 139.6917], 
-        fact: 'The group’s relationship with the city is significant, as Paavo Siljamäki met his wife while remixing Japanese pop star Ayumi Hamasaki.', 
+        fact: ' Paavo Siljamäki met his wife in Tokyo while remixing Japanese pop star Ayumi Hamasaki.', 
         country: 'Japan', 
         events: [
             { date: '2011-10-22', venue: 'AgeHa', type: 'Other', isResidentAdvisor: true },
