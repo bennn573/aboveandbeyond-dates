@@ -1307,13 +1307,14 @@ export const CITIES = [
     },
     { 
         id: 97, 
-        name: 'Austin', 
+        name: 'Austin, TX', 
         position: [30.2672, -97.7431], 
         fact: 'The "Live Music Capital of the World," home to major festivals like SXSW.', 
         country: 'United States', 
         events: [
             { date: '2011-02-11', venue: 'Republic Live', type: 'Other', isSongkick: true },
             { date: '2011-04-29', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2026-11-13', venue: 'Seismic Dance Event 9.0 @ The Concourse Project', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1726,6 +1727,15 @@ export const CITIES = [
         country: 'Belgium',
         events: [
             { date: '2017-07-01', venue: 'Rock Werchter', type: 'Other', isSongkick: true},
+        ]
+    },
+    {
+        id: 138,
+        name: 'Pocono, PA',
+        position: [41.057694000990175, -75.5090873553909],
+        country: 'United States',
+        events: [
+            { date: '2026-08-07', venue: 'Elements Music & Arts Festival', type: 'Other', isResidentAdvisor: true},
         ]
     },
 ];
