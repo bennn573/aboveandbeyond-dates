@@ -176,6 +176,7 @@ export const CITIES = [
             { date: '2006-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2007-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2008-07-26', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
+            { date: '2009-07-25', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2010-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2011-07-29', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
             { date: '2012-07-28', venue: 'Global Gathering', type: 'Other', isSongkick: true },
