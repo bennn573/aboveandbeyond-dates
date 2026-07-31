@@ -1775,4 +1775,13 @@ export const CITIES = [
             { date: '2009-11-07', venue: 'Planet of Angels @ Atlas Arena', type: 'Other', isResidentAdvisor: true },
         ]
     },
+    {
+        id: 142,
+        name: 'Cluj-Napoca',
+        position: [46.770439, 23.591423],
+        country: 'Romania',
+        events: [
+            { date: '2022-08-04', venue: 'Untold Festival', type: 'Other' },
+        ]
+    },
 ];
