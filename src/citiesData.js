@@ -44,6 +44,8 @@ export const CITIES = [
             { date: '2019-04-12', venue: 'Printworks', type: 'Tour' },
             { date: '2019-04-13', venue: 'Printworks', type: 'Tour' },
             { date: '2022-09-10', venue: 'Group Therapy Weekender @ Dockyards', type: 'Other'},
+            { date: '2023-04-12', venue: 'Printworks', type: 'Other' },
+            { date: '2023-04-13', venue: 'Printworks', type: 'Other' },
             { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
             { date: '2025-07-25', venue: 'Junction 2', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
