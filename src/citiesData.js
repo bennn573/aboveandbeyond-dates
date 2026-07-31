@@ -155,6 +155,10 @@ export const CITIES = [
             { date: '2016-08-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2016-08-18', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2016-08-25', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
+            { date: '2017-06-29', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true},
+            { date: '2017-07-13', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true},
+            { date: '2017-07-27', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true},
+            { date: '2017-08-10', venue: 'Cream @ Amnesia', type: 'Other', isSongkick: true},
             { date: '2018-08-15', venue: 'Hï Ibiza', type: 'Tour' },
             { date: '2019-07-12', venue: 'Ushuaia', type: 'Other', isResidentAdvisor: true },
         ]
@@ -380,6 +384,7 @@ export const CITIES = [
         country: 'United Kingdom (Northern Ireland)', 
         events: [
             { date: '2016-11-26', venue: 'Ulster Hall', type: 'Tour' },
+            { date: '2017-08-11', venue: 'Custom Square House', type: 'Other', isSongkick: true},
             { date: '2018-11-09', venue: 'The Telegraph Building', type: 'Tour' },
             { date: '2024-07-26', venue: 'The Telegraph Building', type: 'Other' },
             { date: '2025-11-01', venue: 'The Telegraph Building', type: 'Tour' },
