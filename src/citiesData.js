@@ -1712,5 +1712,14 @@ export const CITIES = [
         events: [
             { date: '2026-08-14', venue: 'Iceland Eclipse @ Snæfellsnes Peninsula', type: 'Other'},
         ]
-    }
+    },
+    {
+        id: 137,
+        name: 'Werchter',
+        position: [50.9667, 4.7000],
+        country: 'Belgium',
+        events: [
+            { date: '2027-07-01', venue: 'Rock Werchter', type: 'Other'},
+        ]
+    },
 ];
