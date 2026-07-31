@@ -46,6 +46,7 @@ export const CITIES = [
             { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2026-07-03', venue: 'Fabric', type: 'Other' },
             { date: '2026-07-03', venue: 'Silverworks Island', type: 'Other' },
         ]
     },
@@ -938,6 +939,7 @@ export const CITIES = [
         events: [
             { date: '2008-05-03', venue: 'Glow', type: 'Other', isResidentAdvisor: true },
             { date: '2010-05-15', venue: 'Fur Nightclub', type: 'Other', isResidentAdvisor: true },
+            { date: '2026-07-10', venue: 'Echostage', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
