@@ -1742,4 +1742,13 @@ export const CITIES = [
             { date: '2026-08-07', venue: 'Elements Music & Arts Festival', type: 'Other', isResidentAdvisor: true},
         ]
     },
+    {
+        id: 139,
+        name: 'Gliwice',
+        position: [50.28535170870516, 18.686023998150866],
+        country: 'Poland',
+        events: [
+            { date: '2022-04-22', venue: 'Anjunabeats Europe @ Arena Gliwice', type: 'Other'},
+        ]
+    },
 ];
