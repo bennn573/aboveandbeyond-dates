@@ -1707,7 +1707,7 @@ export const CITIES = [
     {
         id: 136,
         name: 'Iceland',
-        position: [64.1466, 21.9426],
+        position: [64.128288, -21.827774],
         country: 'Iceland',
         events: [
             { date: '2026-08-14', venue: 'Iceland Eclipse @ Snæfellsnes Peninsula', type: 'Other'},
