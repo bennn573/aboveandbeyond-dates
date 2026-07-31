@@ -1719,7 +1719,7 @@ export const CITIES = [
         position: [50.9667, 4.7000],
         country: 'Belgium',
         events: [
-            { date: '2027-07-01', venue: 'Rock Werchter', type: 'Other'},
+            { date: '2017-07-01', venue: 'Rock Werchter', type: 'Other'},
         ]
     },
 ];
