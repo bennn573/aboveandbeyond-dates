@@ -44,6 +44,7 @@ export const CITIES = [
             { date: '2019-04-12', venue: 'Printworks', type: 'Tour' },
             { date: '2019-04-13', venue: 'Printworks', type: 'Tour' },
             { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
+            { date: '2025-07-25', venue: 'Junction 2', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2026-07-03', venue: 'Fabric', type: 'Other' },
@@ -202,7 +203,7 @@ export const CITIES = [
         id: 8, 
         name: 'Istanbul', 
         position: [41.0082, 28.9784], 
-        fact: '', 
+        fact: 'The gateway to Asia', 
         country: 'Turkey', 
         events: [
             { date: '2005-09-10', venue: 'Pepsi Electronica Festival', type: 'Other', isResidentAdvisor: true },
@@ -543,7 +544,7 @@ export const CITIES = [
         id: 33, 
         name: 'Prague', 
         position: [50.0755, 14.4378], 
-        fact: 'The capital of the Czech Republic, host of the ABGT350 milestone at O2 Arena, and home to Transmission Festival.', 
+        fact: 'Host of the ABGT350 milestone at O2 Arena and home to Transmission Festival.', 
         country: 'Czech Republic', 
         events: [
             { date: '2007-11-02', venue: 'Transmission (O2 Arena)', type: 'Other' },
@@ -600,7 +601,7 @@ export const CITIES = [
         id: 38, 
         name: 'Budapest', 
         position: [47.4979, 19.0402], 
-        fact: 'The capital of Hungary is home to the infamous Sziget Festival.', 
+        fact: 'Home to the infamous Sziget Festival.', 
         country: 'Hungary', 
         events: [
             { date: '2010-10-16', venue: 'T-Mobile Bónusz Electronic Music Festival', type: 'Other', isResidentAdvisor: true },
