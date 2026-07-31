@@ -738,6 +738,7 @@ export const CITIES = [
         events: [
             { date: '2015-06-23', venue: 'The Gorge Amphitheatre (Paradiso Festival)', type: 'Other', isResidentAdvisor: true },
             { date: '2017-09-16', venue: 'The Gorge Amphitheatre (ABGT250)', type: 'Milestone' },
+            { date: '2022-07-23', venue: 'Group Therapy Weekender @ The Gorge', type: 'Other', isResidentAdvisor: true },
             { date: '2026-09-12', venue: 'The Gorge Amphitheatre (ABGT700)', type: 'Milestone' },
         ] 
     },
