@@ -1713,7 +1713,8 @@ export const CITIES = [
         position: [43.5081, 16.4402],
         country: 'Croatia',
         events: [
-            { date: '2016-07-17', venue: 'Ultra Europe 2016 Croatia', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-07-17', venue: 'Ultra Europe 2016', type: 'Other', isResidentAdvisor: true },
+            { date: '2022-07-08', venue: 'Ultra Europe 2022', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     {
@@ -1750,6 +1751,24 @@ export const CITIES = [
         country: 'Poland',
         events: [
             { date: '2022-04-22', venue: 'Anjunabeats Europe @ Arena Gliwice', type: 'Other'},
+        ]
+    },
+    {
+        id: 140,
+        name: 'Poznań',
+        position: [52.42095403087306, 16.7902059400657],
+        country: 'Poland',
+        events: [
+            { date: '2009-06-06', venue: 'Global Gathering Poland', type: 'Other', isResidentAdvisor: true },
+        ]
+    },
+    {
+        id: 141,
+        name: 'Łódź',
+        position: [51.76073433427028, 19.424398386719258],
+        country: 'Poland',
+        events: [
+            { date: '2009-11-07', venue: 'Planet of Angels @ Atlas Arena', type: 'Other', isResidentAdvisor: true },
         ]
     },
 ];
