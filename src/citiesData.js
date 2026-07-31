@@ -323,6 +323,7 @@ export const CITIES = [
             { date: '2013-03-17', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
             { date: '2013-03-23', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
             { date: '2016-03-17', venue: 'RC Cola Plant', type: 'Other', isResidentAdvisor: true },
+            { date: '2017-03-23', venue: 'RC Cola Plant', type: 'Other', isSongkick: true},
         ]
     },
     { 
