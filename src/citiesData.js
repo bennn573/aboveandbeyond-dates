@@ -1213,6 +1213,7 @@ export const CITIES = [
             { date: '2010-04-17', venue: 'Skol Sensation 2010', type: 'Other', isSongkick: true },
             { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2015-12-04', venue: 'EDC Brasil 2015', type: 'Other', isResidentAdvisor: true },
+            { date: '2022-04-09', venue: 'Laroc Club', type: 'Other' },
         ] 
     },
     { 
