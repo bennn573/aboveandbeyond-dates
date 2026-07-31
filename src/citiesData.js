@@ -512,7 +512,7 @@ export const CITIES = [
             { date: '2015-01-22', venue: 'Vega', type: 'Tour' },
             { date: '2016-12-17', venue: 'Vega', type: 'Tour' },
             { date: '2018-10-25', venue: 'Den Grå Hal', type: 'Tour' },
-            { date: '2025-11-20', venue: 'Progon', type: 'Tour' },
+            { date: '2025-11-20', venue: 'Poolen', type: 'Tour' },
         ] 
     },
     { 
