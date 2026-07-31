@@ -968,7 +968,7 @@ export const CITIES = [
     { 
         id: 69, 
         name: 'Barcelona', 
-        position: [56.97778, 24.12167],
+        position: [41.390205, 2.154007],
         fact: '',
         country: 'Spain',
         events: [
