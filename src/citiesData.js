@@ -371,7 +371,7 @@ export const CITIES = [
             { date: '2015-04-05', venue: 'Albert Hall', type: 'Tour' },
             { date: '2016-05-01', venue: 'Albert Hall (Acoustic)', type: 'Acoustic' },
             { date: '2016-11-25', venue: 'The Warehouse Project', type: 'Tour' },
-            { date: '2017-06-11', venue: 'Parklife @ Heaton Park, type: 'Other'},
+            { date: '2017-06-11', venue: 'Parklife @ Heaton Park', type: 'Other'},
             { date: '2018-11-16', venue: 'The Warehouse Project', type: 'Tour' },
             { date: '2019-11-29', venue: 'The Warehouse Project', type: 'Other' },
         ] 
