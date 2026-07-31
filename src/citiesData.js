@@ -46,6 +46,7 @@ export const CITIES = [
             { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2026-07-03', venue: 'Silverworks Island', type: 'Other' },
         ]
     },
     { 
