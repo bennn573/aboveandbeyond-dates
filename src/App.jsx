@@ -118,16 +118,16 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
     
     const [isLeafletLoaded, setIsLeafletLoaded] = useState(false);
     
-    // Constant for the Resident Advisor logo URL
-    const RA_LOGO_URL = 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/ResidentAdvisor_logo.png/1200px-ResidentAdvisor_logo.png';
-    const FALLBACK_RA_URL = 'https://placehold.co/20x20/cccccc/000000?text=RA';
+    // --- Updated Source Logos ---
     
-    // Constant for Songkick logo URL
-    const SK_LOGO_URL = 'https://uptime.com/media/website_profiles/songkick.com.png';
+    // Primary URLs using Google's proxy API (bypasses hotlink restrictions)
+    const RA_LOGO_URL = 'https://www.google.com/s2/favicons?domain=residentadvisor.net&sz=64';
+    const SK_LOGO_URL = 'https://www.google.com/s2/favicons?domain=songkick.com&sz=64';
+    const TL_LOGO_URL = 'https://www.google.com/s2/favicons?domain=1001tracklists.com&sz=64';
+    
+    // Retained placehold.co fallbacks
+    const FALLBACK_RA_URL = 'https://placehold.co/20x20/cccccc/000000?text=RA';
     const FALLBACK_SK_URL = 'https://placehold.co/20x20/ef4444/ffffff?text=SK'; 
-
-    // Constant for 1001Tracklists logo URL
-    const TL_LOGO_URL = 'https://www.1001tracklists.com/images/static/favicon/apple-touch-icon-180x180.png';
     const FALLBACK_TL_URL = 'https://placehold.co/20x20/10b981/ffffff?text=1001';
 
     // Constants for dynamic icon sizing
