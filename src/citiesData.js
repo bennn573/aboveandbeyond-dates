@@ -33,7 +33,7 @@ export const CITIES = [
             { date: '2011-08-27', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
-            { date: '2014-01-24', venue: 'Porchester Hall (Acoustic)', type: 'Acoustic' },
+            { date: '2014-01-24', venue: 'Porchester Hall', type: 'Acoustic' },
             { date: '2014-11-13', venue: 'Little Something Special @ SSE Wembley Arena', type: 'Other', isSongkick: true },
             { date: '2015-03-13', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2015-04-03', venue: 'O2 Academy Brixton', type: 'Tour' },
