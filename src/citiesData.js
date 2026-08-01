@@ -419,8 +419,8 @@ export const CITIES = [
         country: 'Poland', 
         events: [
             { date: '2012-07-14', venue: 'Ultra Music Festival Poland 2012', type: 'Other', isSongkick: true },
-            { date: '2016-11-30', venue: 'Progresja Music Zone', type: 'Tour' },
-            { date: '2018-10-28', venue: 'Progresja Music Zone', type: 'Tour' },
+            { date: '2016-11-30', venue: 'Progresja Music Zone', type: 'Tour', is1001Tracklists: true },
+            { date: '2018-10-28', venue: 'Progresja Music Zone', type: 'Tour', is1001Tracklists: true },
         ] 
     },
     { 
@@ -453,7 +453,7 @@ export const CITIES = [
         events: [
             { date: '2015-01-15', venue: 'Live Music Hall', type: 'Tour' },
             { date: '2016-12-03', venue: 'Live Music Hall', type: 'Tour' },
-            { date: '2018-10-20', venue: 'Boothaus', type: 'Tour' },
+            { date: '2018-10-20', venue: 'Bootshaus', type: 'Tour' },
             { date: '2025-12-05', venue: 'Bootshaus', type: 'Tour' },
         ] 
     },
