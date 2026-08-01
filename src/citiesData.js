@@ -1273,7 +1273,7 @@ export const CITIES = [
         id: 93, 
         name: 'Den Bosch', 
         position: [51.6978, 5.3037], 
-        fact: 'The site of the massive A State of Trance 500 event in 2011.', 
+        fact: 'The site of A State of Trance 500 event in 2011.', 
         country: 'Netherlands', 
         events: [
             { date: '2011-04-09', venue: 'A State of Trance 500 @ Brabanthallen', type: 'Other', isResidentAdvisor: true },
