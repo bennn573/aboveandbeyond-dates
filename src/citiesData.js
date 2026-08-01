@@ -50,8 +50,8 @@ export const CITIES = [
             { date: '2025-07-25', venue: 'Junction 2', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
-            { date: '2026-07-03', venue: 'Fabric', type: 'Other' },
-            { date: '2026-07-03', venue: 'Silverworks Island', type: 'Other' },
+            { date: '2026-07-03', venue: 'Fabric', type: 'Other', is1001Tracklists: true  },
+            { date: '2026-07-03', venue: 'Silverworks Island', type: 'Other', is1001Tracklists: true  },
         ]
     },
     { 
