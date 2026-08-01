@@ -319,7 +319,7 @@ export const CITIES = [
     },
     { 
         id: 16, 
-        name: 'Miami', 
+        name: 'Miami, FL', 
         position: [25.7617, -80.1918], 
         fact: 'A crucial location for Winter Music Conference (WMC) events, including two on the same day in March 2006!', 
         country: 'United States', 
@@ -334,7 +334,7 @@ export const CITIES = [
             { date: '2011-03-24', venue: 'Ice Palace', type: 'Other', isResidentAdvisor: true },
             { date: '2012-03-22', venue: 'Group Therapy @ Bayfront Park', type: 'Other', isSongkick: true },
             { date: '2013-03-17', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
-            { date: '2013-03-23', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
+            { date: '2013-03-24', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
             { date: '2016-03-17', venue: 'RC Cola Plant', type: 'Other', isResidentAdvisor: true },
             { date: '2017-03-23', venue: 'RC Cola Plant', type: 'Other', isSongkick: true},
             { date: '2017-03-25', venue: 'Ultra Music Festival', type: 'Other'},
@@ -551,10 +551,11 @@ export const CITIES = [
         id: 33, 
         name: 'Prague', 
         position: [50.0755, 14.4378], 
-        fact: 'Host of the ABGT350 milestone at O2 Arena and home to Transmission Festival.', 
+        fact: 'Host of the ABGT350 milestone and home to Transmission Festival at O2 Arena.', 
         country: 'Czech Republic', 
         events: [
             { date: '2007-11-02', venue: 'Transmission (O2 Arena)', type: 'Other' },
+            { date: '2011-11-19', venue: 'Transmission (O2 Arena)', type: 'Other', is1001Tracklists: true },
             { date: '2014-10-25', venue: 'Transmission (O2 Arena)', type: 'Other', isResidentAdvisor: true },
             { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Tour', is1001Tracklists: true },
             { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone', is1001Tracklists: true },
@@ -1009,6 +1010,7 @@ export const CITIES = [
         events: [
             { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
             { date: '2011-07-23', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-07-27', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
             { date: '2014-07-26', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
             { date: '2019-07-20', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
             { date: '2019-07-28', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
@@ -1023,6 +1025,7 @@ export const CITIES = [
         events: [
             { date: '2008-08-02', venue: 'Global Gathering Russia 2008', type: 'Other', isResidentAdvisor: true },
             { date: '2010-07-17', venue: 'Global Gathering Russia 2010', type: 'Other', isResidentAdvisor: true },
+            { date: '2013-02-22', venue: 'Trancemission', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
