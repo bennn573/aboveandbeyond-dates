@@ -233,6 +233,7 @@ export const CITIES = [
             { date: '2015-08-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2016-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2019-08-24', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2021-08-28', venue: 'Creamfields', type: 'Other', is1001Tracklists: true },
             { date: '2026-10-17', venue: 'Blackstone Street Warehouse', type: 'Other'},
         ]
     },
@@ -313,7 +314,7 @@ export const CITIES = [
             { date: '2006-02-11', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
             { date: '2010-04-03', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
             { date: '2015-05-03', venue: 'TivoliVredenburg (Acoustic)', type: 'Acoustic' },
-            { date: '2019-02-23', venue: 'A State of Trance 900', type: 'Other' },
+            { date: '2019-02-23', venue: 'A State of Trance 900 @ Jaarbeurs', type: 'Other', is1001Tracklists: true },
         ]
     },
     { 
@@ -555,8 +556,8 @@ export const CITIES = [
         events: [
             { date: '2007-11-02', venue: 'Transmission (O2 Arena)', type: 'Other' },
             { date: '2014-10-25', venue: 'Transmission (O2 Arena)', type: 'Other', isResidentAdvisor: true },
-            { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Tour' },
-            { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone' },
+            { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Tour', is1001Tracklists: true },
+            { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone', is1001Tracklists: true },
         ] 
     },
     { 
@@ -730,7 +731,9 @@ export const CITIES = [
             { date: '2016-05-21', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2016-05-22', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2019-08-31', venue: 'Electric Zoo: Evolved', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-12-31', venue: 'New York Expo Center', type: 'Other', is1001Tracklists: true },
             { date: '2016-10-28', venue: 'Pier 94 (Above & Beyond Halloween)', type: 'Other', isResidentAdvisor: true },
+            { date: '2021-12-28', venue: 'Avant Gardner', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -919,12 +922,13 @@ export const CITIES = [
     },
     { 
         id: 64, 
-        name: 'Detroit', 
+        name: 'Detroit, MI', 
         position: [42.3314, -83.0458],
         country: 'United States',
         events: [
             { date: '2008-04-25', venue: 'Bleu', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-21', venue: 'Necto', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-10-26', venue: 'The Fillmore', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -947,6 +951,8 @@ export const CITIES = [
         events: [
             { date: '2008-05-03', venue: 'Glow', type: 'Other', isResidentAdvisor: true },
             { date: '2010-05-15', venue: 'Fur Nightclub', type: 'Other', isResidentAdvisor: true },
+            { date: '2021-11-26', venue: 'Anjunafamily Reunion @ Echostage', type: 'Other', is1001Tracklists: true },
+            { date: '2021-11-27', venue: 'Anjunafamily Reunion @ Echostage', type: 'Other', is1001Tracklists: true },
             { date: '2025-08-31', venue: 'Echostage', type: 'Tour', isResidentAdvisor: true },
             { date: '2026-07-10', venue: 'Echostage', type: 'Other', isResidentAdvisor: true },
         ] 
@@ -998,13 +1004,13 @@ export const CITIES = [
         id: 71, 
         name: 'Boom',
         position: [51.092222, 4.385556],
-        fact: '',
+        fact: 'Home to the world famous Tomorrowland festival',
         country: 'Belgium',
         events: [
             { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
             { date: '2011-07-23', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
-            { date: '2019-07-19', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
-            { date: '2019-07-26', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-07-20', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
+            { date: '2019-07-28', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1148,6 +1154,7 @@ export const CITIES = [
             { date: '2011-09-03', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
             { date: '2016-05-14', venue: 'Massey Hal (Acoustic)', type: 'Acoustic' },
             { date: '2016-05-15', venue: 'Massey Hall (Acoustic)', type: 'Acoustic' },
+            { date: '2019-12-27', venue: 'REBEL', type: 'Other', is1001Tracklists: true },
             { date: '2026-08-01', venue: 'Veld Music Festival', type: 'Other'},
         ]
     },
@@ -1299,6 +1306,7 @@ export const CITIES = [
             { date: '2013-06-23', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2013-06-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2014-06-20', venue: 'EDC Las Vegas', type: 'Other', isResidentAdvisor: true },
+            { date: '2019-06-09', venue: 'KAOS', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1314,6 +1322,7 @@ export const CITIES = [
             { date: '2013-05-21', venue: 'Royale', type: 'Other', isSongkick: true },
             { date: '2013-05-22', venue: 'Royale', type: 'Other', isSongkick: true },
             { date: '2016-05-17', venue: 'The Wang', type: 'Acoustic' },
+            { date: '2021-12-27', venue: 'Big Night Live', type: 'Other', is1001Tracklists: true },
             { date: '2026-07-31', venue: 'Big Night Live', type: 'Other'},
         ] 
     },
@@ -1421,6 +1430,8 @@ export const CITIES = [
         events: [
             { date: '2012-07-21', venue: 'Red Rocks Amphitheatre', type: 'Other', isSongkick: true },
             { date: '2019-09-20', venue: 'Red Rocks Amphitheatre', type: 'Other', isResidentAdvisor: true },
+            { date: '2021-10-21', venue: 'Red Rocks Amphitheatre', type: 'Other', is1001Tracklists: true },
+            { date: '2021-10-22', venue: 'Red Rocks Amphitheatre', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1433,6 +1444,7 @@ export const CITIES = [
             { date: '2011-06-03', venue: 'Tabernacle', type: 'Other', isSongkick: true },
             { date: '2012-06-01', venue: 'Opera', type: 'Other', isSongkick: true },
             { date: '2019-12-29', venue: 'Believe Music Hall', type: 'Other', isResidentAdvisor: true },
+            { date: '2021-09-24', venue: 'Georgia Freight Depot', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1481,6 +1493,7 @@ export const CITIES = [
         events: [
             { date: '2011-04-22', venue: 'Europe Nightclub', type: 'Other', isSongkick: true },
             { date: '2012-06-09', venue: 'Pulse Music Festival', type: 'Other', isSongkick: true },
+            { date: '2019-05-25', venue: 'Ryse Nightclub', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
