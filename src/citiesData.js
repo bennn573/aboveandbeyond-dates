@@ -1009,6 +1009,7 @@ export const CITIES = [
         events: [
             { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
             { date: '2011-07-23', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-07-26', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
             { date: '2019-07-20', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
             { date: '2019-07-28', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
         ] 
@@ -1734,8 +1735,9 @@ export const CITIES = [
         position: [43.5081, 16.4402],
         country: 'Croatia',
         events: [
-            { date: '2016-07-17', venue: 'Ultra Europe 2016', type: 'Other', isResidentAdvisor: true },
-            { date: '2022-07-08', venue: 'Ultra Europe 2022', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-07-11', venue: 'Ultra Europe', type: 'Other', is1001Tracklists: true },
+            { date: '2016-07-17', venue: 'Ultra Europe', type: 'Other', isResidentAdvisor: true },
+            { date: '2022-07-08', venue: 'Ultra Europe', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     {
