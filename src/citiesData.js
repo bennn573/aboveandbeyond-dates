@@ -1539,6 +1539,7 @@ export const CITIES = [
         events: [
             { date: '2011-09-04', venue: 'Zouk', type: 'Other', isSongkick: true },
             { date: '2012-09-20', venue: 'Lizard Lounge', type: 'Other', isSongkick: true },
+            { date: '2026-07-11', venue: 'SILO', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
