@@ -200,8 +200,8 @@ export const CITIES = [
             { date: '2012-08-04', venue: 'Dance Valley Festival', type: 'Other', isSongkick: true },
             { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
             { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
-            { date: '2022-05-12', venue: 'Gashouder', type: 'Other' },
-            { date: '2022-05-13', venue: 'Gashouder', type: 'Other' },
+            { date: '2022-05-12', venue: 'Gashouder', type: 'Other', is1001Tracklists: true },
+            { date: '2022-05-13', venue: 'Gashouder', type: 'Other', is1001Tracklists: true },
             { date: '2025-10-31', venue: 'AFAS Live', type: 'Tour' },
         ]
     },
@@ -1213,7 +1213,7 @@ export const CITIES = [
             { date: '2010-04-17', venue: 'Skol Sensation 2010', type: 'Other', isSongkick: true },
             { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2015-12-04', venue: 'EDC Brasil 2015', type: 'Other', isResidentAdvisor: true },
-            { date: '2022-04-09', venue: 'Laroc Club', type: 'Other' },
+            { date: '2022-04-09', venue: 'Laroc Club', type: 'Other', is1001Tracklists: true  },
         ] 
     },
     { 
