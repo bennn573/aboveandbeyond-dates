@@ -126,46 +126,34 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
     const SK_LOGO_URL = 'https://uptime.com/media/website_profiles/songkick.com.png';
     const FALLBACK_SK_URL = 'https://placehold.co/20x20/ef4444/ffffff?text=SK'; 
 
+    // Constant for 1001Tracklists logo URL
+    const TL_LOGO_URL = 'https://www.1001tracklists.com/images/static/favicon/apple-touch-icon-180x180.png';
+    const FALLBACK_TL_URL = 'https://placehold.co/20x20/10b981/ffffff?text=1001';
+
     // Constants for dynamic icon sizing
     const MIN_ZOOM = 3; 
     const MAX_ZOOM = 7; 
     const BASE_SIZE = 32;
 
-    // --- MODIFIED HELPER FUNCTION: Sorts events chronologically (Lowest Year First) ---
-    /**
-     * Sorts events chronologically (earliest date first).
-     * This automatically sorts by year first, and then by month/day.
-     */
     const sortEvents = (events) => {
-        // Function to parse date strings (YYYY-MM-DD) into Date objects
         const parseDate = (dateStr) => {
             const date = new Date(dateStr);
             return isNaN(date.getTime()) ? new Date(0) : date;
         };
 
-        const sorted = [...events].sort((a, b) => {
+        return [...events].sort((a, b) => {
             const dateA = parseDate(a.date);
             const dateB = parseDate(b.date);
-            
-            // Fixed ascending sort: dateA - dateB for oldest first
-            const comparison = dateA.getTime() - dateB.getTime();
-
-            return comparison;
+            return dateA.getTime() - dateB.getTime();
         });
-        return sorted;
     };
 
-
-    // Function to generate the custom SVG Icon with zoom scaling (NO CHANGES)
     const getCustomIcon = (cityName, currentZoom) => {
         if (typeof L === 'undefined') return;
 
-        // Calculate size based on a smaller zoom range for world map
         const zoomRatio = Math.max(0, Math.min(1, (currentZoom - MIN_ZOOM) / (MAX_ZOOM - MIN_ZOOM)));
         const scaleFactor = 0.8 + zoomRatio * 0.4; 
         const size = Math.round(BASE_SIZE * scaleFactor);
-
-        // Use the first letter of the cleaned city name for the marker text
         const markerText = cityName.charAt(0);
 
         const svgContent = `
@@ -187,9 +175,7 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
         });
     };
 
-    // --- Effect 1: Load Leaflet and Initialize Map (Runs Once) ---
     useEffect(() => {
-        // Helper functions to load external resources
         const loadScript = (url) => new Promise((resolve) => {
             if (document.querySelector(`script[src="${url}"]`)) { resolve(); return; }
             const script = document.createElement('script');
@@ -212,7 +198,6 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
         });
     }, []);
 
-    // --- Effect 2: Initialize Map Instance and Listeners (Runs on isLeafletLoaded=true) ---
     useEffect(() => {
         if (isLeafletLoaded && typeof L !== 'undefined' && mapRef.current && !mapInstance.current) {
             const mapCenter = [20, 0]; 
@@ -230,7 +215,6 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                 if (!map) return;
                 
                 map.invalidateSize(true);
-                // Update marker icons on zoom
                 markerLayerRef.current.eachLayer(layer => {
                     const cityName = layer.options.title; 
                     if (cityName) { 
@@ -248,7 +232,6 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
             window.addEventListener('resize', fixMap);
             map.on('zoomend', handleMapUpdate); 
 
-            // Cleanup function for map instance
             return () => {
                 if (mapInstance.current) {
                     mapInstance.current.remove();
@@ -259,14 +242,12 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
         }
     }, [isLeafletLoaded]); 
 
-    // --- Effect 3: Filter and Draw Markers (Runs on filter change or map init) ---
     useEffect(() => {
         if (!mapInstance.current || !markerLayerRef.current) return;
 
         const map = mapInstance.current;
         const markerLayer = markerLayerRef.current;
         
-        // Store markers whose popups are currently open to update them later
         const openPopups = {};
         markerLayer.eachLayer(layer => {
             if (layer.isPopupOpen()) {
@@ -274,21 +255,14 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
             }
         });
         
-        // Clear all existing markers (we'll redraw them)
         markerLayer.clearLayers();
-
         const currentZoom = map.getZoom();
 
-        // 2. Add filtered and sorted markers
         CITIES.forEach(city => {
-            // Filter city based on Country filter
             const countryMatchCity = countryFilter === 'All Countries' || city.country === countryFilter;
             
-            if (!countryMatchCity) {
-                return; // Skip the city entirely if it doesn't match the country filter
-            }
+            if (!countryMatchCity) return;
             
-            // 1. Filter events based on year AND type
             const filteredEventsRaw = city.events.filter(event => {
                 const year = event.date.substring(0, 4);
                 const yearMatch = yearFilter === 'All Years' || year === yearFilter;
@@ -297,19 +271,13 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                 return yearMatch && typeMatch; 
             });
 
-            // 2. Sort the filtered events (always ascending chronological)
             const filteredEvents = sortEvents(filteredEventsRaw);
 
-
-            // Only show the city marker if it has matching events
             if (filteredEvents.length > 0) {
-                
-                // Create event table rows from filtered and sorted events
                 const tableRows = filteredEvents.map(event => {
                     let sourceDisplay = '';
                     let sourceTitle = '';
                     
-                    // Show RA logo only if explicitly flagged as ResidentAdvisor source
                     if (event.isResidentAdvisor) {
                         sourceTitle = 'Source: Resident Advisor';
                         sourceDisplay = `<div class="flex items-center justify-center p-0 m-0"> 
@@ -330,6 +298,16 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                                                  onerror="this.onerror=null;this.src='${FALLBACK_SK_URL}';"
                                             />
                                        </div>`;
+                    } else if (event.is1001Tracklists) {
+                        sourceTitle = 'Source: 1001Tracklists';
+                        sourceDisplay = `<div class="flex items-center justify-center p-0 m-0"> 
+                                            <img src="${TL_LOGO_URL}" 
+                                                 class="w-5 h-5 object-contain align-middle rounded-full" 
+                                                 alt="1001Tracklists Logo" 
+                                                 title="${sourceTitle}"
+                                                 onerror="this.onerror=null;this.src='${FALLBACK_TL_URL}';"
+                                            />
+                                       </div>`;
                     }
                     
                     return `
@@ -341,7 +319,6 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                     `;
                 }).join('');
 
-                // Popup content construction (using filtered events)
                 const popupContent = `
                     <div class="p-4 font-inter w-full">
                         <h3 class="text-xl font-bold text-indigo-700 mb-3">${city.name}, ${city.country}</h3>
@@ -354,7 +331,6 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                             <table class="w-full text-left table-fixed">
                                 <thead class="bg-gray-100 sticky top-0">
                                     <tr>
-                                        <!-- DATE HEADER: Now static, no click handler or sort icon -->
                                         <th scope="col" 
                                             class="px-3 py-1 text-xs font-bold text-gray-600 sm:w-[23%] select-none"
                                             title="Sorted by Year (Lowest First)">
@@ -369,23 +345,19 @@ const MapComponent = ({ yearFilter, typeFilter, countryFilter }) => {
                                 </tbody>
                             </table>
                         </div>
-                        <p class="text-[10px] text-gray-400 mt-2">Last column indicates the source from which the event was grabbed.</p>
+                        <p class="text-[10px] text-gray-400 mt-2">Icons indicate event sources (Resident Advisor, Songkick, 1001Tracklists).</p>
                     </div>
                 `;
 
-                // Create and add marker to the feature group
                 const icon = getCustomIcon(city.name, currentZoom);
                 const marker = L.marker(city.position, { icon: icon, title: city.name });
                 marker.bindPopup(popupContent, { minWidth: 540, maxWidth: 600 });
                 
                 markerLayer.addLayer(marker);
 
-                // CRITICAL: If the popup for this city was open before the re-render, update its content
                 if (openPopups[city.name]) {
-                    // Find the existing marker instance (which is now in markerLayer)
                     markerLayer.eachLayer(newMarker => {
                         if (newMarker.options.title === city.name) {
-                            // Update the content of the already open popup
                             newMarker.setPopupContent(popupContent);
                         }
                     });
