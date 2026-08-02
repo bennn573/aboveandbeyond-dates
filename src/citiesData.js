@@ -47,6 +47,7 @@ export const CITIES = [
             { date: '2023-04-12', venue: 'Printworks', type: 'Other', is1001Tracklists: true  },
             { date: '2023-04-13', venue: 'Printworks', type: 'Other', is1001Tracklists: true  },
             { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
+            { date: '2024-08-04', venue: 'Anjunadeep Open Air @ Finsbury Park', type: 'Other', is1001Tracklists: true },
             { date: '2025-07-25', venue: 'Junction 2', type: 'Festival' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
@@ -57,7 +58,7 @@ export const CITIES = [
     },
     { 
         id: 2, 
-        name: 'Los Angeles', 
+        name: 'Los Angeles, CA', 
         position: [34.0522, -118.2437], 
         fact: 'Home to the most iconic A&B events in the US.', 
         country: 'United States', 
@@ -78,6 +79,7 @@ export const CITIES = [
             { date: '2012-05-19', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
             { date: '2015-02-06', venue: 'The Forum', type: 'Other' },
             { date: '2016-05-28', venue: 'Hollywood Bowl', type: 'Acoustic' },
+            { date: '2024-11-23', venue: 'Dreamstate @ Long Beach', type: 'Festival', is1001Tracklists: true },
             { date: '2025-12-31', venue: 'Los Angeles Convention Centre', type: 'Other' },
         ], 
     },
@@ -797,6 +799,7 @@ export const CITIES = [
         events: [
             { date: '2007-03-31', venue: 'World Trade Plaza', type: 'Other', isResidentAdvisor: true },
             { date: '2010-03-31', venue: 'World Trade Plaza', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-03-03', venue: 'World Trade Plaza', type: 'Other', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1096,6 +1099,7 @@ export const CITIES = [
             { date: '2016-05-11', venue: 'Chicago Theatre', type: 'Acoustic' },
             { date: '2016-05-12', venue: 'Chicago Theatre', type: 'Acoustic' },
             { date: '2016-06-10', venue: 'Spring Awakening Music Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2025-08-22', venue: 'Huntington Bank Pavillion', type: 'Tour' },
         ]
     },
     { 
@@ -1154,7 +1158,7 @@ export const CITIES = [
         id: 83, 
         name: 'Toronto', 
         position: [43.70011, -79.4163], 
-        fact: '', 
+        fact: 'Home in the past to the legendary Guvernment', 
         country: 'Canada', 
         events: [
             { date: '2010-09-05', venue: 'Labour Of Love @ Guvernment', type: 'Other', isResidentAdvisor: true },
@@ -1162,6 +1166,7 @@ export const CITIES = [
             { date: '2016-05-14', venue: 'Massey Hall', type: 'Acoustic' },
             { date: '2016-05-15', venue: 'Massey Hall', type: 'Acoustic' },
             { date: '2019-12-27', venue: 'REBEL', type: 'Other', is1001Tracklists: true },
+            { date: '2025-08-29', venue: 'RBC Amphitheatre', type: 'Tour', is1001Tracklists: true },
             { date: '2026-08-01', venue: 'Veld Music Festival', type: 'Festival'},
         ]
     },
@@ -1169,7 +1174,7 @@ export const CITIES = [
         id: 84, 
         name: 'Mumbai', 
         position: [19.07283, 72.88261], 
-        fact: '', 
+        fact: 'One of the stops in India', 
         country: 'India', 
         events: [
             { date: '2010-09-17', venue: 'Blue Frog', type: 'Other', isResidentAdvisor: true },
@@ -1200,7 +1205,7 @@ export const CITIES = [
         id: 86, 
         name: 'Sofia', 
         position: [42.69751, 23.32415], 
-        fact: '', 
+        fact: 'Home to the Yalta Club', 
         country: 'Bulgaria', 
         events: [
             { date: '2010-10-09', venue: 'Yalta Club', type: 'Other', isResidentAdvisor: true },
@@ -1221,13 +1226,14 @@ export const CITIES = [
         id: 88, 
         name: 'São Paulo', 
         position: [-23.5475, -46.63611], 
-        fact: '', 
+        fact: 'Hottest landmark for the boys in Brazil', 
         country: 'Brazil', 
         events: [
             { date: '2010-04-17', venue: 'Skol Sensation 2010', type: 'Other', isSongkick: true },
             { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2015-12-04', venue: 'EDC Brasil', type: 'Festival', isResidentAdvisor: true },
             { date: '2022-04-09', venue: 'Laroc Club', type: 'Other', is1001Tracklists: true  },
+            { date: '2024-03-23', venue: 'Lollapalooza', type: 'Festival', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1237,7 +1243,7 @@ export const CITIES = [
         fact: 'Capital of Cyprus', 
         country: 'Cyprus', 
         events: [
-            { date: '2010-12-17', venue: 'The Pavillion Hall', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-12-17', venue: 'The Pavilion Hall', type: 'Other', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1343,6 +1349,7 @@ export const CITIES = [
         events: [
             { date: '2011-02-11', venue: 'Republic Live', type: 'Other', isSongkick: true },
             { date: '2011-04-29', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2023-10-06', venue: 'Austin City Music Festival', type: 'Other', is1001Tracklists: true },
             { date: '2026-11-13', venue: 'Seismic Dance Event 9.0 @ The Concourse Project', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
@@ -1808,6 +1815,15 @@ export const CITIES = [
         country: 'Romania',
         events: [
             { date: '2022-08-04', venue: 'Untold Festival', type: 'Other' },
+        ]
+    },
+    {
+        id: 143,
+        name: 'Cairo',
+        position: [29.978592644459685, 31.13249549994739],
+        country: 'Egypt',
+        events: [
+            { date: '2023-09-15', venue: 'FSOE 800 @ Great Pyramids of Giza', type: 'Other', is1001Tracklists: true },
         ]
     },
 ];
