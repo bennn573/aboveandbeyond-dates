@@ -1016,6 +1016,7 @@ export const CITIES = [
         country: 'Belgium',
         events: [
             { date: '2008-07-27', venue: 'Tomorrowland', type: 'Festival', isResidentAdvisor: true },
+            { date: '2009-07-26', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
             { date: '2011-07-23', venue: 'Tomorrowland', type: 'Festival', isResidentAdvisor: true },
             { date: '2012-07-27', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
             { date: '2014-07-26', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
