@@ -1826,4 +1826,13 @@ export const CITIES = [
             { date: '2023-09-15', venue: 'FSOE 800 @ Great Pyramids of Giza', type: 'Other', is1001Tracklists: true },
         ]
     },
+    {
+        id: 144,
+        name: 'Reno, NV',
+        position: [29.978592644459685, 31.13249549994739],
+        country: 'United States',
+        events: [
+            { date: '2022-09-22', venue: 'Burning Man', type: 'Festival', is1001Tracklists: true },
+        ]
+    },
 ];
