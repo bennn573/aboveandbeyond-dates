@@ -533,6 +533,7 @@ export const CITIES = [
         fact: 'Host to the 2015 "We Are All We Need" Tour, the 2016 European Tour finale, and a stop on the 2018 Common Ground Tour at Sentrum Scene.', 
         country: 'Norway', 
         events: [
+            { date: '2007-05-16', venue: 'Sentrum Scene', type: 'Other', is1001Tracklists: true },
             { date: '2013-02-28', venue: 'Sentrum Scene', type: 'Other', isSongkick: true },
             { date: '2015-01-23', venue: 'Rockefeller', type: 'Tour' },
             { date: '2016-12-18', venue: 'Sentrum Scene', type: 'Tour' },
