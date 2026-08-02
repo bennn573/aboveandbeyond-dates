@@ -25,12 +25,12 @@ export const CITIES = [
             { date: '2007-12-07', venue: 'Turnmills', type: 'Other', isResidentAdvisor: true },
             { date: '2008-10-10', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2008-12-31', venue: 'Ministry of Sound', type: 'Other', isResidentAdvisor: true },
-            { date: '2009-08-29', venue: 'SW4 @ Clapham Common', type: 'Other', isSongkick: true },
+            { date: '2009-08-29', venue: 'SW4 @ Clapham Common', type: 'Festival', isSongkick: true },
             { date: '2009-10-02', venue: 'Ministry of Sound', type: 'Other', isSongkick: true },
             { date: '2009-10-28', venue: 'Ministry of Sound', type: 'Other', isSongkick: true },
             { date: '2010-04-02', venue: 'Anjunabeats @ Ministry of Sound', type: 'Other', isResidentAdvisor: true },
             { date: '2010-10-30', venue: 'O2 Academy Brixton', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-08-27', venue: 'SW4 @ Clapham Common', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-08-27', venue: 'SW4 @ Clapham Common', type: 'Festival', isResidentAdvisor: true },
             { date: '2012-04-07', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2012-04-08', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2014-01-24', venue: 'Porchester Hall', type: 'Acoustic' },
@@ -47,7 +47,7 @@ export const CITIES = [
             { date: '2023-04-12', venue: 'Printworks', type: 'Other', is1001Tracklists: true  },
             { date: '2023-04-13', venue: 'Printworks', type: 'Other', is1001Tracklists: true  },
             { date: '2024-03-29', venue: 'Drumsheds (BBC Radio 1 Dance)', type: 'Other' },
-            { date: '2025-07-25', venue: 'Junction 2', type: 'Other' },
+            { date: '2025-07-25', venue: 'Junction 2', type: 'Festival' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2026-05-28', venue: 'Anjunabeats Volume 17 Showcase @ Leake Street', type: 'Other', is1001Tracklists: true },
@@ -67,9 +67,9 @@ export const CITIES = [
             { date: '2022-10-15', venue: 'Banc of California Stadium (ABGT500)', type: 'Milestone' },
             
             // OTHER DATES
-            { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-09-13', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-06-26', venue: 'Electric Daisy Carnival', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-06-30', venue: 'Electric Daisy Carnival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2008-09-13', venue: 'Nocturnal Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-06-26', venue: 'Electric Daisy Carnival', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-05-13', venue: 'Hollywood Palladium', type: 'Other', isSongkick: true },
             { date: '2011-05-14', venue: 'Hollywood Palladium', type: 'Other', isSongkick: true },
             { date: '2011-09-05', venue: 'Sutra', type: 'Other', isResidentAdvisor: true },
@@ -77,7 +77,7 @@ export const CITIES = [
             { date: '2012-05-18', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
             { date: '2012-05-19', venue: 'Shrine Auditorium', type: 'Other', isSongkick: true },
             { date: '2015-02-06', venue: 'The Forum', type: 'Other' },
-            { date: '2016-05-28', venue: 'Hollywood Bowl (Acoustic)', type: 'Acoustic' },
+            { date: '2016-05-28', venue: 'Hollywood Bowl', type: 'Acoustic' },
             { date: '2025-12-31', venue: 'Los Angeles Convention Centre', type: 'Other' },
         ], 
     },
@@ -152,7 +152,7 @@ export const CITIES = [
             { date: '2015-06-11', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2015-07-02', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2015-07-16', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
-            { date: '2015-08-01', venue: 'Creamfields Ibiza @ Ushuaia', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-08-01', venue: 'Creamfields Ibiza @ Ushuaia', type: 'Festival', isResidentAdvisor: true },
             { date: '2015-08-06', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2015-08-20', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
             { date: '2015-08-27', venue: 'Cream @ Amnesia', type: 'Other', isResidentAdvisor: true },
@@ -176,14 +176,14 @@ export const CITIES = [
         fact: 'The setting for massive Global Gathering festival appearances.', 
         country: 'United Kingdom', 
         events: [
-            { date: '2005-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2006-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2007-07-28', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-07-26', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2009-07-25', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-07-30', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-07-29', venue: 'Global Gathering', type: 'Other', isResidentAdvisor: true },
-            { date: '2012-07-28', venue: 'Global Gathering', type: 'Other', isSongkick: true },
+            { date: '2005-07-30', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2006-07-28', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2007-07-28', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2008-07-26', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2009-07-25', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-07-30', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2011-07-29', venue: 'Global Gathering', type: 'Festival', isResidentAdvisor: true },
+            { date: '2012-07-28', venue: 'Global Gathering', type: 'Festival', isSongkick: true },
         ]
     },
     { 
@@ -193,12 +193,12 @@ export const CITIES = [
         fact: 'Host to the ABGT200 milestone at the Ziggo Dome.', 
         country: 'Netherlands', 
         events: [
-            { date: '2005-08-05', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2006-07-14', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2005-08-05', venue: 'Dance Valley Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2006-07-14', venue: 'Dance Valley Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2008-09-20', venue: 'The Sand', type: 'Other', isResidentAdvisor: true },
             { date: '2009-08-30', venue: 'Mysteryland', type: 'Other', isSongkick: true },
-            { date: '2011-08-06', venue: 'Dance Valley Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2012-08-04', venue: 'Dance Valley Festival', type: 'Other', isSongkick: true },
+            { date: '2011-08-06', venue: 'Dance Valley Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2012-08-04', venue: 'Dance Valley Festival', type: 'Festival', isSongkick: true },
             { date: '2015-01-30', venue: 'Paradiso', type: 'Tour' },
             { date: '2016-09-24', venue: 'Ziggo Dome (ABGT200)', type: 'Milestone' },
             { date: '2022-05-12', venue: 'Gashouder', type: 'Other', is1001Tracklists: true },
@@ -213,8 +213,8 @@ export const CITIES = [
         fact: 'The gateway to Asia', 
         country: 'Turkey', 
         events: [
-            { date: '2005-09-10', venue: 'Pepsi Electronica Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-08-08', venue: 'Global Gathering Turkey 2008', type: 'Other', isResidentAdvisor: true },
+            { date: '2005-09-10', venue: 'Pepsi Electronica Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2008-08-08', venue: 'Global Gathering Turkey', type: 'Festival', isResidentAdvisor: true },
         ]
     },
     { 
@@ -224,17 +224,17 @@ export const CITIES = [
         fact: 'Host of Creamfields festival.', 
         country: 'United Kingdom', 
         events: [
-            { date: '2005-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
-            { date: '2007-08-25', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2005-08-27', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
+            { date: '2007-08-25', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-03-05', venue: 'Cream @ Nation', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-08-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-08-28', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-10-08', venue: 'Cream 19th Birthday @ Nation', type: 'Other', isResidentAdvisor: true },
             { date: '2012-04-14', venue: 'O2 Academy Liverpool', type: 'Tour' },
-            { date: '2012-08-25', venue: 'Creamfields', type: 'Other', isSongkick: true },
-            { date: '2015-08-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
-            { date: '2016-08-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
-            { date: '2019-08-24', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
-            { date: '2021-08-28', venue: 'Creamfields', type: 'Other', is1001Tracklists: true },
+            { date: '2012-08-25', venue: 'Creamfields', type: 'Festival', isSongkick: true },
+            { date: '2015-08-29', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
+            { date: '2016-08-27', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
+            { date: '2019-08-24', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
+            { date: '2021-08-28', venue: 'Creamfields', type: 'Festival', is1001Tracklists: true },
             { date: '2026-10-17', venue: 'Blackstone Street Warehouse', type: 'Other'},
         ]
     },
@@ -257,13 +257,13 @@ export const CITIES = [
         events: [
             { date: '2015-09-26', venue: 'Allphones Arena (ABGT150)', type: 'Milestone' }, 
             { date: '2005-10-02', venue: 'Godskitchen @ Space', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-11-30', venue: 'Global Gathering Sydney', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-30', venue: 'Global Gathering Sydney', type: 'Festival', isResidentAdvisor: true },
             { date: '2010-03-06', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-10', venue: 'Hordern Pavillion', type: 'Tour', isResidentAdvisor: true },
-            { date: '2012-04-29', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-04-29', venue: 'Creamfields', type: 'Festival', isResidentAdvisor: true },
             { date: '2013-01-27', venue: 'Hordern Pavillion', type: 'Other', isSongkick: true },
             { date: '2014-12-31', venue: 'Hordern Pavillion', type: 'Other', isSongkick: true },
-            { date: '2016-06-06', venue: 'Sydney Opera House (Acoustic)', type: 'Acoustic' },
+            { date: '2016-06-06', venue: 'Sydney Opera House', type: 'Acoustic' },
         ]
     },
     { 
@@ -274,8 +274,8 @@ export const CITIES = [
         country: 'Australia', 
         events: [
             { date: '2005-10-08', venue: 'Rod Laver Arena', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-11-22', venue: 'Global Gathering Melbourne', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-03-07', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-22', venue: 'Global Gathering Melbourne', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-03-07', venue: 'Future Music Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-09-17', venue: 'Festival Hall', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-28', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2013-02-02', venue: 'Melbourne Arena', type: 'Other', isSongkick: true },
@@ -291,7 +291,7 @@ export const CITIES = [
         country: 'United Kingdom', 
         events: [
             { date: '2005-10-15', venue: 'Evolution', type: 'Other', isResidentAdvisor: true },
-            { date: '2008-12-31', venue: 'Liquid (Godskitchen Return To Cardiff Nye)', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-12-31', venue: 'Liquid (Godskitchen Return to Cardiff NYE)', type: 'Other', isResidentAdvisor: true },
             { date: '2011-04-08', venue: 'Millenium Music Hall', type: 'Other', isSongkick: true },
         ]
     },
@@ -312,9 +312,9 @@ export const CITIES = [
         fact: 'The home of the massive Trance Energy event in February 2006.', 
         country: 'Netherlands', 
         events: [
-            { date: '2006-02-11', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-04-03', venue: 'Trance Energy', type: 'Other', isResidentAdvisor: true },
-            { date: '2015-05-03', venue: 'TivoliVredenburg (Acoustic)', type: 'Acoustic' },
+            { date: '2006-02-11', venue: 'Trance Energy', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-04-03', venue: 'Trance Energy', type: 'Festival', isResidentAdvisor: true },
+            { date: '2015-05-03', venue: 'TivoliVredenburg', type: 'Acoustic' },
             { date: '2019-02-23', venue: 'A State of Trance 900 @ Jaarbeurs', type: 'Other', is1001Tracklists: true },
         ]
     },
@@ -331,14 +331,14 @@ export const CITIES = [
             { date: '2007-03-22', venue: 'Made Event pres. Above & Beyond', type: 'Other', isResidentAdvisor: true },
             { date: '2007-03-23', venue: 'Wet Grooves Beach Party After Dark', type: 'Other', isResidentAdvisor: true },
             { date: '2008-03-27', venue: 'Anjunabeats 100 with Above & Beyond', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-03-27', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-27', venue: 'Ultra Music Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-03-24', venue: 'Ice Palace', type: 'Other', isResidentAdvisor: true },
             { date: '2012-03-22', venue: 'Group Therapy @ Bayfront Park', type: 'Other', isSongkick: true },
-            { date: '2013-03-17', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
-            { date: '2013-03-24', venue: 'Ultra Music Festival', type: 'Other', isSongkick: true },
+            { date: '2013-03-17', venue: 'Ultra Music Festival', type: 'Festival', isSongkick: true },
+            { date: '2013-03-24', venue: 'Ultra Music Festival', type: 'Festival', isSongkick: true },
             { date: '2016-03-17', venue: 'RC Cola Plant', type: 'Other', isResidentAdvisor: true },
             { date: '2017-03-23', venue: 'RC Cola Plant', type: 'Other', isSongkick: true},
-            { date: '2017-03-25', venue: 'Ultra Music Festival', type: 'Other'},
+            { date: '2017-03-25', venue: 'Ultra Music Festival', type: 'Festival'},
         ]
     },
     { 
@@ -361,7 +361,7 @@ export const CITIES = [
         fact: 'Host city for Creamfields Australia 2012.', 
         country: 'Australia', 
         events: [
-            { date: '2010-03-08', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-03-08', venue: 'Future Music Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-09-15', venue: 'HQ Complex', type: 'Tour', isResidentAdvisor: true },
             { date: '2012-04-27', venue: 'Creamfields', type: 'Other', isResidentAdvisor: true },
             { date: '2013-01-26', venue: 'Adelaide Entertainment Centre', type: 'Other', isSongkick: true },
@@ -419,7 +419,7 @@ export const CITIES = [
         fact: 'A stop in Eastern Europe for both the 2016 European Tour and the 2018 Common Ground Tour.', 
         country: 'Poland', 
         events: [
-            { date: '2012-07-14', venue: 'Ultra Music Festival Poland 2012', type: 'Other', isSongkick: true },
+            { date: '2012-07-14', venue: 'Ultra Music Festival Poland', type: 'Festival', isSongkick: true },
             { date: '2016-11-30', venue: 'Progresja Music Zone', type: 'Tour', is1001Tracklists: true },
             { date: '2018-10-28', venue: 'Progresja Music Zone', type: 'Tour', is1001Tracklists: true },
         ] 
@@ -558,7 +558,7 @@ export const CITIES = [
             { date: '2007-11-02', venue: 'Transmission (O2 Arena)', type: 'Other' },
             { date: '2011-11-19', venue: 'Transmission (O2 Arena)', type: 'Other', is1001Tracklists: true },
             { date: '2014-10-25', venue: 'Transmission (O2 Arena)', type: 'Other', isResidentAdvisor: true },
-            { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Tour', is1001Tracklists: true },
+            { date: '2018-10-27', venue: 'Transmission (O2 Arena)', type: 'Other', is1001Tracklists: true },
             { date: '2019-09-28', venue: 'O2 Arena (ABGT350)', type: 'Milestone', is1001Tracklists: true },
         ] 
     },
@@ -613,8 +613,8 @@ export const CITIES = [
         fact: 'Home to the infamous Sziget Festival.', 
         country: 'Hungary', 
         events: [
-            { date: '2010-10-16', venue: 'T-Mobile Bónusz Electronic Music Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-08-10', venue: 'Sziget Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-10-16', venue: 'T-Mobile Bónusz Electronic Music Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2011-08-10', venue: 'Sziget Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2025-11-29', venue: 'Obuda Bay', type: 'Tour' },
         ] 
     },
@@ -625,8 +625,8 @@ export const CITIES = [
         fact: 'The Scottish capital hosts the 2025 Tour at the Corn Exchange.', 
         country: 'United Kingdom', 
         events: [
-            { date: '2009-08-15', venue: 'EH1 Festival', type: 'Other', isSongkick: true },
-            { date: '2019-09-14', venue: 'EH1 Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2009-08-15', venue: 'EH1 Festival', type: 'Festival', isSongkick: true },
+            { date: '2019-09-14', venue: 'EH1 Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2025-12-07', venue: 'Edinburgh Corn Exchange', type: 'Tour' },
         ] 
     },
@@ -649,8 +649,8 @@ export const CITIES = [
         country: 'Argentina', 
         events: [
             { date: '2007-09-22', venue: 'Paradise Garage', type: 'Other', isResidentAdvisor: true  },
-            { date: '2008-06-07', venue: 'Versus Sessions Festival', type: 'Other', isResidentAdvisor: true  },
-            { date: '2011-11-12', venue: 'Creamfields Buenos Aires', type: 'Other', isResidentAdvisor: true  },
+            { date: '2008-06-07', venue: 'Versus Sessions Festival', type: 'Festival', isResidentAdvisor: true  },
+            { date: '2011-11-12', venue: 'Creamfields Buenos Aires', type: 'Festival', isResidentAdvisor: true  },
             { date: '2019-02-09', venue: 'Mandarine Park', type: 'Other' },
             { date: '2026-02-14', venue: 'Parque de la Ciudad', type: 'Other' },
             { date: '2026-02-15', venue: 'Parque de la Ciudad', type: 'Other' },
@@ -724,11 +724,11 @@ export const CITIES = [
             { date: '2008-05-02', venue: 'Pacha NYC (Anjunabeats 100)', type: 'Other', isResidentAdvisor: true },
             { date: '2010-09-05', venue: 'Electric Zoo', type: 'Other', isResidentAdvisor: true },
             { date: '2011-04-23', venue: 'Best Buy Theater', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-09-03', venue: 'Electric Zoo Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2012-09-01', venue: 'Electric Zoo Festival', type: 'Other', isSongkick: true },
+            { date: '2011-09-03', venue: 'Electric Zoo Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2012-09-01', venue: 'Electric Zoo Festival', type: 'Festival', isSongkick: true },
             { date: '2013-02-16', venue: 'Roseland Ballroom', type: 'Other', isSongkick: true },
             { date: '2014-10-18', venue: 'Madison Square Garden (ABGT100)', type: 'Milestone' },
-            { date: '2015-09-04', venue: 'Electric Zoo: Transformed', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-09-04', venue: 'Electric Zoo: Transformed', type: 'Festival', isResidentAdvisor: true },
             { date: '2016-05-20', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2016-05-21', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
             { date: '2016-05-22', venue: 'Beacon Theatre (Acoustic)', type: 'Acoustic' },
@@ -745,7 +745,7 @@ export const CITIES = [
         fact: 'The breathtaking setting for the two-day ABGT250 celebration at The Gorge Amphitheatre in 2017.', 
         country: 'United States', 
         events: [
-            { date: '2015-06-23', venue: 'The Gorge Amphitheatre (Paradiso Festival)', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-06-23', venue: 'The Gorge Amphitheatre (Paradiso Festival)', type: 'Festival', isResidentAdvisor: true },
             { date: '2017-09-16', venue: 'The Gorge Amphitheatre (ABGT250)', type: 'Milestone' },
             { date: '2022-07-23', venue: 'Group Therapy Weekender @ The Gorge', type: 'Other', isResidentAdvisor: true },
             { date: '2026-09-12', venue: 'The Gorge Amphitheatre (ABGT700)', type: 'Milestone' },
@@ -772,9 +772,10 @@ export const CITIES = [
         events: [
             { date: '2010-12-11', venue: 'Hipódromo de las Américas', type: 'Other', isResidentAdvisor: true },
             { date: '2012-03-16', venue: 'Centro De Espectáculos Premier', type: 'Other', isSongkick: true },
-            { date: '2012-11-03', venue: 'Nevada Festival 2012', type: 'Other', isSongkick: true },
-            { date: '2014-05-03', venue: 'Electric Zoo Mexico City', type: 'Other', isResidentAdvisor: true },
+            { date: '2012-11-03', venue: 'Nevada Festival 2012', type: 'Festival', isSongkick: true },
+            { date: '2014-05-03', venue: 'Electric Zoo Mexico City', type: 'Festival', isResidentAdvisor: true },
             { date: '2024-10-19', venue: 'Hipódromo de las Américas (ABGT600)', type: 'Milestone' },
+            { date: '2026-02-20', venue: 'EDC Mexico @ kineticFIELD', type: 'Festival', is1001Tracklists: true },
         ] 
     },
     { 
@@ -816,7 +817,7 @@ export const CITIES = [
         country: 'Slovakia', 
         events: [
             { date: '2007-06-22', venue: 'Dopler', type: 'Other', isResidentAdvisor: true },
-            { date: '2016-06-24', venue: 'Zlate Piesky (Neon Festival)', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-06-24', venue: 'Zlate Piesky (Neon Festival)', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -826,7 +827,7 @@ export const CITIES = [
         fact: 'Germany\'s Frankfurt hosted Above & Beyond first in 2007.',
         country: 'Germany',
         events: [
-            { date: '2007-08-03', venue: 'Nature One', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-08-03', venue: 'Nature One', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -836,7 +837,7 @@ export const CITIES = [
         fact: 'Estonia\'s Harjumaa hosted Above & Beyond first in 2007.',
         country: 'Estonia',
         events: [
-            { date: '2007-08-10', venue: 'Take Off Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-08-10', venue: 'Take Off Festival', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -846,8 +847,8 @@ export const CITIES = [
         fact: 'Northern Ireland\'s Antrim hosted Above & Beyond first in 2007.',
         country: 'United Kingdom (Northern Ireland)',
         events: [
-            { date: '2007-09-08', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-09-10', venue: 'Planet Love Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-09-08', venue: 'Planet Love', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-09-10', venue: 'Planet Love', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -857,7 +858,7 @@ export const CITIES = [
         fact: 'Croatia\'s Osijek hosted Above & Beyond first in 2007.',
         country: 'Croatia',
         events: [
-            { date: '2007-09-28', venue: 'Runway Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-09-28', venue: 'Runway Festival', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -884,9 +885,9 @@ export const CITIES = [
         fact: 'Where Anjuna was born - on the beaches of Goa.',
         country: 'India',
         events: [
-            { date: '2007-12-28', venue: 'Smirnoff Sunburn Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-12-27', venue: 'Sunburn Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2014-12-26', venue: 'VH1 Supersonic', type: 'Other', isResidentAdvisor: true },
+            { date: '2007-12-28', venue: 'Smirnoff Sunburn Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2011-12-27', venue: 'Sunburn Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2014-12-26', venue: 'VH1 Supersonic', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -940,8 +941,9 @@ export const CITIES = [
         fact: 'Home to world famous Coachella festival.',
         country: 'United States',
         events: [
-            { date: '2008-04-26', venue: 'Coachella', type: 'Other', isResidentAdvisor: true },
-            { date: '2025-04-12', venue: 'Coachella', type: 'Other'},
+            { date: '2008-04-26', venue: 'Coachella', type: 'Festival', isResidentAdvisor: true },
+            { date: '2025-04-12', venue: 'Coachella', type: 'Festival', is1001Tracklists: true },
+            { date: '2025-04-19', venue: 'Coachella', type: 'Festival', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1009,12 +1011,12 @@ export const CITIES = [
         fact: 'Home to the world famous Tomorrowland festival',
         country: 'Belgium',
         events: [
-            { date: '2008-07-27', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-07-23', venue: 'Tomorrowland', type: 'Other', isResidentAdvisor: true },
-            { date: '2012-07-27', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
-            { date: '2014-07-26', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
-            { date: '2019-07-20', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
-            { date: '2019-07-28', venue: 'Tomorrowland', type: 'Other', is1001Tracklists: true },
+            { date: '2008-07-27', venue: 'Tomorrowland', type: 'Festival', isResidentAdvisor: true },
+            { date: '2011-07-23', venue: 'Tomorrowland', type: 'Festival', isResidentAdvisor: true },
+            { date: '2012-07-27', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
+            { date: '2014-07-26', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
+            { date: '2019-07-20', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
+            { date: '2019-07-28', venue: 'Tomorrowland', type: 'Festival', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1024,9 +1026,9 @@ export const CITIES = [
         fact: '',
         country: 'Russia',
         events: [
-            { date: '2008-08-02', venue: 'Global Gathering Russia 2008', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-07-17', venue: 'Global Gathering Russia 2010', type: 'Other', isResidentAdvisor: true },
-            { date: '2013-02-22', venue: 'Trancemission', type: 'Other', is1001Tracklists: true },
+            { date: '2008-08-02', venue: 'Global Gathering Russia 2008', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-07-17', venue: 'Global Gathering Russia 2010', type: 'Festival', isResidentAdvisor: true },
+            { date: '2013-02-22', venue: 'Trancemission', type: 'Festival', is1001Tracklists: true },
         ] 
     },
     { 
@@ -1050,9 +1052,9 @@ export const CITIES = [
             { date: '2011-10-13', venue: 'Ruby Skye', type: 'Other', isSongkick: true },
             { date: '2012-06-22', venue: 'The Warfield', type: 'Other', isSongkick: true },
             { date: '2012-06-23', venue: 'The Warfield', type: 'Other', isSongkick: true },
-            { date: '2014-09-20', venue: 'Beyond Wonderland Bay Area', type: 'Other', isResidentAdvisor: true },
-            { date: '2016-05-26', venue: 'Greek Theatre (Acoustic)', type: 'Acoustic' },
-            { date: '2016-05-27', venue: 'Greek Theatre (Acoustic)', type: 'Acoustic' },
+            { date: '2014-09-20', venue: 'Beyond Wonderland Bay Area', type: 'Festival', isResidentAdvisor: true },
+            { date: '2016-05-26', venue: 'Greek Theatre', type: 'Acoustic' },
+            { date: '2016-05-27', venue: 'Greek Theatre', type: 'Acoustic' },
         ]
     },
     { 
@@ -1062,10 +1064,10 @@ export const CITIES = [
         fact: '',
         country: 'Australia',
         events: [
-            { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-02-28', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-23', venue: 'Global Gathering Perth @ Esplanade Park', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-02-28', venue: 'Future Music Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-09-09', venue: 'Metro City', type: 'Tour', isResidentAdvisor: true },
-            { date: '2012-05-05', venue: 'Creamfields Perth 2012', type: 'Other', isSongkick: true },
+            { date: '2012-05-05', venue: 'Creamfields Perth', type: 'Festival', isSongkick: true },
             { date: '2013-02-01', venue: 'Metro City', type: 'Other', isSongkick: true },
             { date: '2019-11-16', venue: 'Amon Vision Courtyard Party', type: 'Other', isResidentAdvisor: true },
         ] 
@@ -1077,8 +1079,8 @@ export const CITIES = [
         fact: '',
         country: 'Australia',
         events: [
-            { date: '2008-11-29', venue: 'Global Gathering Brisbane', type: 'Other', isResidentAdvisor: true },
-            { date: '2010-02-27', venue: 'Future Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2008-11-29', venue: 'Global Gathering Brisbane', type: 'Festival', isResidentAdvisor: true },
+            { date: '2010-02-27', venue: 'Future Music Festival', type: 'Festival', isResidentAdvisor: true },
             { date: '2011-09-16', venue: 'The Family', type: 'Tour', isResidentAdvisor: true },
         ] 
     },
@@ -1091,9 +1093,9 @@ export const CITIES = [
         events: [
             { date: '2010-03-20', venue: 'Spring Awakening', type: 'Other', isResidentAdvisor: true },
             { date: '2012-05-12', venue: 'Congrass Theatre', type: 'Other', isSongkick: true },
-            { date: '2016-05-11', venue: 'Chicago Theatre (Acoustic)', type: 'Acoustic' },
-            { date: '2016-05-12', venue: 'Chicago Theatre (Acoustic)', type: 'Acoustic' },
-            { date: '2016-06-10', venue: 'Spring Awakening Music Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-05-11', venue: 'Chicago Theatre', type: 'Acoustic' },
+            { date: '2016-05-12', venue: 'Chicago Theatre', type: 'Acoustic' },
+            { date: '2016-06-10', venue: 'Spring Awakening Music Festival', type: 'Festival', isResidentAdvisor: true },
         ]
     },
     { 
@@ -1113,8 +1115,8 @@ export const CITIES = [
         fact: '', 
         country: 'United Kingdom', 
         events: [
-            { date: '2010-06-27', venue: 'Glastonbury Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2014-06-27', venue: 'Glastonbury Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-06-27', venue: 'Glastonbury', type: 'Festival', isResidentAdvisor: true },
+            { date: '2014-06-27', venue: 'Glastonbury', type: 'Festival', isResidentAdvisor: true },
         ]
     },
     { 
@@ -1124,7 +1126,7 @@ export const CITIES = [
         fact: '', 
         country: 'Lithuania', 
         events: [
-            { date: '2010-07-16', venue: 'Sennheiser pres. Open Air Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-07-16', venue: 'Sennheiser pres. Open Air Festival', type: 'Festival', isResidentAdvisor: true },
         ]
     },
     { 
@@ -1155,12 +1157,12 @@ export const CITIES = [
         fact: '', 
         country: 'Canada', 
         events: [
-            { date: '2010-09-05', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
-            { date: '2011-09-03', venue: 'Labour Of Love at Guvernment', type: 'Other', isResidentAdvisor: true },
-            { date: '2016-05-14', venue: 'Massey Hal (Acoustic)', type: 'Acoustic' },
-            { date: '2016-05-15', venue: 'Massey Hall (Acoustic)', type: 'Acoustic' },
+            { date: '2010-09-05', venue: 'Labour Of Love @ Guvernment', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-09-03', venue: 'Labour Of Love @ Guvernment', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-05-14', venue: 'Massey Hall', type: 'Acoustic' },
+            { date: '2016-05-15', venue: 'Massey Hall', type: 'Acoustic' },
             { date: '2019-12-27', venue: 'REBEL', type: 'Other', is1001Tracklists: true },
-            { date: '2026-08-01', venue: 'Veld Music Festival', type: 'Other'},
+            { date: '2026-08-01', venue: 'Veld Music Festival', type: 'Festival'},
         ]
     },
     { 
@@ -1223,8 +1225,8 @@ export const CITIES = [
         country: 'Brazil', 
         events: [
             { date: '2010-04-17', venue: 'Skol Sensation 2010', type: 'Other', isSongkick: true },
-            { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2015-12-04', venue: 'EDC Brasil 2015', type: 'Other', isResidentAdvisor: true },
+            { date: '2010-11-06', venue: 'Ultra Music Festival', type: 'Festival', isResidentAdvisor: true },
+            { date: '2015-12-04', venue: 'EDC Brasil', type: 'Festival', isResidentAdvisor: true },
             { date: '2022-04-09', venue: 'Laroc Club', type: 'Other', is1001Tracklists: true  },
         ] 
     },
@@ -1232,7 +1234,7 @@ export const CITIES = [
         id: 89, 
         name: 'Nicosia', 
         position: [35.17531, 33.3642], 
-        fact: '', 
+        fact: 'Capital of Cyprus', 
         country: 'Cyprus', 
         events: [
             { date: '2010-12-17', venue: 'The Pavillion Hall', type: 'Other', isResidentAdvisor: true },
@@ -1245,7 +1247,7 @@ export const CITIES = [
         fact: 'Host of the Creamfields Brasil festival in 2011.', 
         country: 'Brazil', 
         events: [
-            { date: '2011-01-22', venue: 'Creamfields Brasil', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-01-22', venue: 'Creamfields Brasil', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1304,13 +1306,13 @@ export const CITIES = [
             { date: '2011-06-26', venue: 'Tao', type: 'Other', isResidentAdvisor: true },
             { date: '2011-09-01', venue: 'Wet Republic', type: 'Other', isResidentAdvisor: true },
             { date: '2012-05-20', venue: 'Marquee', type: 'Other', isSongkick: true },
-            { date: '2012-06-08', venue: 'Electric Daisy Carnival', type: 'Other', isSongkick: true },
+            { date: '2012-06-08', venue: 'EDC Las Vegas', type: 'Festival', isSongkick: true },
             { date: '2012-09-03', venue: 'Marquee', type: 'Other', isSongkick: true },
             { date: '2013-05-08', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2013-05-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2013-06-23', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2013-06-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
-            { date: '2014-06-20', venue: 'EDC Las Vegas', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-06-20', venue: 'EDC Las Vegas', type: 'Festival', isResidentAdvisor: true },
             { date: '2019-06-09', venue: 'KAOS', type: 'Other', is1001Tracklists: true },
             { date: '2026-05-16', venue: 'EDC Las Vegas @ kineticField', type: 'Festival', is1001Tracklists: true },
         ] 
@@ -1341,7 +1343,7 @@ export const CITIES = [
         events: [
             { date: '2011-02-11', venue: 'Republic Live', type: 'Other', isSongkick: true },
             { date: '2011-04-29', venue: 'Nocturnal Festival', type: 'Other', isResidentAdvisor: true },
-            { date: '2026-11-13', venue: 'Seismic Dance Event 9.0 @ The Concourse Project', type: 'Other', isResidentAdvisor: true },
+            { date: '2026-11-13', venue: 'Seismic Dance Event 9.0 @ The Concourse Project', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1372,7 +1374,7 @@ export const CITIES = [
         fact: 'A port and spa city on the Baltic Sea coast of Poland, and home to the major electronic music event, Sunrise Festival.', 
         country: 'Poland', 
         events: [
-            { date: '2011-07-22', venue: 'Sunrise Festival', type: 'Other', isResidentAdvisor: true },
+            { date: '2011-07-22', venue: 'Sunrise Festival', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1460,7 +1462,7 @@ export const CITIES = [
         fact: 'Host of Creamfields UAE 2010, marking the group\'s first performance in the Middle East.', 
         country: 'United Arab Emirates',
         events: [
-            { date: '2010-12-09', venue: 'Creamfields UAE 2010', type: 'Other', isSongkick: true },
+            { date: '2010-12-09', venue: 'Creamfields UAE', type: 'Festival', isSongkick: true },
         ] 
     },
     { 
@@ -1498,7 +1500,7 @@ export const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-04-22', venue: 'Europe Nightclub', type: 'Other', isSongkick: true },
-            { date: '2012-06-09', venue: 'Pulse Music Festival', type: 'Other', isSongkick: true },
+            { date: '2012-06-09', venue: 'Pulse Music Festival', type: 'Festival', isSongkick: true },
             { date: '2019-05-25', venue: 'Ryse Nightclub', type: 'Other', is1001Tracklists: true },
         ] 
     },
@@ -1509,7 +1511,7 @@ export const CITIES = [
         country: 'United States',
         events: [
             { date: '2011-04-28', venue: 'Roxy', type: 'Tour', isSongkick: true },
-            { date: '2016-11-04', venue: 'EDC Orlando', type: 'Other', isResidentAdvisor: true },
+            { date: '2016-11-04', venue: 'EDC Orlando', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1576,7 +1578,7 @@ export const CITIES = [
         position: [37.5665, 126.9780],
         country: 'South Korea',
         events: [
-            { date: '2012-01-14', venue: 'Seoul Electronic Music Festival', type: 'Other', isSongkick: true },
+            { date: '2012-01-14', venue: 'Seoul Electronic Music Festival', type: 'Festival', isSongkick: true },
         ] 
     },
     { 
@@ -1594,7 +1596,7 @@ export const CITIES = [
         position: [-33.4489, -70.6693],
         country: 'Chile',
         events: [
-            { date: '2012-04-01', venue: 'Lollapalooza 2012', type: 'Other', isSongkick: true },
+            { date: '2012-04-01', venue: 'Lollapalooza', type: 'Festival', isSongkick: true },
             { date: '2015-07-03', venue: 'Ciudad Empresarial', type: 'Other', isResidentAdvisor: true },
         ] 
     },
@@ -1640,7 +1642,7 @@ export const CITIES = [
         position: [39.0997, -94.5786],
         country: 'United States',
         events: [
-            { date: '2012-07-20', venue: 'Global Dance Festival 2012', type: 'Other', isSongkick: true },
+            { date: '2012-07-20', venue: 'Global Dance Festival', type: 'Festival', isSongkick: true },
         ] 
     },
     { 
@@ -1704,7 +1706,7 @@ export const CITIES = [
         position: [47.1667, 11.8667],
         country: 'Austria',
         events: [
-            { date: '2013-03-31', venue: 'Snowbombing 2013', type: 'Other', isSongkick: true },
+            { date: '2013-03-31', venue: 'Snowbombing', type: 'Festival', isSongkick: true },
         ] 
     },
     { 
@@ -1713,7 +1715,7 @@ export const CITIES = [
         position: [57.4778, -4.2247],
         country: 'United Kingdom',
         events: [
-            { date: '2013-06-08', venue: 'Rockness 2013', type: 'Other', isSongkick: true },
+            { date: '2013-06-08', venue: 'Rockness', type: 'Festival', isSongkick: true },
         ] 
     },
     { 
@@ -1722,7 +1724,7 @@ export const CITIES = [
         position: [56.395462405, -3.438900169],
         country: 'United Kingdom',
         events: [
-            { date: '2015-07-10', venue: 'T In The Park', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-07-10', venue: 'T In The Park', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1731,7 +1733,7 @@ export const CITIES = [
         position: [51.0056, 5.3387],
         country: 'Belgium',
         events: [
-            { date: '2015-08-21', venue: 'Pukkelpop', type: 'Other', isResidentAdvisor: true },
+            { date: '2015-08-21', venue: 'Pukkelpop', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     { 
@@ -1740,9 +1742,9 @@ export const CITIES = [
         position: [43.5081, 16.4402],
         country: 'Croatia',
         events: [
-            { date: '2014-07-11', venue: 'Ultra Europe', type: 'Other', is1001Tracklists: true },
-            { date: '2016-07-17', venue: 'Ultra Europe', type: 'Other', isResidentAdvisor: true },
-            { date: '2022-07-08', venue: 'Ultra Europe', type: 'Other', isResidentAdvisor: true },
+            { date: '2014-07-11', venue: 'Ultra Europe', type: 'Festival', is1001Tracklists: true },
+            { date: '2016-07-17', venue: 'Ultra Europe', type: 'Festival', isResidentAdvisor: true },
+            { date: '2022-07-08', venue: 'Ultra Europe', type: 'Festival', isResidentAdvisor: true },
         ] 
     },
     {
@@ -1751,7 +1753,7 @@ export const CITIES = [
         position: [64.128288, -21.827774],
         country: 'Iceland',
         events: [
-            { date: '2026-08-14', venue: 'Iceland Eclipse @ Snæfellsnes Peninsula', type: 'Other'},
+            { date: '2026-08-14', venue: 'Iceland Eclipse @ Snæfellsnes Peninsula', type: 'Festival'},
         ]
     },
     {
@@ -1760,7 +1762,7 @@ export const CITIES = [
         position: [50.9667, 4.7000],
         country: 'Belgium',
         events: [
-            { date: '2017-07-01', venue: 'Rock Werchter', type: 'Other', isSongkick: true},
+            { date: '2017-07-01', venue: 'Rock Werchter', type: 'Festival', isSongkick: true},
         ]
     },
     {
@@ -1769,7 +1771,7 @@ export const CITIES = [
         position: [41.057694000990175, -75.5090873553909],
         country: 'United States',
         events: [
-            { date: '2026-08-07', venue: 'Elements Music & Arts Festival', type: 'Other', isResidentAdvisor: true},
+            { date: '2026-08-07', venue: 'Elements Music & Arts Festival', type: 'Festival', isResidentAdvisor: true},
         ]
     },
     {
@@ -1787,7 +1789,7 @@ export const CITIES = [
         position: [52.42095403087306, 16.7902059400657],
         country: 'Poland',
         events: [
-            { date: '2009-06-06', venue: 'Global Gathering Poland', type: 'Other', isResidentAdvisor: true },
+            { date: '2009-06-06', venue: 'Global Gathering Poland', type: 'Festival', isResidentAdvisor: true },
         ]
     },
     {
