@@ -1320,6 +1320,7 @@ export const CITIES = [
             { date: '2013-06-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2014-06-20', venue: 'EDC Las Vegas', type: 'Festival', isResidentAdvisor: true },
             { date: '2019-06-09', venue: 'KAOS', type: 'Other', is1001Tracklists: true },
+            { date: '2021-10-23', venue: 'Elia', type: 'Other', is1001Tracklists: true },
             { date: '2022-06-04', venue: 'Hakkasan', type: 'Other', is1001Tracklists: true },
             { date: '2026-05-16', venue: 'EDC Las Vegas @ kineticField', type: 'Festival', is1001Tracklists: true },
         ] 
