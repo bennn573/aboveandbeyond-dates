@@ -50,6 +50,7 @@ export const CITIES = [
             { date: '2025-07-25', venue: 'Junction 2', type: 'Other' },
             { date: '2025-11-15', venue: 'O2 Academy Brixton', type: 'Tour' },
             { date: '2025-11-16', venue: 'O2 Academy Brixton', type: 'Tour' },
+            { date: '2026-05-28', venue: 'Anjunabeats Volume 17 Showcase @ Leake Street', type: 'Other', is1001Tracklists: true },
             { date: '2026-07-03', venue: 'Fabric', type: 'Other', is1001Tracklists: true  },
             { date: '2026-07-03', venue: 'Silverworks Island', type: 'Other', is1001Tracklists: true  },
         ]
@@ -1311,6 +1312,7 @@ export const CITIES = [
             { date: '2013-06-26', venue: 'Wynn Las Vegas', type: 'Other', isSongkick: true },
             { date: '2014-06-20', venue: 'EDC Las Vegas', type: 'Other', isResidentAdvisor: true },
             { date: '2019-06-09', venue: 'KAOS', type: 'Other', is1001Tracklists: true },
+            { date: '2026-05-16', venue: 'EDC Las Vegas @ kineticField', type: 'Festival', is1001Tracklists: true },
         ] 
     },
     { 
