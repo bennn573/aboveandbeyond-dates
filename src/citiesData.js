@@ -1833,7 +1833,7 @@ export const CITIES = [
     {
         id: 144,
         name: 'Reno, NV',
-        position: [29.978592644459685, 31.13249549994739],
+        position: [39.530895, -119.814972],
         country: 'United States',
         events: [
             { date: '2022-09-22', venue: 'Burning Man', type: 'Festival', is1001Tracklists: true },
